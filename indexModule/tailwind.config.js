@@ -1,6 +1,5 @@
 module.exports = {
   content: [
-    "./indexModule/components/*.js",
     "./pages/*.js",
     "./pages/**/*.js",
     "./components/*.js",
