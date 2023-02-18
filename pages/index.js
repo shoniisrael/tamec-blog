@@ -93,6 +93,7 @@ const Home = ({ articles, navigation, settings }) => {
     <SeoHead title='Agencia de Viajes Tamec' />
     <Layout
       withHeaderDivider={false}
+      withProfile={false}
       navigation={navigation}
       settings={settings}
     >

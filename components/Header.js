@@ -51,7 +51,7 @@ const NavItem = ({ children }) => {
 
 export const Header = ({
   withDivider = true,
-  withProfile = true,
+  withProfile = false,
   navigation,
   settings,
 }) => {

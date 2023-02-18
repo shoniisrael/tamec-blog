@@ -84,7 +84,8 @@ const Article = ({ article }) => {
 const Blog = ({ articles, navigation, settings }) => {
   return (
     <Layout
-      withHeaderDivider={false}
+      withHeaderDivider={true}
+      withProfile={true}
       navigation={navigation}
       settings={settings}
     >
