@@ -88,7 +88,7 @@ const Testimoni = ({
       >
         {listTestimoni.map((listTestimonis, index) => (
           <div className="flex items-stretch px-3" key={index}>
-            <div className="flex flex-col rounded-lg border-2 border-gray-500 p-8 transition-all hover:border-orange-500">
+            <div className="flex flex-col rounded-lg border-2 border-gray-500 p-8 transition-all hover:border-teal-500">
               <div className="flex w-full flex-col items-stretch xl:flex-row xl:items-center">
                 <div className="order-2 flex xl:order-1">
                   <Image
@@ -135,7 +135,7 @@ const Testimoni = ({
       <div className="flex w-full items-center justify-end">
         <div className="mt-14 flex w-auto flex-none justify-between">
           <div
-            className="bg-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-orange-500 text-orange-500 transition-all hover:bg-orange-500 hover:text-white-500"
+            className="bg-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white-500"
             onClick={sliderRef?.slickPrev}
           >
             <svg
@@ -154,7 +154,7 @@ const Testimoni = ({
             </svg>
           </div>
           <div
-            className="bg-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-orange-500 text-orange-500 transition-all hover:bg-orange-500 hover:text-white-500"
+            className="bg-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white-500"
             onClick={sliderRef?.slickNext}
           >
             <svg
