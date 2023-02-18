@@ -235,11 +235,11 @@ const Pricing = () => {
               pleasure when using this crazy feature.
             </motion.p>
           </ScrollAnimationWrapper>
-          {/*<ScrollAnimationWrapper className="w-full flex flex-col py-12">*/}
-          {/*  <motion.div variants={scrollAnimation}>*/}
-          {/*    <Testimoni />*/}
-          {/*  </motion.div>*/}
-          {/*</ScrollAnimationWrapper>*/}
+          <ScrollAnimationWrapper className="w-full flex flex-col py-12">
+            <motion.div variants={scrollAnimation}>
+              <Testimoni />
+            </motion.div>
+          </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{duration: 3}}>
               <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">

@@ -3,14 +3,11 @@ import React, { useState } from "react";
 // import react slick
 import Slider from "react-slick";
 import Image from "next/image";
-import Stars from "../../public/assets/Icon/stars.svg";
-import ArrowBack from "../../public/assets/Icon/eva_arrow-back-fill.svg";
-import ArrowNext from "../../public/assets/Icon/eva_arrow-next-fill.svg";
 
 const Testimoni = ({
   listTestimoni = [
     {
-      name: "iezh Robert",
+      name: "iooooooooooh Robert",
       image: "/assets/people-3.png",
       city: "Warsaw",
       country: "Poland",
@@ -19,7 +16,7 @@ const Testimoni = ({
         "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
     },
     {
-      name: "iezh Robert",
+      name: "iezñ,py",
       image: "/assets/people-3.png",
       city: "Warsaw",
       country: "Poland",
@@ -28,7 +25,7 @@ const Testimoni = ({
         "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
     },
     {
-      name: "iezh Robert",
+      name: "iezh Robuideuidert",
       image: "/assets/people-3.png",
       city: "Warsaw",
       country: "Poland",
@@ -52,7 +49,7 @@ const Testimoni = ({
     customPaging: function (i) {
       return (
         <a className="">
-          <span className="mx-2 rounded-l-full rounded-r-full h-4 w-4 block cursor-pointer transition-all "></span>
+          <span className="mx-2 block h-4 w-4 cursor-pointer rounded-l-full rounded-r-full transition-all "></span>
         </a>
       );
     },
@@ -90,29 +87,43 @@ const Testimoni = ({
         className="flex items-stretch justify-items-stretch"
       >
         {listTestimoni.map((listTestimonis, index) => (
-          <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
-              <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-                <div className="flex order-2 xl:order-1">
+          <div className="flex items-stretch px-3" key={index}>
+            <div className="flex flex-col rounded-lg border-2 border-gray-500 p-8 transition-all hover:border-orange-500">
+              <div className="flex w-full flex-col items-stretch xl:flex-row xl:items-center">
+                <div className="order-2 flex xl:order-1">
                   <Image
                     src={listTestimonis.image}
                     height={50}
                     width={50}
                     alt="Icon People"
                   />
-                  <div className="flex flex-col ml-5 text-left">
-                    <p className="text-lg text-black-600 capitalize">
+                  <div className="ml-5 flex flex-col text-left">
+                    <p className="text-lg capitalize text-black-600">
                       {listTestimonis.name}
                     </p>
-                    <p className="text-sm text-black-500 capitalize">
+                    <p className="text-sm capitalize text-black-500">
                       {listTestimonis.city},{listTestimonis.country}
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-none items-center ml-auto order-1 xl:order-2">
+
+                <div className="order-1 ml-auto flex flex-none items-center xl:order-2">
                   <p className="text-sm">{listTestimonis.rating}</p>
-                  <span className="flex ml-4">
-                    <Stars className="h-4 w-4" />
+                  <span className="ml-4 flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                      />
+                    </svg>
                   </span>
                 </div>
               </div>
@@ -122,18 +133,44 @@ const Testimoni = ({
         ))}
       </Slider>
       <div className="flex w-full items-center justify-end">
-        <div className="flex flex-none justify-between w-auto mt-14">
+        <div className="mt-14 flex w-auto flex-none justify-between">
           <div
-            className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
+            className="bg-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-orange-500 text-orange-500 transition-all hover:bg-orange-500 hover:text-white-500"
             onClick={sliderRef?.slickPrev}
           >
-            <ArrowBack className="h-6 w-6 " />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
+              />
+            </svg>
           </div>
           <div
-            className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
+            className="bg-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-orange-500 text-orange-500 transition-all hover:bg-orange-500 hover:text-white-500"
             onClick={sliderRef?.slickNext}
           >
-            <ArrowNext className="h-6 w-6" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+              />
+            </svg>
           </div>
         </div>
       </div>
