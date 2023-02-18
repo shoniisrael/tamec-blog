@@ -54,7 +54,7 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
       </Head>
       <Bounded>
         <PrismicLink
-          href="/"
+          href="/blog"
           className="font-semibold tracking-tight text-slate-400"
         >
           &larr; Back to articles

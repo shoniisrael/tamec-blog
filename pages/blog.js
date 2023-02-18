@@ -1,9 +1,3 @@
-import Feature from "../indexModule/components/Feature";
-import Pricing from "../indexModule/components/Pricing";
-import Hero from "../indexModule/components/Hero";
-
-import SeoHead from "../indexModule/components/SeoHead";
-
 import Head from "next/head";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
@@ -87,31 +81,29 @@ const Article = ({ article }) => {
   );
 };
 
-const Home = ({ articles, navigation, settings }) => {
+const Blog = ({ articles, navigation, settings }) => {
   return (
-    <>
-    <SeoHead title='Agencia de Viajes Tamec' />
     <Layout
-      withHeaderDivider={false}
-      withProfile={false}
+      withHeaderDivider={true}
+      withProfile={true}
       navigation={navigation}
       settings={settings}
     >
-
       <Head>
-        <title>Agencia de Viajes Tamec</title>
+        <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
       <Bounded size="widest">
-        <Hero />
-        <Feature />
-        <Pricing />
+        <ul className="grid grid-cols-1 gap-16">
+          {articles.map((article) => (
+            <Article key={article.id} article={article} />
+          ))}
+        </ul>
       </Bounded>
     </Layout>
-    </>
   );
 };
 
-export default Home;
+export default Blog;
 
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });

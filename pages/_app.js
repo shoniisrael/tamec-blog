@@ -1,7 +1,8 @@
+import "../styles/tailwind.css";
+import "../styles/slick.css";
 import Link from "next/link";
 import { PrismicLink, PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
-
 import { repositoryName } from "../prismicio";
 import { Heading } from "../components/Heading";
 
