@@ -63,7 +63,6 @@ export default function App({ Component, pageProps }) {
     >
 
       <PrismicPreview repositoryName={repositoryName}>
-        ap*****************
         <Component {...pageProps} />
       </PrismicPreview>
     </PrismicProvider>

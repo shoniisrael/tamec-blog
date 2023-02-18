@@ -15,7 +15,6 @@ const Page = ({ page, navigation, settings }) => {
           {prismicH.asText(settings.data.name)}
         </title>
       </Head>
-      uid**********
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
