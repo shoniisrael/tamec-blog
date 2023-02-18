@@ -88,7 +88,6 @@ const Blog = ({ articles, navigation, settings }) => {
       navigation={navigation}
       settings={settings}
     >
-        blogindex*******
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
