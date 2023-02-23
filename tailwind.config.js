@@ -44,6 +44,7 @@ module.exports = {
       },
       teal:colors.teal,
       cyan:colors.cyan,
+      zinc:colors.zinc,
     },
     extend: {},
   },
