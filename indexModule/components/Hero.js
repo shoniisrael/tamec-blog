@@ -28,14 +28,14 @@ const Hero = ({
 
   return (
     <div
-      className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto"
+      className="max-w-screen-2xl px-4 md:px-0 mx-auto"
       id="about"
     >
       <ScrollAnimationWrapper>
           <motion.div
-            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 md:pt-0 md:pb-8"
             variants={scrollAnimation}>
-            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1 px-6 sm:px-8 lg:px-16 ">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
                 Viajes <strong>Únicos</strong><br/>
                 Recuerdos <strong>Eternos</strong>.
@@ -48,7 +48,7 @@ const Hero = ({
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
                 <Image
-                  src="/assets/ilustration1.jpg"
+                  src="/assets/hero.gif"
                   alt="VPN Illustrasi"
                   quality={100}
                   width={612}

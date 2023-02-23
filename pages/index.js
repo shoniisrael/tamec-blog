@@ -101,11 +101,12 @@ const Home = ({ articles, navigation, settings }) => {
       <Head>
         <title>Agencia de Viajes Tamec</title>
       </Head>
-      <Bounded size="widest">
+
         <Hero />
         <Feature />
         <Pricing />
-      </Bounded>
+        {/*<Footer />*/}
+
     </Layout>
     </>
   );
