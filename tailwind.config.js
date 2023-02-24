@@ -26,10 +26,6 @@ module.exports = {
         500: "#4F5665",
         600: "#0B132A",
       },
-      orange: {
-        100: "#FFECEC",
-        500: "#F53855",
-      },
       green: {
         500: "#ffb371",
       },
@@ -43,6 +39,7 @@ module.exports = {
         400: "#AFB5C0",
         500: "#DDDDDD",
       },
+      orange:colors.orange,
       teal:colors.teal,
       cyan:colors.cyan,
       zinc:colors.zinc,
