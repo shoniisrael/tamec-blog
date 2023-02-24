@@ -33,17 +33,17 @@ const Hero = ({
     >
       <ScrollAnimationWrapper>
           <motion.div
-            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 md:pt-0 md:pb-8"
+            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 sm:pt-0 sm:pb-8"
             variants={scrollAnimation}>
-            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1 px-6 sm:px-8 lg:px-16 ">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
+            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1 px-6 sm:px-8 lg:pl-16 lg:pr-0 ">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-black-600 leading-normal">
                 Viajes <strong>Únicos</strong><br/>
                 Recuerdos <strong>Eternos</strong>.
               </h1>
               <p className="text-black-500 mt-4 mb-6">
                 con <strong>TAMEC</strong> tu agencia de viajes de confianza.
               </p>
-              <ButtonPrimary>Get Started</ButtonPrimary>
+              <ButtonPrimary>Contactar</ButtonPrimary>
             </div>
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
