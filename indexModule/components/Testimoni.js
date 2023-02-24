@@ -8,25 +8,25 @@ const Testimoni = ({
   listTestimoni = [
     {
       name: "iooooooooooh Robert",
-      image: "/assets/people-3.png",
+      image: "https://i.pravatar.cc/75",
       city: "Warsaw",
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "La atención al cliente de Tamec es excepcional. Ellos me ayudaron a planificar mi viaje a Europa de principio a fin",
     },
     {
-      name: "iezñ,py",
-      image: "/assets/people-3.png",
+      name: "Dario Jerez",
+      image: "https://i.pravatar.cc/75",
       city: "Warsaw",
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Gracias a Tamec, ¡pude ir a mi destino soñado sin preocupaciones!",
     },
     {
       name: "iezh Robuideuidert",
-      image: "/assets/people-3.png",
+      image: "https://i.pravatar.cc/75",
       city: "Warsaw",
       country: "Poland",
       rating: "4.5",
@@ -35,7 +35,7 @@ const Testimoni = ({
     },
     {
       name: "iezh Robert",
-      image: "/assets/people-3.png",
+      image: "https://i.pravatar.cc/75",
       city: "Warsaw",
       country: "Poland",
       rating: "4.5",
@@ -91,12 +91,13 @@ const Testimoni = ({
             <div className="flex flex-col rounded-lg border-2 border-gray-500 p-8 transition-all hover:border-teal-500">
               <div className="flex w-full flex-col items-stretch xl:flex-row xl:items-center">
                 <div className="order-2 flex xl:order-1">
-                  <Image
-                    src={listTestimonis.image}
-                    height={50}
-                    width={50}
-                    alt="Icon People"
-                  />
+                  {/*<Image*/}
+                  {/*  src={listTestimonis.image}*/}
+                  {/*  height={50}*/}
+                  {/*  width={50}*/}
+                  {/*  alt="Icon People"*/}
+                  {/*/>*/}
+                  <img src={listTestimonis.image+"?img="+index} alt="oeu" srcset=""/>
                   <div className="ml-5 flex flex-col text-left">
                     <p className="text-lg capitalize text-black-600">
                       {listTestimonis.name}
