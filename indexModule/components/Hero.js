@@ -37,12 +37,12 @@ const Hero = ({
             className="grid grid-flow-row sm:grid-flow-col grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 sm:pt-0 sm:pb-8"
             variants={scrollAnimation}>
             <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1 px-6 sm:px-8 lg:pl-16 lg:pr-0 ">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-black-600 leading-normal">
-                Viajes <strong>Únicos</strong><br/>
-                Recuerdos <strong>Eternos</strong>.
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-orange-300 leading-normal">
+                Viajes <strong className="text-teal-600">Únicos</strong><br/>
+                Recuerdos <strong className="text-teal-600">Eternos</strong>
               </h1>
               <p className="text-black-500 mt-4 mb-6">
-                con <strong>TAMEC</strong> tu agencia de viajes de confianza.
+                con <strong className="text-teal-600">TAMEC</strong> tu agencia de viajes de confianza.
               </p>
               <ButtonPrimary>Contactar</ButtonPrimary>
               <ButtonOutline>Ver Tours</ButtonOutline>
