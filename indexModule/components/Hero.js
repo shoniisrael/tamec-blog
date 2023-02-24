@@ -4,23 +4,24 @@ import ButtonPrimary from "./misc/ButtonPrimary";
 import {motion} from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import ButtonOutline from "./misc/ButtonOutline.";
 
 const Hero = ({
   listUser = [
     {
-      name: "Users",
-      number: "390",
+      name: "Clientes Satisfechos",
+      number: "+2000",
       icon: "assets/Icon/heroicons_sm-user.svg",
     },
     {
-      name: "Locations",
-      number: "20",
-      icon: "/assets/Icon/gridicons_location.svg",
+      name: "Destinos Turísticos",
+      number: "+300",
+      icon: "/assets/Icon/bx_bxs-server.svg",
     },
     {
-      name: "Server",
-      number: "50",
-      icon: "/assets/Icon/bx_bxs-server.svg",
+      name: "Atención Personalizada",
+      number: "24/7",
+      icon: "/assets/Icon/gridicons_location.svg",
     },
   ],
 }) => {
@@ -44,6 +45,9 @@ const Hero = ({
                 con <strong>TAMEC</strong> tu agencia de viajes de confianza.
               </p>
               <ButtonPrimary>Contactar</ButtonPrimary>
+              <ButtonOutline>Ver Tours</ButtonOutline>
+
+
             </div>
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
@@ -75,7 +79,7 @@ const Hero = ({
                 </div>
                 <div className="flex flex-col">
                   <p className="text-xl text-black-600 font-bold">
-                    {listUsers.number}+
+                    {listUsers.number}
                   </p>
                   <p className="text-lg text-black-500">{listUsers.name}</p>
                 </div>

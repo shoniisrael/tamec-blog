@@ -68,10 +68,9 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
         <HorizontalDivider />
         {withSignUpForm && <SignUpForm settings={settings} />}
         <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
-          Proudly published using{" "}
-          <PrismicLink href="https://prismic.io" className="text-slate-700">
-            Prismic
-          </PrismicLink>
+          &copy; Tamec {new Date().getFullYear()} <br/>
+          Quito-Ecuador +593 999 778 220
+
         </div>
       </div>
     </Bounded>

@@ -225,14 +225,13 @@ const Pricing = () => {
             <motion.h3
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto">
-              Trusted by Thousands of Happy Customer{" "}
+              No te preocupes si nunca has viajado antes
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
               className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12"
-            >
-              These are the stories of our customers who have joined us with great
-              pleasure when using this crazy feature.
+            > ¡Tamec te guiará en cada paso!
+              Escucha lo que algunos de nuestros clientes han dicho:
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
@@ -245,9 +244,10 @@ const Pricing = () => {
               <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
                 <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
                   <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
-                    Subscribe Now for <br /> Get Special Features!
+                                        ¡Haz tus sueños realidad y planifica tu próximo viaje con Tamec hoy mismo!
+
                   </h5>
-                  <p>Let s subscribe with us and find the fun.</p>
+                  <p>Reserva tus vuelos, tramita tus visas y compra tus tours con nosotros.</p>
                 </div>
                 <ButtonPrimary>Get Started</ButtonPrimary>
               </div>
