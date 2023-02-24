@@ -87,13 +87,13 @@ const SeoHead = (props) => {
         <link key={linkProps.href} {...linkProps} />
       ))}
       {/* Windows 8 app icon */}
-      <meta name='msapplication-TileColor' content='#F53838' />
+      <meta name='msapplication-TileColor' content='#51b2b6' />
       <meta
         name='msapplication-TileImage'
         content='/favicon/ms-icon-144x144.png'
       />
       {/* Accent color on supported browser */}
-      <meta name='theme-color' content='#F53838' />
+      <meta name='theme-color' content='#51b2b6' />
     </Head>
   );
 };
