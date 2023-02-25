@@ -22,7 +22,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
-              Escoge el servico según tus necesidades
+              Escoge el servicio según tus necesidades
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
@@ -32,10 +32,10 @@ const Pricing = () => {
             </motion.p>
           </ScrollAnimationWrapper>
           <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12 px-6 sm:px-0 lg:px-6">
-            <ScrollAnimationWrapper className="flex justify-center cursor-pointer">
+            <ScrollAnimationWrapper className="flex justify-center cursor-pointer bg-white-500">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center bg-white-500 border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -46,8 +46,8 @@ const Pricing = () => {
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
                     src="/assets/avion.png"
-                    width={100}
-                    height={100}
+                    width={64}
+                    height={64}
                     alt="Free Plan"
                   />
                 </div>
@@ -73,10 +73,10 @@ const Pricing = () => {
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="flex justify-center cursor-pointer">
+            <ScrollAnimationWrapper className="flex justify-center bg-white-500 cursor-pointer">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center bg-white-500 border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -87,8 +87,8 @@ const Pricing = () => {
               <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                 <Image
                   src="/assets/visa.png"
-                  width={100}
-                  height={100}
+                  width={64}
+                  height={64}
                   alt="Standard Plan"
                 />
               </div>
@@ -115,10 +115,10 @@ const Pricing = () => {
               </div>
               </motion.div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="flex justify-center cursor-pointer">
+            <ScrollAnimationWrapper className="flex justify-center bg-white-500 cursor-pointer">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center bg-white-500 border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -129,8 +129,8 @@ const Pricing = () => {
               <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                 <Image
                   src="/assets/tour.png"
-                  width={100}
-                  height={100}
+                  width={64}
+                  height={64}
                   alt="Premium Plan"
                 />
               </div>
