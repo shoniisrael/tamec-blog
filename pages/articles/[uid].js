@@ -27,7 +27,7 @@ const LatestArticle = ({ article }) => {
           <PrismicText field={article.data.title} />
         </PrismicLink>
       </h1>
-      <p className="font-serif italic tracking-tighter text-slate-500">
+      <p className="font-sans italic tracking-tighter text-slate-500">
         {dateFormatter.format(date)}
       </p>
     </li>
@@ -65,7 +65,7 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
           <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
             <PrismicText field={article.data.title} />
           </h1>
-          <p className="font-serif italic tracking-tighter text-slate-500">
+          <p className="font-sans italic tracking-tighter text-slate-500">
             {dateFormatter.format(date)}
           </p>
         </Bounded>
