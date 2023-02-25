@@ -5,6 +5,7 @@ import {motion} from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import ButtonOutline from "./misc/ButtonOutline.";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Hero = ({
   listUser = [
@@ -51,14 +52,15 @@ const Hero = ({
             </div>
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
-                <Image
-                  src="/assets/hero.gif"
-                  alt="VPN Illustrasi"
-                  quality={100}
-                  width={612}
-                  height={383}
-                  layout="responsive"
-                />
+                <picture className={"w-full h-full block"}>
+                  <LazyLoadImage
+                    alt="turista en el festival de globos de Turquia"
+                    effect="opacity"
+                    src="/assets/hero/2.webp"
+                    height="100%"
+                    width="100%"
+                  />
+                </picture>
               </motion.div>
             </div>
           </motion.div>
