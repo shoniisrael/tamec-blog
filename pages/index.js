@@ -13,11 +13,12 @@ import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import { Bounded } from "../components/Bounded";
 import { Heading } from "../components/Heading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "numeric",
-  year: "numeric",
+  year: "numeric"
 });
 
 const findFirstImage = (slices) => {
@@ -58,13 +59,16 @@ const Article = ({ article }) => {
       <PrismicLink document={article} tabIndex="-1">
         <div className="aspect-w-4 aspect-h-3 relative bg-gray-100">
           {prismicH.isFilled.image(featuredImage) && (
-            <PrismicNextImage
-              field={featuredImage}
-              fill={false}
-              width={400}
-              height={300}
-              className="object-cover"
-            />
+            <picture className={"flex justify-center"}>
+              <LazyLoadImage
+                alt={featuredImage.alt}
+                effect="opacity"
+                src={featuredImage.url}
+                width={400}
+                height="384px"
+                wrapperClassName="object-cover"
+              />
+            </picture>
           )}
         </div>
       </PrismicLink>
@@ -90,24 +94,24 @@ const Article = ({ article }) => {
 const Home = ({ articles, navigation, settings }) => {
   return (
     <>
-    <SeoHead title='Agencia de Viajes Tamec' />
-    <Layout
-      withHeaderDivider={false}
-      withProfile={false}
-      navigation={navigation}
-      settings={settings}
-    >
+      <SeoHead title="Agencia de Viajes Tamec" />
+      <Layout
+        withHeaderDivider={false}
+        withProfile={false}
+        navigation={navigation}
+        settings={settings}
+      >
 
-      <Head>
-        <title>Agencia de Viajes Tamec</title>
-      </Head>
+        <Head>
+          <title>Agencia de Viajes Tamec</title>
+        </Head>
 
         <Hero />
         <Feature />
         <Pricing />
         {/*<Footer />*/}
 
-    </Layout>
+      </Layout>
     </>
   );
 };
@@ -120,8 +124,8 @@ export async function getStaticProps({ previewData }) {
   const articles = await client.getAllByType("article", {
     orderings: [
       { field: "my.article.publishDate", direction: "desc" },
-      { field: "document.first_publication_date", direction: "desc" },
-    ],
+      { field: "document.first_publication_date", direction: "desc" }
+    ]
   });
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
@@ -130,7 +134,7 @@ export async function getStaticProps({ previewData }) {
     props: {
       articles,
       navigation,
-      settings,
-    },
+      settings
+    }
   };
 }
