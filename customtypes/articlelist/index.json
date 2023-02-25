@@ -1,0 +1,17 @@
+{
+  "id": "articlelist",
+  "label": "articleList",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "articlelist",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

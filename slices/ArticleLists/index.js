@@ -1,12 +1,12 @@
-import Head from "next/head";
+import React from 'react';
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 
-import { createClient } from "../prismicio";
-import { Layout } from "../components/Layout";
-import { Bounded } from "../components/Bounded";
-import { Heading } from "../components/Heading";
+import { createClient } from "../../prismicio";
+import { Layout } from "../../components/Layout";
+import { Bounded } from "../../components/Bounded";
+import { Heading } from "../../components/Heading";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -81,47 +81,17 @@ const Article = ({ article }) => {
   );
 };
 
-const Blog = ({ articles, navigation, settings }) => {
+const ArticleLists = ({ context}) => {
+
   return (
-    <Layout
-      withHeaderDivider={true}
-      withProfile={true}
-      navigation={navigation}
-      settings={settings}
-    >
-      <Head>
-        <title>{prismicH.asText(settings.data.name)}</title>
-      </Head>
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
-          {articles.map((article) => (
+          {context.map((article) => (
             <Article key={article.id} article={article} />
           ))}
         </ul>
       </Bounded>
-    </Layout>
   );
 };
 
-export default Blog;
-
-export async function getStaticProps({ previewData }) {
-  const client = createClient({ previewData });
-
-  const articles = await client.getAllByType("article", {
-    orderings: [
-      { field: "my.article.publishDate", direction: "desc" },
-      { field: "document.first_publication_date", direction: "desc" },
-    ],
-  });
-  const navigation = await client.getSingle("navigation");
-  const settings = await client.getSingle("settings");
-
-  return {
-    props: {
-      articles,
-      navigation,
-      settings,
-    },
-  };
-}
+export default ArticleLists;

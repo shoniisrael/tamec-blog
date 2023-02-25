@@ -57,7 +57,8 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "articlelist": {}
   },
   "slices": {
     "Text": {
@@ -107,6 +108,11 @@
       }
     },
     "ContactForm": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ArticleLists": {
       "default": {
         "primary": {}
       }
