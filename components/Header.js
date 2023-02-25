@@ -32,7 +32,7 @@ const Profile = ({ name, description, profilePicture }) => {
               </Heading>
             )}
             {prismicH.isFilled.richText(description) && (
-              <p className="font-serif text-2xl italic leading-normal tracking-tight text-slate-500">
+              <p className="font-sans text-2xl italic leading-normal tracking-tight text-slate-500">
                 <PrismicText field={description} />
               </p>
             )}

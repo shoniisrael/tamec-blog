@@ -74,11 +74,11 @@ const Article = ({ article }) => {
             <PrismicText field={article.data.title} />
           </PrismicLink>
         </Heading>
-        <p className="font-serif italic tracking-tighter text-slate-500">
+        <p className="font-sans italic tracking-tighter text-slate-500">
           {dateFormatter.format(date)}
         </p>
         {excerpt && (
-          <p className="font-serif leading-relaxed md:text-lg md:leading-relaxed">
+          <p className="font-sans leading-relaxed md:text-lg md:leading-relaxed">
             {excerpt}
           </p>
         )}
