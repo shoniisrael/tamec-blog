@@ -136,7 +136,7 @@ const Testimoni = ({
       <div className="flex w-full items-center justify-end">
         <div className="mt-14 flex w-auto flex-none justify-between">
           <div
-            className="bg-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white-500"
+            className="bg-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
             onClick={sliderRef?.slickPrev}
           >
             <svg
@@ -155,7 +155,7 @@ const Testimoni = ({
             </svg>
           </div>
           <div
-            className="bg-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white-500"
+            className="bg-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
             onClick={sliderRef?.slickNext}
           >
             <svg

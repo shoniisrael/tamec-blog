@@ -40,6 +40,9 @@
             },
             "article_lists": {
               "type": "SharedSlice"
+            },
+            "banner": {
+              "type": "SharedSlice"
             }
           }
         }

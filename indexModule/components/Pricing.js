@@ -12,7 +12,7 @@ const Pricing = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14"
+      className="bg-gradient-to-b from-zinc-300 to-white w-full py-14"
       id="pricing"
     >
       <div className="max-w-screen-2xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
@@ -32,10 +32,10 @@ const Pricing = () => {
             </motion.p>
           </ScrollAnimationWrapper>
           <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12 px-6 sm:px-0 lg:px-6">
-            <ScrollAnimationWrapper className="flex justify-center cursor-pointer bg-white-500">
+            <ScrollAnimationWrapper className="flex justify-center cursor-pointer bg-white">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center bg-white-500 border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center bg-white border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -73,10 +73,10 @@ const Pricing = () => {
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="flex justify-center bg-white-500 cursor-pointer">
+            <ScrollAnimationWrapper className="flex justify-center bg-white cursor-pointer">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center bg-white-500 border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center bg-white border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -115,10 +115,10 @@ const Pricing = () => {
               </div>
               </motion.div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="flex justify-center bg-white-500 cursor-pointer">
+            <ScrollAnimationWrapper className="flex justify-center bg-white cursor-pointer">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center bg-white-500 border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center bg-white border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -225,7 +225,7 @@ const Pricing = () => {
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{duration: 3}}>
-              <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
+              <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white">
                 <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
                   <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
                                         ¡Haz tus sueños realidad y planifica tu próximo viaje con Tamec hoy mismo!

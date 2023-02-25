@@ -17,7 +17,7 @@ const Header = () => {
     <>
       <header
         className={
-          "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
+          "fixed top-0 w-full  z-30 bg-white transition-all " +
           (scrollActive ? " shadow-md pt-0" : " pt-4")
         }
       >
@@ -110,7 +110,7 @@ const Header = () => {
       {/* Mobile Navigation */}
 
       <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
-        <div className="bg-white-500 sm:px-3">
+        <div className="bg-white sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             <LinkScroll
               activeClass="active"
