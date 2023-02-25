@@ -45,9 +45,9 @@ const Pricing = () => {
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
-                    src="/assets/Free.png"
-                    width={145}
-                    height={165}
+                    src="/assets/avion.png"
+                    width={100}
+                    height={100}
                     alt="Free Plan"
                   />
                 </div>
@@ -56,23 +56,20 @@ const Pricing = () => {
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
                   <li className="relative check custom-list my-2">
-                    Unlimited Bandwitch
+                    Amplia red de destinos nacionales e internacionales
                   </li>
                   <li className="relative check custom-list my-2">
-                    Encrypted Connection
+                    Seguridad y Confiabilidad
                   </li>
                   <li className="relative check custom-list my-2">
-                    No Traffic Logs
+                    Nos ajustamos a tus necesidades
                   </li>
                   <li className="relative check custom-list my-2">
-                    Works on All Devices
+                    Tarifas competitivas y accesibles.
                   </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-                  <p className="text-2xl text-black-600 text-center mb-4 ">
-                    Free
-                  </p>
-                  <ButtonOutline>Select</ButtonOutline>
+                  <ButtonOutline>Ver mas</ButtonOutline>
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -89,9 +86,9 @@ const Pricing = () => {
               >
               <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                 <Image
-                  src="/assets/Standard.png"
-                  width={145}
-                  height={165}
+                  src="/assets/visa.png"
+                  width={100}
+                  height={100}
                   alt="Standard Plan"
                 />
               </div>
@@ -100,26 +97,21 @@ const Pricing = () => {
               </p>
               <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
                 <li className="relative check custom-list my-2">
-                  Unlimited Bandwitch
+               Ayuda en la obtención de turnos y llenado de documentación
                 </li>
                 <li className="relative check custom-list my-2">
-                  Encrypted Connection
+                  Experiencia y conocimiento especializado.
                 </li>
                 <li className="relative check custom-list my-2">
-                  No Traffic Logs
+                  Atención personalizada y cercana.
                 </li>
                 <li className="relative check custom-list my-2">
-                  Works on All Devices
-                </li>
-                <li className="relative check custom-list my-2">
-                  Connect Anyware{" "}
+                  Asesoramiento y acompañamiento en todo momento.
                 </li>
               </ul>
               <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-                <p className="text-2xl text-black-600 text-center mb-4 ">
-                  $9 <span className="text-black-500">/ mo</span>
-                </p>
-                <ButtonOutline>Select</ButtonOutline>
+
+                <ButtonOutline>Ver mas</ButtonOutline>
               </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -136,9 +128,9 @@ const Pricing = () => {
               >
               <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                 <Image
-                  src="/assets/Premium.png"
-                  width={145}
-                  height={165}
+                  src="/assets/tour.png"
+                  width={100}
+                  height={100}
                   alt="Premium Plan"
                 />
               </div>
@@ -147,77 +139,71 @@ const Pricing = () => {
               </p>
               <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
                 <li className="relative check custom-list my-2">
-                  Unlimited Bandwitch
+                  Destinos paradisíacos y atractivos.
                 </li>
                 <li className="relative check custom-list my-2">
-                  Encrypted Connection
+                  Variedad de opciones de alojamiento.
                 </li>
                 <li className="relative check custom-list my-2">
-                  No Traffic Logs
+                  Itinerarios flexibles y adaptados.
                 </li>
                 <li className="relative check custom-list my-2">
-                  Works on All Devices
+                  Precios competitivos y accesibles.
                 </li>
                 <li className="relative check custom-list my-2">
-                  Connect Anyware{" "}
-                </li>
-                <li className="relative check custom-list my-2">
-                  Get New Features{" "}
+                  Reservas y pagos fáciles.
                 </li>
               </ul>
               <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-                <p className="text-2xl text-black-600 text-center mb-4 ">
-                  $12 <span className="text-black-500">/ mo</span>
-                </p>
 
-                <ButtonOutline>Select</ButtonOutline>
+                <ButtonOutline>Ver mas</ButtonOutline>
               </div>
               </motion.div>
             </ScrollAnimationWrapper>
           </div>
         </div>
-        <div className="flex flex-col w-full my-16">
-          <ScrollAnimationWrapper>
-            <motion.h3
-              variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-6/12 mx-auto">
-              Tantas opciones, tantos destinos
-            </motion.h3>
-            <motion.p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12" variants={scrollAnimation}>
-              Explora las innumerables posibilidades turísticas
-            </motion.p>
-          </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper>
-            <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap" variants={scrollAnimation}>
-              {/* <Netflix className="h-18 w-auto" /> */}
-              <img
-                src="/assets/Icon/amazon.png"
-                className="h-14 w-auto mt-4 lg:mt-2"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/netflix.png"
-                className="h-14 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/reddit.png"
-                className="h-12 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/discord.png"
-                className="h-14 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/spotify.png"
-                className="h-12 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-            </motion.div>
-          </ScrollAnimationWrapper>
-        </div>
+        {/*<div className="flex flex-col w-full my-16">*/}
+        {/*  <ScrollAnimationWrapper>*/}
+        {/*    <motion.h3*/}
+        {/*      variants={scrollAnimation}*/}
+        {/*      className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-6/12 mx-auto">*/}
+        {/*      Tantas opciones, tantos destinos*/}
+        {/*    </motion.h3>*/}
+        {/*    <motion.p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12" variants={scrollAnimation}>*/}
+        {/*      Explora las innumerables posibilidades turísticas*/}
+        {/*    </motion.p>*/}
+        {/*  </ScrollAnimationWrapper>*/}
+        {/*  <ScrollAnimationWrapper>*/}
+        {/*    <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap" variants={scrollAnimation}>*/}
+        {/*      /!* <Netflix className="h-18 w-auto" /> *!/*/}
+        {/*      <img*/}
+        {/*        src="/assets/Icon/amazon.png"*/}
+        {/*        className="h-14 w-auto mt-4 lg:mt-2"*/}
+        {/*        alt=""*/}
+        {/*      />*/}
+        {/*      <img*/}
+        {/*        src="/assets/Icon/netflix.png"*/}
+        {/*        className="h-14 w-auto mt-2 lg:mt-0"*/}
+        {/*        alt=""*/}
+        {/*      />*/}
+        {/*      <img*/}
+        {/*        src="/assets/Icon/reddit.png"*/}
+        {/*        className="h-12 w-auto mt-2 lg:mt-0"*/}
+        {/*        alt=""*/}
+        {/*      />*/}
+        {/*      <img*/}
+        {/*        src="/assets/Icon/discord.png"*/}
+        {/*        className="h-14 w-auto mt-2 lg:mt-0"*/}
+        {/*        alt=""*/}
+        {/*      />*/}
+        {/*      <img*/}
+        {/*        src="/assets/Icon/spotify.png"*/}
+        {/*        className="h-12 w-auto mt-2 lg:mt-0"*/}
+        {/*        alt=""*/}
+        {/*      />*/}
+        {/*    </motion.div>*/}
+        {/*  </ScrollAnimationWrapper>*/}
+        {/*</div>*/}
         <div className="flex flex-col w-full my-16" id="testimoni">
           <ScrollAnimationWrapper>
             <motion.h3
