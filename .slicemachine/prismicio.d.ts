@@ -68,6 +68,18 @@ type ArticleDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | Cont
  * @typeParam Lang - Language API ID of the document.
  */
 export type ArticleDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ArticleDocumentData>, "article", Lang>;
+/** Content for articleList documents */
+type ArticlelistDocumentData = Record<string, never>;
+/**
+ * articleList document from Prismic
+ *
+ * - **API ID**: `articlelist`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ArticlelistDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ArticlelistDocumentData>, "articlelist", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
@@ -158,7 +170,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice | ArticleListsSlice;
 /**
  * Page document from Prismic
  *
@@ -237,7 +249,30 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = ArticleDocument | NavigationDocument | PageDocument | SettingsDocument;
+export type AllDocumentTypes = ArticleDocument | ArticlelistDocument | NavigationDocument | PageDocument | SettingsDocument;
+/**
+ * Default variation for ArticleLists Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ArticleLists`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ArticleListsSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+/**
+ * Slice variation for *ArticleLists*
+ *
+ */
+type ArticleListsSliceVariation = ArticleListsSliceDefault;
+/**
+ * ArticleLists Shared Slice
+ *
+ * - **API ID**: `article_lists`
+ * - **Description**: `ArticleLists`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ArticleListsSlice = prismicT.SharedSlice<"article_lists", ArticleListsSliceVariation>;
 /**
  * Default variation for ContactForm Slice
  *
@@ -438,6 +473,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

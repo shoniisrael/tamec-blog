@@ -1,7 +1,7 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "solution"
+    "value": "daughter"
   },
   "title": {
     "__TYPE__": "StructuredTextContent",
@@ -9,7 +9,7 @@
       {
         "type": "heading1",
         "content": {
-          "text": "Final"
+          "text": "Cover"
         }
       }
     ]
@@ -18,7 +18,7 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "image$c7252bac-20e2-4d75-a970-ad65661ce677",
+        "key": "image$0927bc29-1ec5-412e-85bc-95801260defb",
         "name": "image",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -28,13 +28,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
-                "width": 3424,
-                "height": 3424
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+                "width": 4160,
+                "height": 3120
               },
-              "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
-              "width": 3424,
-              "height": 3424,
+              "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+              "width": 4160,
+              "height": 3120,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -51,7 +51,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Mollit sint aliquip enim elit reprehenderit do laborum non nulla. Mollit cillum pariatur laborum ut proident."
+                    "text": "Reprehenderit ad magna commodo dolore fugiat reprehenderit eiusmod esse consequat commodo cupidatat minim irure consequat."
                   }
                 }
               ]
@@ -66,7 +66,7 @@
         }
       },
       {
-        "key": "quote$28dc9cee-3b41-429e-b738-29630295cb50",
+        "key": "quote$f6653c65-b632-43fd-9727-3a255e718249",
         "name": "quote",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -78,14 +78,14 @@
                 {
                   "type": "heading2",
                   "content": {
-                    "text": "Offer"
+                    "text": "Disappear"
                   }
                 }
               ]
             },
             "source": {
               "__TYPE__": "FieldContent",
-              "value": "stay",
+              "value": "bell",
               "type": "Text"
             }
           },
@@ -98,7 +98,7 @@
         }
       },
       {
-        "key": "text$88102072-0c69-4b54-96fa-8606e749c870",
+        "key": "text$6b0c2612-d48d-4404-b7e9-9f0a5d76e7d8",
         "name": "text",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -110,7 +110,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Culpa enim ex quis consectetur quis exercitation Lorem."
+                    "text": "Dolor ea sint laborum fugiat ut in qui proident fugiat et labore veniam."
                   }
                 }
               ]
@@ -125,8 +125,23 @@
         }
       },
       {
-        "key": "contact_form$b56eb8c2-e568-4390-8f74-21c749860b6f",
+        "key": "contact_form$5c831009-d12a-4d3d-bc83-a5eb1a82dc68",
         "name": "contact_form",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "article_lists$ab8a7bc7-2918-415e-9cf6-e86272d3edba",
+        "name": "article_lists",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",

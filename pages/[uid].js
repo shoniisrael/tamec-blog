@@ -6,7 +6,7 @@ import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
-const Page = ({ page, navigation, settings }) => {
+const Page = ({ page, navigation, settings,articles }) => {
   return (
     <Layout    withHeaderDivider={true}
                withProfile={true} navigation={navigation} settings={settings}>
@@ -16,7 +16,7 @@ const Page = ({ page, navigation, settings }) => {
           {prismicH.asText(settings.data.name)}
         </title>
       </Head>
-      <SliceZone slices={page.data.slices} components={components} />
+      <SliceZone slices={page.data.slices} components={components} context={articles}/>
     </Layout>
   );
 };
@@ -29,12 +29,19 @@ export async function getStaticProps({ params, previewData }) {
   const page = await client.getByUID("page", params.uid);
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
+  const articles = await client.getAllByType("article", {
+    orderings: [
+      { field: "my.article.publishDate", direction: "desc" },
+      { field: "document.first_publication_date", direction: "desc" },
+    ],
+  });
 
   return {
     props: {
       page,
       navigation,
       settings,
+      articles,
     },
   };
 }
