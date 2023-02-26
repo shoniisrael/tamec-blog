@@ -338,6 +338,66 @@ interface BannerSliceDefaultPrimary {
      *
      */
     image: prismicT.ImageField<never>;
+    /**
+     * color_de_fondo field in *Banner → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: Color De Fondo
+     * - **API ID Path**: banner.primary.color_de_fondo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Morado" | "Amarillo" | "Naranja">;
+    /**
+     * opacidad_de_fondo field in *Banner → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: Opacidad Fondo 1 claro - 5 obscuro
+     * - **API ID Path**: banner.primary.opacidad_de_fondo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    opacidad_de_fondo: prismicT.SelectField<"1" | "2" | "3" | "4" | "5">;
+    /**
+     * color_small_title field in *Banner → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: banner.primary.color_small_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color_small_title: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Morado" | "Amarillo" | "Naranja">;
+    /**
+     * op_color_small_title field in *Banner → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: Opacit Smalltext (1 claro - 5 obsc)
+     * - **API ID Path**: banner.primary.op_color_small_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    op_color_small_title: prismicT.NumberField;
+    /**
+     * color_title field in *Banner → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: banner.primary.color_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color_title: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Morado" | "Amarillo" | "Naranja">;
+    /**
+     * op_color_title field in *Banner → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: 1 claro - 5 obscuro
+     * - **API ID Path**: banner.primary.op_color_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    op_color_title: prismicT.NumberField;
 }
 /**
  * Default variation for Banner Slice

@@ -59,6 +59,79 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "color_de_fondo": {
+          "type": "Select",
+          "config": {
+            "label": "color_de_fondo",
+            "placeholder": "Color De Fondo",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste",
+              "Morado",
+              "Amarillo",
+              "Naranja"
+            ]
+          }
+        },
+        "opacidad_de_fondo": {
+          "type": "Select",
+          "config": {
+            "label": "opacidad_de_fondo",
+            "placeholder": "Opacidad Fondo 1 claro - 5 obscuro",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ]
+          }
+        },
+        "color_small_title": {
+          "type": "Select",
+          "config": {
+            "label": "color_small_title",
+            "placeholder": "",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste",
+              "Morado",
+              "Amarillo",
+              "Naranja"
+            ]
+          }
+        },
+        "op_color_small_title": {
+          "type": "Number",
+          "config": {
+            "label": "op_color_small_title",
+            "placeholder": "Opacit Smalltext (1 claro - 5 obsc)"
+          }
+        },
+        "color_title": {
+          "type": "Select",
+          "config": {
+            "label": "color_title",
+            "placeholder": "",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste",
+              "Morado",
+              "Amarillo",
+              "Naranja"
+            ]
+          }
+        },
+        "op_color_title": {
+          "type": "Number",
+          "config": {
+            "label": "op_color_title",
+            "placeholder": "1 claro - 5 obscuro"
+          }
         }
       },
       "items": {},

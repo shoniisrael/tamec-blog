@@ -20,7 +20,7 @@ const Home = ({ navigation, settings }) => {
       >
 
         <Head>
-          <title>Agencia de Viajes Tamec</title>
+          <title>TAMEC | Agencia de Viajes Online</title>
         </Head>
 
         <Hero />

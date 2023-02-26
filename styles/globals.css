@@ -8,3 +8,211 @@ img {
     max-height: 95vh;
     border-radius: 0.25rem;
 }
+
+
+
+.bg-primary-100 {
+    background-color: #B4EAEC;
+}
+
+.bg-primary-300 {
+    background-color: #7DCFD3;
+}
+
+.bg-primary-500 {
+    background-color: #51B2B6;
+}
+
+.bg-primary-700 {
+    background-color: #319398;
+}
+
+.bg-primary-900 {
+    background-color: #18858A;
+}
+
+.bg-secondary-100 {
+    background-color: #FFDEC2;
+}
+
+.bg-secondary-300 {
+    background-color: #FFC696;
+}
+
+.bg-secondary-500 {
+    background-color: #FFB371;
+}
+
+.bg-secondary-700 {
+    background-color: #FC9F50;
+}
+
+.bg-secondary-900 {
+    background-color: #E57F27;
+}
+
+.bg-tertiary-100 {
+    background-color: #C6BEF0;
+}
+
+.bg-tertiary-300 {
+    background-color: #9A8DDD;
+}
+
+.bg-tertiary-500 {
+    background-color: #7566C6;
+}
+
+.bg-tertiary-700 {
+    background-color: #5646AE;
+}
+
+.bg-tertiary-900 {
+    background-color: #3D2B9E;
+}
+
+.bg-quaternary-100 {
+    background-color: #FFF3C2;
+}
+
+.bg-quaternary-300 {
+    background-color: #FFEA96;
+}
+
+.bg-quaternary-500 {
+    background-color: #FFE271;
+}
+
+.bg-quaternary-700 {
+    background-color: #FCD950;
+}
+
+.bg-quaternary-900 {
+    background-color: #E5BE27;
+}
+.bg-zinc-100 {
+    background-color: #f1f5f9;
+}
+
+.bg-zinc-300 {
+    background-color: #cbd5e1;
+}
+
+.bg-zinc-500 {
+    background-color: #64748b;
+}
+
+.bg-zinc-700 {
+    background-color: #334155;
+}
+
+.bg-zinc-900 {
+    background-color: #0f172a;
+}
+
+
+.text-primary-100 {
+    color: #B4EAEC;
+}
+
+.text-primary-300 {
+    color: #7DCFD3;
+}
+
+.text-primary-500 {
+    color: #51B2B6;
+}
+
+.text-primary-700 {
+    color: #319398;
+}
+
+.text-primary-900 {
+    color: #18858A;
+}
+
+.text-secondary-100 {
+    color: #FFDEC2;
+}
+
+.text-secondary-300 {
+    color: #FFC696;
+}
+
+.text-secondary-500 {
+    color: #FFB371;
+}
+
+.text-secondary-700 {
+    color: #FC9F50;
+}
+
+.text-secondary-900 {
+    color: #E57F27;
+}
+
+.text-tertiary-100 {
+    color: #C6BEF0;
+}
+
+.text-tertiary-300 {
+    color: #9A8DDD;
+}
+
+.text-tertiary-500 {
+    color: #7566C6;
+}
+
+.text-tertiary-700 {
+    color: #5646AE;
+}
+
+.text-tertiary-900 {
+    color: #3D2B9E;
+}
+
+.text-quaternary-100 {
+    color: #FFF3C2;
+}
+
+.text-quaternary-300 {
+    color: #FFEA96;
+}
+
+.text-quaternary-500 {
+    color: #FFE271;
+}
+
+.text-quaternary-700 {
+    color: #FCD950;
+}
+
+.text-quaternary-900 {
+    color: #E5BE27;
+}
+
+.text-zinc-100 {
+    color: #f1f5f9;
+}
+
+.text-zinc-300 {
+    color: #cbd5e1;
+}
+
+.text-zinc-500 {
+    color: #64748b;
+}
+
+.text-zinc-700 {
+    color: #334155;
+}
+
+.text-zinc-900 {
+    color: #0f172a;
+}
+
+
+
+
+
+

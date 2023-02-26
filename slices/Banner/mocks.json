@@ -82,6 +82,36 @@
             }
           }
         ]
+      },
+      "color_de_fondo": {
+        "__TYPE__": "FieldContent",
+        "value": "Blanco",
+        "type": "Select"
+      },
+      "opacidad_de_fondo": {
+        "__TYPE__": "FieldContent",
+        "value": "5",
+        "type": "Select"
+      },
+      "color_small_title": {
+        "__TYPE__": "FieldContent",
+        "value": "Blanco",
+        "type": "Select"
+      },
+      "op_color_small_title": {
+        "__TYPE__": "FieldContent",
+        "value": "16",
+        "type": "Number"
+      },
+      "color_title": {
+        "__TYPE__": "FieldContent",
+        "value": "Morado",
+        "type": "Select"
+      },
+      "op_color_title": {
+        "__TYPE__": "FieldContent",
+        "value": "87",
+        "type": "Number"
       }
     },
     "items": [
