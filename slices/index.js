@@ -4,6 +4,7 @@ import ArticleLists from './ArticleLists';
 import Banner from './Banner';
 import ContactForm from './ContactForm';
 import Image from './Image';
+import ProductCard from './ProductCard';
 import Quote from './Quote';
 import Text from './Text';
 
@@ -12,6 +13,7 @@ export {
 	Banner,
 	ContactForm,
 	Image,
+	ProductCard,
 	Quote,
 	Text,
 };
@@ -21,6 +23,7 @@ export const components = {
 	banner: Banner,
 	contact_form: ContactForm,
 	image: Image,
+	product_card: ProductCard,
 	quote: Quote,
 	text: Text,
 };

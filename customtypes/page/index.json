@@ -43,6 +43,9 @@
             },
             "banner": {
               "type": "SharedSlice"
+            },
+            "product_card": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -121,6 +121,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "ProductCard": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }
