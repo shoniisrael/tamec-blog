@@ -21,10 +21,10 @@ const ProductCard = ({ slice }) => (
           <PrismicText field={slice.primary.title} />
         </h3>
          <br/>
-        <p className="text-gray-700 text-base overflow-hidden max-h-24">
+        <div className="text-gray-700 text-base overflow-hidden max-h-24">
         <PrismicRichText   field={slice.primary.description}/>
 
-        </p>
+        </div>
       </div>
     </div>
 

@@ -126,6 +126,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "ProductCardWithPrice": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

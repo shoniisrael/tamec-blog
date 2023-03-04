@@ -5,6 +5,7 @@ import Banner from './Banner';
 import ContactForm from './ContactForm';
 import Image from './Image';
 import ProductCard from './ProductCard';
+import ProductCardWithPrice from './ProductCardWithPrice';
 import Quote from './Quote';
 import Text from './Text';
 
@@ -14,6 +15,7 @@ export {
 	ContactForm,
 	Image,
 	ProductCard,
+	ProductCardWithPrice,
 	Quote,
 	Text,
 };
@@ -24,6 +26,7 @@ export const components = {
 	contact_form: ContactForm,
 	image: Image,
 	product_card: ProductCard,
+	product_card_with_price: ProductCardWithPrice,
 	quote: Quote,
 	text: Text,
 };

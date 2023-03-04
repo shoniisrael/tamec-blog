@@ -46,6 +46,9 @@
             },
             "product_card": {
               "type": "SharedSlice"
+            },
+            "product_card_with_price": {
+              "type": "SharedSlice"
             }
           }
         }
