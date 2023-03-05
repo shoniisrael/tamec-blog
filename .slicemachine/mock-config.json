@@ -131,6 +131,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "ListaDestinos": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
     }
   }
 }

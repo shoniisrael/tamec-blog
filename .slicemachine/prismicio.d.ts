@@ -170,7 +170,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice | ArticleListsSlice | BannerSlice | ProductCardSlice | ProductCardWithPriceSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice | ArticleListsSlice | BannerSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice;
 /**
  * Page document from Prismic
  *
@@ -530,6 +530,141 @@ type ImageSliceVariation = ImageSliceDefault | ImageSliceWide;
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
 /**
+ * Primary content in ListaDestinos → Primary
+ *
+ */
+interface ListaDestinosSliceDefaultPrimary {
+    /**
+     * titulo de la seccion field in *ListaDestinos → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: lista_destinos.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * subtitulo o descripcion field in *ListaDestinos → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: lista_destinos.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Color de Fondo field in *ListaDestinos → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lista_destinos.primary.color_de_fondo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Naranja" | "Morado" | "Amarillo">;
+    /**
+     * Opacidad de fondo field in *ListaDestinos → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: 1 claro - 5 obscuro
+     * - **API ID Path**: lista_destinos.primary.opacidad_de_fondo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    opacidad_de_fondo: prismicT.NumberField;
+    /**
+     * color de texto field in *ListaDestinos → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lista_destinos.primary.color_de_texto
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color_de_texto: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Naranja" | "Morado" | "Amarillo">;
+    /**
+     * opacidad color de texto field in *ListaDestinos → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: 1 claro, 5 obscuro
+     * - **API ID Path**: lista_destinos.primary.opacidad_color_de_texto
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    opacidad_color_de_texto: prismicT.NumberField;
+}
+/**
+ * Item in ListaDestinos → Items
+ *
+ */
+export interface ListaDestinosSliceDefaultItem {
+    /**
+     * texto pequeño field in *ListaDestinos → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lista_destinos.items[].smalltext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    smalltext: prismicT.KeyTextField;
+    /**
+     * Texto principal field in *ListaDestinos → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lista_destinos.items[].principal_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    principal_text: prismicT.KeyTextField;
+    /**
+     * imagenFondo field in *ListaDestinos → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lista_destinos.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * link de pagina o enlace al dar click field in *ListaDestinos → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lista_destinos.items[].link_route
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_route: prismicT.LinkField;
+}
+/**
+ * Default variation for ListaDestinos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ListaDestinos`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ListaDestinosSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ListaDestinosSliceDefaultPrimary>, Simplify<ListaDestinosSliceDefaultItem>>;
+/**
+ * Slice variation for *ListaDestinos*
+ *
+ */
+type ListaDestinosSliceVariation = ListaDestinosSliceDefault;
+/**
+ * ListaDestinos Shared Slice
+ *
+ * - **API ID**: `lista_destinos`
+ * - **Description**: `ListaDestinos`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ListaDestinosSlice = prismicT.SharedSlice<"lista_destinos", ListaDestinosSliceVariation>;
+/**
  * Primary content in ProductCard → Primary
  *
  */
@@ -720,6 +855,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

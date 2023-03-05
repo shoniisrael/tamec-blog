@@ -1,0 +1,109 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Replied"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Laboris mollit qui eu esse quis eiusmod laborum officia. Magna eiusmod ad magna amet ullamco. Proident enim sint id consequat cillum nulla."
+            }
+          }
+        ]
+      },
+      "color_de_fondo": {
+        "__TYPE__": "FieldContent",
+        "value": "Blanco",
+        "type": "Select"
+      },
+      "opacidad_de_fondo": {
+        "__TYPE__": "FieldContent",
+        "value": "26",
+        "type": "Number"
+      },
+      "color_de_texto": {
+        "__TYPE__": "FieldContent",
+        "value": "Morado",
+        "type": "Select"
+      },
+      "opacidad_color_de_texto": {
+        "__TYPE__": "FieldContent",
+        "value": "50",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "smalltext",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "worse",
+              "type": "Text"
+            }
+          ],
+          [
+            "principal_text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "perfectly",
+              "type": "Text"
+            }
+          ],
+          [
+            "image",
+            {
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+                "width": 2747,
+                "height": 4120
+              },
+              "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+              "width": 2747,
+              "height": 4120,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
+            }
+          ],
+          [
+            "link_route",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

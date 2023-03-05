@@ -1,0 +1,113 @@
+{
+  "id": "lista_destinos",
+  "type": "SharedSlice",
+  "name": "ListaDestinos",
+  "description": "ListaDestinos",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ListaDestinos",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "titulo de la seccion",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "subtitulo o descripcion",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "color_de_fondo": {
+          "type": "Select",
+          "config": {
+            "label": "Color de Fondo",
+            "placeholder": "",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste",
+              "Naranja",
+              "Morado",
+              "Amarillo"
+            ]
+          }
+        },
+        "opacidad_de_fondo": {
+          "type": "Number",
+          "config": {
+            "label": "Opacidad de fondo",
+            "placeholder": "1 claro - 5 obscuro"
+          }
+        },
+        "color_de_texto": {
+          "type": "Select",
+          "config": {
+            "label": "color de texto",
+            "placeholder": "",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste",
+              "Naranja",
+              "Morado",
+              "Amarillo"
+            ]
+          }
+        },
+        "opacidad_color_de_texto": {
+          "type": "Number",
+          "config": {
+            "label": "opacidad color de texto",
+            "placeholder": "1 claro, 5 obscuro"
+          }
+        }
+      },
+      "items": {
+        "smalltext": {
+          "type": "Text",
+          "config": {
+            "label": "texto pequeño",
+            "placeholder": ""
+          }
+        },
+        "principal_text": {
+          "type": "Text",
+          "config": {
+            "label": "Texto principal",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "imagenFondo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "link_route": {
+          "type": "Link",
+          "config": {
+            "label": "link de pagina o enlace al dar click",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
