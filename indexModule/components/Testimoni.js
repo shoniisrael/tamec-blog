@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // import react slick
 import Slider from "react-slick";
-import Image from "next/image";
 
 const Testimoni = ({
   listTestimoni = [
@@ -53,7 +52,7 @@ const Testimoni = ({
         </a>
       );
     },
-    dotsClass: "slick-dots w-max absolute mt-20  ",
+    dotsClass: "slick-dots w-max absolute mt-64  ",
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -87,8 +86,8 @@ const Testimoni = ({
         className="flex items-stretch justify-items-stretch"
       >
         {listTestimoni.map((listTestimonis, index) => (
-          <div className="flex items-stretch px-3" key={index}>
-            <div className="flex flex-col rounded-lg border-2 border-gray-500 p-8 transition-all hover:border-teal-500">
+          <div className="flex h-60 items-stretch px-3" key={index}>
+            <div className="hover:border-teal-500 flex h-60 flex-col rounded-lg border-2 border-gray-500 p-8 transition-all">
               <div className="flex w-full flex-col items-stretch xl:flex-row xl:items-center">
                 <div className="order-2 flex xl:order-1">
                   {/*<Image*/}
@@ -97,7 +96,11 @@ const Testimoni = ({
                   {/*  width={50}*/}
                   {/*  alt="Icon People"*/}
                   {/*/>*/}
-                  <img src={listTestimonis.image+"?img="+index} alt="oeu" srcset=""/>
+                  <img
+                    src={listTestimonis.image + "?img=" + index}
+                    alt="oeu"
+                    srcset=""
+                  />
                   <div className="ml-5 flex flex-col text-left">
                     <p className="text-lg capitalize text-black-600">
                       {listTestimonis.name}
@@ -136,7 +139,7 @@ const Testimoni = ({
       <div className="flex w-full items-center justify-end">
         <div className="mt-14 flex w-auto flex-none justify-between">
           <div
-            className="bg-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
+            className="bg-white border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border transition-all"
             onClick={sliderRef?.slickPrev}
           >
             <svg
@@ -155,7 +158,7 @@ const Testimoni = ({
             </svg>
           </div>
           <div
-            className="bg-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
+            className="bg-white border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border transition-all"
             onClick={sliderRef?.slickNext}
           >
             <svg

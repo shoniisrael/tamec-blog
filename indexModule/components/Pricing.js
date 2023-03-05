@@ -12,38 +12,39 @@ const Pricing = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-zinc-300 to-white w-full py-14"
+      className="from-primary-300 to-white w-full bg-gradient-to-b py-14"
       id="pricing"
     >
-      <div className="max-w-screen-2xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
-        <div className="flex flex-col w-full">
+      <div className="mx-auto  flex w-full max-w-screen-2xl flex-col justify-center px-6 text-center sm:px-8 lg:px-16">
+        <div className="flex w-full flex-col">
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
+              className="text-2xl font-medium leading-relaxed text-black-600 sm:text-3xl lg:text-4xl"
             >
               Escoge el servicio según tus necesidades
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
-              className="leading-normal w-10/12 sm:w-7/12 lg:w-6/12 mx-auto my-2 text-center"
+              className="mx-auto my-2 w-10/12 text-center leading-normal sm:w-7/12 lg:w-6/12"
             >
-              Personaliza tu experiencia y elige el servicio que mejor se ajuste a tus necesidades y presupuesto
+              Personaliza tu experiencia y elige el servicio que mejor se ajuste
+              a tus necesidades y presupuesto
             </motion.p>
           </ScrollAnimationWrapper>
-          <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12 px-6 sm:px-0 lg:px-6">
-            <ScrollAnimationWrapper className="flex justify-center cursor-pointer bg-white">
+          <div className="grid grid-flow-row grid-cols-1 gap-4 py-8 px-6 sm:grid-flow-col sm:grid-cols-3 sm:px-0 lg:gap-12 lg:py-12 lg:px-6">
+            <ScrollAnimationWrapper className="flex cursor-pointer justify-center rounded">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center bg-white border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="bg-white flex flex-col items-center justify-center rounded-xl border-2 border-gray-500 py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
-                  scale : 1.1,
+                  scale: 1.1,
                   transition: {
-                    duration: .2
-                  }
+                    duration: 0.2,
+                  },
                 }}
               >
-                <div className="p-4 lg:p-0 mt-6 lg:mt-16">
+                <div className="mt-6 p-4 lg:mt-16 lg:p-0">
                   <Image
                     src="/assets/avion.png"
                     width={64}
@@ -51,113 +52,111 @@ const Pricing = () => {
                     alt="Free Plan"
                   />
                 </div>
-                <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
+                <p className="my-2 text-lg font-medium capitalize text-black-600 sm:my-7">
                   Vuelos Aéreos
                 </p>
-                <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
-                  <li className="relative check custom-list my-2">
+                <ul className="flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left text-black-500 xl:pl-0">
+                  <li className="check custom-list relative my-2">
                     Amplia red de destinos nacionales e internacionales
                   </li>
-                  <li className="relative check custom-list my-2">
+                  <li className="check custom-list relative my-2">
                     Seguridad y Confiabilidad
                   </li>
-                  <li className="relative check custom-list my-2">
+                  <li className="check custom-list relative my-2">
                     Nos ajustamos a tus necesidades
                   </li>
-                  <li className="relative check custom-list my-2">
+                  <li className="check custom-list relative my-2">
                     Tarifas competitivas y accesibles.
                   </li>
                 </ul>
-                <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
+                <div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">
                   <ButtonOutline>Ver mas</ButtonOutline>
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="flex justify-center bg-white cursor-pointer">
+            <ScrollAnimationWrapper className="flex cursor-pointer justify-center rounded">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center bg-white border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="bg-white flex flex-col items-center justify-center rounded-xl border-2 border-gray-500 py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
-                  scale : 1.1,
+                  scale: 1.1,
                   transition: {
-                    duration: .2
-                  }
+                    duration: 0.2,
+                  },
                 }}
               >
-              <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                <Image
-                  src="/assets/visa.png"
-                  width={64}
-                  height={64}
-                  alt="Standard Plan"
-                />
-              </div>
-              <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
-                Tramite de visados
-              </p>
-              <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
-                <li className="relative check custom-list my-2">
-               Ayuda en la obtención de turnos y llenado de documentación
-                </li>
-                <li className="relative check custom-list my-2">
-                  Experiencia y conocimiento especializado.
-                </li>
-                <li className="relative check custom-list my-2">
-                  Atención personalizada y cercana.
-                </li>
-                <li className="relative check custom-list my-2">
-                  Asesoramiento y acompañamiento en todo momento.
-                </li>
-              </ul>
-              <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-
-                <ButtonOutline>Ver mas</ButtonOutline>
-              </div>
+                <div className="mt-6 p-4 lg:mt-16 lg:p-0">
+                  <Image
+                    src="/assets/visa.png"
+                    width={64}
+                    height={64}
+                    alt="Standard Plan"
+                  />
+                </div>
+                <p className="my-2 text-lg font-medium capitalize text-black-600 sm:my-7">
+                  Tramite de visados
+                </p>
+                <ul className="flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left text-black-500 xl:pl-0">
+                  <li className="check custom-list relative my-2">
+                    Ayuda en la obtención de turnos y llenado de documentación
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Experiencia y conocimiento especializado.
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Atención personalizada y cercana.
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Asesoramiento y acompañamiento en todo momento.
+                  </li>
+                </ul>
+                <div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">
+                  <ButtonOutline>Ver mas</ButtonOutline>
+                </div>
               </motion.div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="flex justify-center bg-white cursor-pointer">
+            <ScrollAnimationWrapper className="flex cursor-pointer justify-center rounded">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center bg-white border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="bg-white flex flex-col items-center justify-center rounded-xl border-2 border-gray-500 py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
-                  scale : 1.1,
+                  scale: 1.1,
                   transition: {
-                    duration: .2
-                  }
+                    duration: 0.2,
+                  },
                 }}
               >
-              <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                <Image
-                  src="/assets/tour.png"
-                  width={64}
-                  height={64}
-                  alt="Premium Plan"
-                />
-              </div>
-              <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
-                Programas y Tours
-              </p>
-              <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
-                <li className="relative check custom-list my-2">
-                  Destinos paradisíacos y atractivos.
-                </li>
-                <li className="relative check custom-list my-2">
-                  Variedad de opciones de alojamiento.
-                </li>
-                <li className="relative check custom-list my-2">
-                  Itinerarios flexibles y adaptados.
-                </li>
-                <li className="relative check custom-list my-2">
-                  Precios competitivos y accesibles.
-                </li>
-                <li className="relative check custom-list my-2">
-                  Reservas y pagos fáciles.
-                </li>
-              </ul>
-              <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-
-                <ButtonOutline>Ver mas</ButtonOutline>
-              </div>
+                <div className="mt-6 p-4 lg:mt-16 lg:p-0">
+                  <Image
+                    src="/assets/tour.png"
+                    width={64}
+                    height={64}
+                    alt="Premium Plan"
+                  />
+                </div>
+                <p className="my-2 text-lg font-medium capitalize text-black-600 sm:my-7">
+                  Programas y Tours
+                </p>
+                <ul className="flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left text-black-500 xl:pl-0">
+                  <li className="check custom-list relative my-2">
+                    Destinos paradisíacos y atractivos.
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Variedad de opciones de alojamiento.
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Itinerarios flexibles y adaptados.
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Precios competitivos y accesibles.
+                  </li>
+                  <li className="check custom-list relative my-2">
+                    Reservas y pagos fáciles.
+                  </li>
+                </ul>
+                <div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">
+                  <ButtonOutline>Ver mas</ButtonOutline>
+                </div>
               </motion.div>
             </ScrollAnimationWrapper>
           </div>
@@ -204,39 +203,45 @@ const Pricing = () => {
         {/*    </motion.div>*/}
         {/*  </ScrollAnimationWrapper>*/}
         {/*</div>*/}
-        <div className="flex flex-col w-full my-16" id="testimoni">
+        <div className="my-16 flex w-full flex-col" id="testimoni">
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto">
+              className="sm: mx-auto w-9/12 text-2xl font-medium leading-normal text-black-600 sm:text-3xl lg:w-4/12 lg:text-4xl"
+            >
               No te preocupes si nunca has viajado antes
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
-              className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12"
-            > ¡Tamec te guiará en cada paso!
-              Escucha lo que algunos de nuestros clientes han dicho:
+              className="mx-auto mb-2 mt-4 w-10/12 leading-normal sm:w-7/12 lg:w-6/12"
+            >
+              {" "}
+              ¡Tamec te guiará en cada paso! Escucha lo que algunos de nuestros
+              clientes han dicho:
             </motion.p>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper className="w-full flex flex-col py-12">
+          <ScrollAnimationWrapper className="flex w-full flex-col py-12">
             <motion.div variants={scrollAnimation}>
               <Testimoni />
             </motion.div>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper className="relative w-full mt-16">
-            <motion.div variants={scrollAnimation} custom={{duration: 3}}>
-              <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white">
-                <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
-                  <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
-                                        ¡Haz tus sueños realidad y planifica tu próximo viaje con Tamec hoy mismo!
-
+          <ScrollAnimationWrapper className="relative mt-16 w-full">
+            <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
+              <div className="bg-white absolute  z-10 flex w-full flex-col items-center justify-between rounded-xl py-8 px-6 sm:flex-row sm:py-14 sm:px-12 lg:px-16">
+                <div className="mb-6 flex w-10/12 flex-col text-left sm:mb-0 sm:w-7/12 lg:w-5/12">
+                  <h5 className="text-xl font-medium leading-relaxed text-black-600 sm:text-2xl lg:text-3xl">
+                    ¡Haz tus sueños realidad y planifica tu próximo viaje con
+                    Tamec hoy mismo!
                   </h5>
-                  <p>Reserva tus vuelos, tramita tus visas y compra tus tours con nosotros.</p>
+                  <p>
+                    Reserva tus vuelos, tramita tus visas y compra tus tours con
+                    nosotros.
+                  </p>
                 </div>
                 <ButtonPrimary>Me interesa</ButtonPrimary>
               </div>
               <div
-                className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"
+                className="roudned-lg absolute top-0 left-0 right-0 mx-auto mt-8 h-60 w-11/12 bg-black-600 opacity-5 sm:h-56"
                 style={{ filter: "blur(114px)" }}
               ></div>
             </motion.div>
