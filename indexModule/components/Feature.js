@@ -16,7 +16,7 @@ const Feature = () => {
 
   return (
     <div
-      className="mx-auto mt-8 mb-6 max-w-screen-2xl px-6 sm:my-14 sm:py-14 sm:px-8 lg:px-16"
+      className="bg-white mx-auto mt-8 mb-6 max-w-screen-2xl px-6 sm:my-14 sm:py-14 sm:px-8 lg:px-16"
       id="feature"
     >
       <div className="p y-8 my-12 grid grid-flow-row grid-cols-1 gap-8  sm:grid-flow-col sm:grid-cols-2">
