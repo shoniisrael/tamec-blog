@@ -6,8 +6,8 @@ import ContactForm from './ContactForm';
 import HeroSection from './HeroSection';
 import Image from './Image';
 import ListaDestinos from './ListaDestinos';
+import ListaDeToursConPrecio from './ListaDeToursConPrecio';
 import ProductCard from './ProductCard';
-import ProductCardWithPrice from './ProductCardWithPrice';
 import Quote from './Quote';
 import Text from './Text';
 
@@ -18,8 +18,8 @@ export {
 	HeroSection,
 	Image,
 	ListaDestinos,
+	ListaDeToursConPrecio,
 	ProductCard,
-	ProductCardWithPrice,
 	Quote,
 	Text,
 };
@@ -31,8 +31,8 @@ export const components = {
 	hero_section: HeroSection,
 	image: Image,
 	lista_destinos: ListaDestinos,
+	product_card_with_price: ListaDeToursConPrecio,
 	product_card: ProductCard,
-	product_card_with_price: ProductCardWithPrice,
 	quote: Quote,
 	text: Text,
 };

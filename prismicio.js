@@ -11,12 +11,16 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 /**
  * The project's Prismic Route Resolvers. This list determines a Prismic document's URL.
  *
- * @type {prismic.ClientConfig['routes']}
+ * @type {prismic.ClientConfig["routes"]}
  */
 const routes = [
   {
     type: "article",
     path: "/articles/:uid",
+  },
+  {
+    type: "destinos",
+    path: "/destinos/:uid",
   },
   {
     type: "page",

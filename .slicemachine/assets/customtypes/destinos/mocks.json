@@ -1,0 +1,130 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "field"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Canal"
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_section$35bddac6-47fc-40a9-a258-28387cc47d48",
+        "name": "hero_section",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "titulo": {
+              "__TYPE__": "FieldContent",
+              "value": "size",
+              "type": "Text"
+            },
+            "titulo_principal": {
+              "__TYPE__": "FieldContent",
+              "value": "list",
+              "type": "Text"
+            },
+            "parrafo": {
+              "__TYPE__": "FieldContent",
+              "value": "made",
+              "type": "Text"
+            },
+            "texto_boton_azul": {
+              "__TYPE__": "FieldContent",
+              "value": "truck",
+              "type": "Text"
+            },
+            "texto_boton_blanco": {
+              "__TYPE__": "FieldContent",
+              "value": "serve",
+              "type": "Text"
+            },
+            "link_boton_azul": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            },
+            "link_boton_blanco": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            },
+            "imagen_de_fondo": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+                "width": 5616,
+                "height": 3744
+              },
+              "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+              "width": 5616,
+              "height": 3744,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "product_card_with_price$7585f8e1-0625-4aac-bc8f-7c94bbe7f188",
+        "name": "product_card_with_price",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "title",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "recently",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "desde",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "forget",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

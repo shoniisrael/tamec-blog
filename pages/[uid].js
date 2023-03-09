@@ -6,17 +6,25 @@ import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
-const Page = ({ page, navigation, settings,articles }) => {
+const Page = ({ page, navigation, settings, articles }) => {
   return (
-    <Layout    withHeaderDivider={true}
-               withProfile={true} navigation={navigation} settings={settings}>
+    <Layout
+      withHeaderDivider={true}
+      withProfile={true}
+      navigation={navigation}
+      settings={settings}
+    >
       <Head>
         <title>
           {prismicH.asText(page.data.title)} |{" "}
           {prismicH.asText(settings.data.name)}
         </title>
       </Head>
-      <SliceZone slices={page.data.slices} components={components} context={articles}/>
+      <SliceZone
+        slices={page.data.slices}
+        components={components}
+        context={articles}
+      />
     </Layout>
   );
 };
@@ -50,9 +58,9 @@ export async function getStaticPaths() {
   const client = createClient();
 
   const pages = await client.getAllByType("page");
-
+  const filteredPages = pages.filter((item) => item !== "destinos");
   return {
-    paths: pages.map((page) => prismicH.asLink(page)),
+    paths: filteredPages.map((page) => prismicH.asLink(page)),
     fallback: false,
   };
 }

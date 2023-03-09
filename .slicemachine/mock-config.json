@@ -58,7 +58,8 @@
         }
       }
     },
-    "articlelist": {}
+    "articlelist": {},
+    "destinos": {}
   },
   "slices": {
     "Text": {
@@ -129,7 +130,8 @@
     },
     "ProductCardWithPrice": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "ListaDestinos": {
@@ -141,6 +143,12 @@
     "HeroSection": {
       "default": {
         "primary": {}
+      }
+    },
+    "ListaDeToursConPrecio": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

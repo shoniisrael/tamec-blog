@@ -80,6 +80,46 @@ type ArticlelistDocumentData = Record<string, never>;
  * @typeParam Lang - Language API ID of the document.
  */
 export type ArticlelistDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ArticlelistDocumentData>, "articlelist", Lang>;
+/** Content for Nuevo Destino documents */
+interface DestinosDocumentData {
+    /**
+     * Title field in *Nuevo Destino*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: destinos.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *Nuevo Destino*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: destinos.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<DestinosDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Nuevo Destino → Slice Zone*
+ *
+ */
+type DestinosDocumentDataSlicesSlice = HeroSectionSlice | ProductCardWithPriceSlice;
+/**
+ * Nuevo Destino document from Prismic
+ *
+ * - **API ID**: `destinos`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DestinosDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<DestinosDocumentData>, "destinos", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
@@ -249,7 +289,7 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = ArticleDocument | ArticlelistDocument | NavigationDocument | PageDocument | SettingsDocument;
+export type AllDocumentTypes = ArticleDocument | ArticlelistDocument | DestinosDocument | NavigationDocument | PageDocument | SettingsDocument;
 /**
  * Default variation for ArticleLists Slice
  *
@@ -774,6 +814,101 @@ type ListaDestinosSliceVariation = ListaDestinosSliceDefault;
  */
 export type ListaDestinosSlice = prismicT.SharedSlice<"lista_destinos", ListaDestinosSliceVariation>;
 /**
+ * Primary content in ListaDeToursConPrecio → Primary
+ *
+ */
+interface ProductCardWithPriceSliceDefaultPrimary {
+    /**
+     * title field in *ListaDeToursConPrecio → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_card_with_price.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * description field in *ListaDeToursConPrecio → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_card_with_price.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in ListaDeToursConPrecio → Items
+ *
+ */
+export interface ProductCardWithPriceSliceDefaultItem {
+    /**
+     * Texto Principal field in *ListaDeToursConPrecio → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_card_with_price.items[].principal_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    principal_text: prismicT.KeyTextField;
+    /**
+     * desde valor field in *ListaDeToursConPrecio → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_card_with_price.items[].desde
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    desde: prismicT.KeyTextField;
+    /**
+     * link field in *ListaDeToursConPrecio → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_card_with_price.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * imagen field in *ListaDeToursConPrecio → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_card_with_price.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for ListaDeToursConPrecio Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ProductCardWithPrice`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ProductCardWithPriceSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ProductCardWithPriceSliceDefaultPrimary>, Simplify<ProductCardWithPriceSliceDefaultItem>>;
+/**
+ * Slice variation for *ListaDeToursConPrecio*
+ *
+ */
+type ProductCardWithPriceSliceVariation = ProductCardWithPriceSliceDefault;
+/**
+ * ListaDeToursConPrecio Shared Slice
+ *
+ * - **API ID**: `product_card_with_price`
+ * - **Description**: `ProductCardWithPrice`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ProductCardWithPriceSlice = prismicT.SharedSlice<"product_card_with_price", ProductCardWithPriceSliceVariation>;
+/**
  * Primary content in ProductCard → Primary
  *
  */
@@ -822,55 +957,6 @@ type ProductCardSliceVariation = ProductCardSliceDefault;
  *
  */
 export type ProductCardSlice = prismicT.SharedSlice<"product_card", ProductCardSliceVariation>;
-/**
- * Primary content in ProductCardWithPrice → Primary
- *
- */
-interface ProductCardWithPriceSliceDefaultPrimary {
-    /**
-     * Title field in *ProductCardWithPrice → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: product_card_with_price.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.RichTextField;
-    /**
-     * Description field in *ProductCardWithPrice → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: product_card_with_price.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-}
-/**
- * Default variation for ProductCardWithPrice Slice
- *
- * - **API ID**: `default`
- * - **Description**: `ProductCardWithPrice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ProductCardWithPriceSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ProductCardWithPriceSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *ProductCardWithPrice*
- *
- */
-type ProductCardWithPriceSliceVariation = ProductCardWithPriceSliceDefault;
-/**
- * ProductCardWithPrice Shared Slice
- *
- * - **API ID**: `product_card_with_price`
- * - **Description**: `ProductCardWithPrice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ProductCardWithPriceSlice = prismicT.SharedSlice<"product_card_with_price", ProductCardWithPriceSliceVariation>;
 /**
  * Primary content in Quote → Primary
  *
@@ -964,6 +1050,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
