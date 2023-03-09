@@ -137,6 +137,11 @@
         "items": {},
         "primary": {}
       }
+    },
+    "HeroSection": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

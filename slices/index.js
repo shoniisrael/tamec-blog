@@ -3,6 +3,7 @@
 import ArticleLists from './ArticleLists';
 import Banner from './Banner';
 import ContactForm from './ContactForm';
+import HeroSection from './HeroSection';
 import Image from './Image';
 import ListaDestinos from './ListaDestinos';
 import ProductCard from './ProductCard';
@@ -14,6 +15,7 @@ export {
 	ArticleLists,
 	Banner,
 	ContactForm,
+	HeroSection,
 	Image,
 	ListaDestinos,
 	ProductCard,
@@ -26,6 +28,7 @@ export const components = {
 	article_lists: ArticleLists,
 	banner: Banner,
 	contact_form: ContactForm,
+	hero_section: HeroSection,
 	image: Image,
 	lista_destinos: ListaDestinos,
 	product_card: ProductCard,

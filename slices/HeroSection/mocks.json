@@ -1,0 +1,74 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "titulo": {
+        "__TYPE__": "FieldContent",
+        "value": "solution",
+        "type": "Text"
+      },
+      "titulo_principal": {
+        "__TYPE__": "FieldContent",
+        "value": "rock",
+        "type": "Text"
+      },
+      "parrafo": {
+        "__TYPE__": "FieldContent",
+        "value": "claws",
+        "type": "Text"
+      },
+      "texto_boton_azul": {
+        "__TYPE__": "FieldContent",
+        "value": "milk",
+        "type": "Text"
+      },
+      "texto_boton_blanco": {
+        "__TYPE__": "FieldContent",
+        "value": "merely",
+        "type": "Text"
+      },
+      "link_boton_azul": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "link_boton_blanco": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "imagen_de_fondo": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+          "width": 6000,
+          "height": 4000
+        },
+        "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+        "width": 6000,
+        "height": 4000,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

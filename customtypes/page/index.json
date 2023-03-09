@@ -52,6 +52,9 @@
             },
             "lista_destinos": {
               "type": "SharedSlice"
+            },
+            "hero_section": {
+              "type": "SharedSlice"
             }
           }
         }

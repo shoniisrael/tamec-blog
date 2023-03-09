@@ -1,0 +1,78 @@
+{
+  "id": "hero_section",
+  "type": "SharedSlice",
+  "name": "HeroSection",
+  "description": "HeroSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroSection",
+      "primary": {
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Titulo en negro",
+            "placeholder": ""
+          }
+        },
+        "titulo_principal": {
+          "type": "Text",
+          "config": {
+            "label": "titulo en color principal",
+            "placeholder": ""
+          }
+        },
+        "parrafo": {
+          "type": "Text",
+          "config": {
+            "label": "parrafo",
+            "placeholder": ""
+          }
+        },
+        "texto_boton_azul": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton azul",
+            "placeholder": ""
+          }
+        },
+        "texto_boton_blanco": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton blanco",
+            "placeholder": ""
+          }
+        },
+        "link_boton_azul": {
+          "type": "Link",
+          "config": {
+            "label": "link boton azul",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_boton_blanco": {
+          "type": "Link",
+          "config": {
+            "label": "link boton blanco",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "imagen_de_fondo": {
+          "type": "Image",
+          "config": {
+            "label": "imagen de fondo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
