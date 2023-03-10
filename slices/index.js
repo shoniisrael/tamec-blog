@@ -2,7 +2,10 @@
 
 import ArticleLists from './ArticleLists';
 import Banner from './Banner';
+import Banner2 from './Banner2';
 import ContactForm from './ContactForm';
+import Faq from './Faq';
+import Hero from './Hero';
 import HeroSection from './HeroSection';
 import Image from './Image';
 import ListaDestinos from './ListaDestinos';
@@ -14,7 +17,10 @@ import Text from './Text';
 export {
 	ArticleLists,
 	Banner,
+	Banner2,
 	ContactForm,
+	Faq,
+	Hero,
 	HeroSection,
 	Image,
 	ListaDestinos,
@@ -27,7 +33,10 @@ export {
 export const components = {
 	article_lists: ArticleLists,
 	banner: Banner,
+	banner2: Banner2,
 	contact_form: ContactForm,
+	faq: Faq,
+	hero: Hero,
 	hero_section: HeroSection,
 	image: Image,
 	lista_destinos: ListaDestinos,

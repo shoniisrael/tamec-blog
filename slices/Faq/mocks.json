@@ -1,0 +1,41 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "hot",
+        "type": "Text"
+      },
+      "description": {
+        "__TYPE__": "FieldContent",
+        "value": "complete",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "pregunta",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "author",
+              "type": "Text"
+            }
+          ],
+          [
+            "respuesta",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "ten",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

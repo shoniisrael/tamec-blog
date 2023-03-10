@@ -1,0 +1,66 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "branch"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "faq$2061360e-e467-42af-8f74-5f3e347ddcfb",
+        "name": "faq",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Highway"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Minim quis aute occaecat quis dolore voluptate aliquip adipisicing sint sunt voluptate Lorem aliquip consequat aliqua. Sint est eiusmod nostrud anim ullamco sint velit sunt quis ad. Id esse culpa nisi labore adipisicing irure."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "pregunta",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "getting",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "respuesta",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "mission",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

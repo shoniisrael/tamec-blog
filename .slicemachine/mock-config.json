@@ -59,7 +59,8 @@
       }
     },
     "articlelist": {},
-    "destinos": {}
+    "destinos": {},
+    "faq": {}
   },
   "slices": {
     "Text": {
@@ -149,6 +150,21 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "Banner2": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Hero": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Faq": {
+      "default": {
+        "primary": {}
       }
     }
   }

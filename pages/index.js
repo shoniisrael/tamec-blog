@@ -7,8 +7,10 @@ import SeoHead from "../indexModule/components/SeoHead";
 import Head from "next/head";
 import { Layout } from "../components/Layout";
 import { createClient } from "../prismicio";
+import { SliceZone } from "@prismicio/react";
+import { components } from "../slices";
 
-const Home = ({ navigation, settings }) => {
+const Home = ({ navigation, settings, page }) => {
   return (
     <>
       <SeoHead title="Agencia de Viajes Tamec" />
@@ -18,16 +20,15 @@ const Home = ({ navigation, settings }) => {
         navigation={navigation}
         settings={settings}
       >
-
         <Head>
           <title>TAMEC | Agencia de Viajes Online</title>
         </Head>
 
+        <SliceZone slices={page.data.slices} components={components} />
         <Hero />
         <Feature />
         <Pricing />
         {/*<Footer />*/}
-
       </Layout>
     </>
   );
@@ -40,11 +41,13 @@ export async function getStaticProps({ params, previewData }) {
 
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
+  const page = await client.getByUID("page", "home");
 
   return {
     props: {
-          navigation,
+      navigation,
       settings,
+      page,
     },
   };
 }

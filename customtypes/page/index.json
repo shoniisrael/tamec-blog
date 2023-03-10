@@ -55,6 +55,12 @@
             },
             "hero_section": {
               "type": "SharedSlice"
+            },
+            "banner2": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
             }
           }
         }

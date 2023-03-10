@@ -58,7 +58,8 @@ export async function getStaticPaths() {
   const client = createClient();
 
   const pages = await client.getAllByType("page");
-  const filteredPages = pages.filter((item) => item !== "destinos");
+  let filteredPages = pages.filter((item) => item !== "destinos");
+  filteredPages = filteredPages.filter((item) => item !== "home");
   return {
     paths: filteredPages.map((page) => prismicH.asLink(page)),
     fallback: false,

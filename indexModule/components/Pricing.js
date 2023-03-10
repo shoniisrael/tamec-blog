@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
-import ButtonPrimary from "./misc/ButtonPrimary";
 import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
@@ -203,7 +202,10 @@ const Pricing = () => {
           {/*</div>*/}
         </div>
       </div>
-      <div className="my-16 flex w-full flex-col" id="testimoni">
+      <div
+        className="container my-16 mx-auto flex w-full flex-col"
+        id="testimoni"
+      >
         <ScrollAnimationWrapper>
           <motion.h3
             variants={scrollAnimation}
@@ -225,7 +227,7 @@ const Pricing = () => {
             <Testimoni />
           </motion.div>
         </ScrollAnimationWrapper>
-        <ScrollAnimationWrapper className="relative mt-16 w-full">
+        <ScrollAnimationWrapper className="relative my-16 h-52 w-full">
           <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
             <div className="bg-primary-900 absolute  z-10 flex w-full flex-col items-center justify-between rounded-xl py-8 px-6 sm:flex-row sm:py-14 sm:px-12 lg:px-16">
               <div className="mb-6 flex w-10/12 flex-col text-left sm:mb-0 sm:w-7/12 lg:w-5/12">
@@ -233,12 +235,14 @@ const Pricing = () => {
                   ¡Haz tus sueños realidad y planifica tu próximo viaje con
                   Tamec hoy mismo!
                 </h5>
-                <p className={"text-cyan-50"}>
+                <p className={"text-black-900"}>
                   Reserva tus vuelos, tramita tus visas y compra tus tours con
                   nosotros.
                 </p>
               </div>
-              <ButtonPrimary>Me interesa</ButtonPrimary>
+              <button className="active:text-rose-500 bg-white text-primary-500 hover:text-primary-700 block w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring sm:w-auto">
+                Contactar
+              </button>
             </div>
             <div
               className="roudned-lg absolute top-0 left-0 right-0 mx-auto mt-8 h-60 w-11/12 bg-black-600 opacity-5 sm:h-56"
