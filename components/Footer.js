@@ -221,35 +221,37 @@ export const Footer = () => {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-gray-900 text-lg font-medium">Helpful Links</p>
+              <p className="text-gray-900 text-lg font-medium">Links Utils</p>
 
               <nav aria-label="Footer Helpful Nav" className="mt-8">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <a
                       className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
+                      href="/faq"
                     >
-                      FAQs
+                      Preguntas Frecuentes-FAQ
                     </a>
                   </li>
 
-                  <li>
-                    <a
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Support
-                    </a>
-                  </li>
+                  {/*<li>*/}
+                  {/*  <a*/}
+                  {/*    className="text-gray-700 hover:text-gray-700/75 transition"*/}
+                  {/*    href="/"*/}
+                  {/*  >*/}
+                  {/*    Support*/}
+                  {/*  </a>*/}
+                  {/*</li>*/}
 
                   <li>
                     <a
                       className="group flex justify-center gap-1.5 sm:justify-start"
-                      href="/"
+                      href="https://wa.me/message/YREO4ZR4GE43E1"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <span className="text-gray-700 group-hover:text-gray-700/75 transition">
-                        Live Chat
+                        Chatear con nosotros
                       </span>
 
                       <span className="relative flex h-2 w-2">

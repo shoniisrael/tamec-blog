@@ -11,19 +11,19 @@ const Pricing = () => {
 
   return (
     <div>
-      <div className=" bg-primary-300 w-full py-14" id="pricing">
+      <div className=" bg-primary-900 w-full py-8 lg:py-24" id="pricing">
         <div className="mx-auto  flex w-full max-w-screen-2xl flex-col justify-center px-6 text-center sm:px-8 lg:px-16">
           <div className="flex w-full flex-col">
             <ScrollAnimationWrapper>
               <motion.h3
                 variants={scrollAnimation}
-                className="text-2xl font-medium leading-relaxed text-black-600 sm:text-3xl lg:text-4xl"
+                className="text-white text-2xl font-medium leading-relaxed sm:text-3xl lg:text-4xl"
               >
                 Escoge el servicio según tus necesidades
               </motion.h3>
               <motion.p
                 variants={scrollAnimation}
-                className="mx-auto my-2 w-10/12 text-center leading-normal sm:w-7/12 lg:w-6/12"
+                className="text-white mx-auto my-2 w-10/12 text-center leading-normal sm:w-7/12 lg:w-6/12"
               >
                 Personaliza tu experiencia y elige el servicio que mejor se
                 ajuste a tus necesidades y presupuesto

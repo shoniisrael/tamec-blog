@@ -18,7 +18,7 @@ const Faq = ({ slice }) => (
       <div className="divide-gray-700 flex flex-col divide-y text-tertiary-900 sm:px-8 lg:px-12 xl:px-32">
         {slice?.items?.map((item, i) => (
           <details>
-            <summary className="cursor-pointer py-2 outline-none focus:underline">
+            <summary className="cursor-pointer py-2 font-bold outline-none focus:underline">
               <span>{item.pregunta}</span>
             </summary>
             <div className="px-4 pb-4">
