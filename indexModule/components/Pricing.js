@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
-import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
@@ -66,9 +65,9 @@ const Pricing = () => {
                       Tarifas competitivas y accesibles.
                     </li>
                   </ul>
-                  <div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">
-                    <ButtonOutline>Ver mas</ButtonOutline>
-                  </div>
+                  {/*<div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">*/}
+                  {/*  <ButtonOutline>Ver mas</ButtonOutline>*/}
+                  {/*</div>*/}
                 </motion.div>
               </ScrollAnimationWrapper>
               <ScrollAnimationWrapper className="flex cursor-pointer justify-center rounded">
@@ -107,9 +106,9 @@ const Pricing = () => {
                       Asesoramiento y acompañamiento en todo momento.
                     </li>
                   </ul>
-                  <div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">
-                    <ButtonOutline>Ver mas</ButtonOutline>
-                  </div>
+                  {/*<div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">*/}
+                  {/*  <ButtonOutline>Ver mas</ButtonOutline>*/}
+                  {/*</div>*/}
                 </motion.div>
               </ScrollAnimationWrapper>
               <ScrollAnimationWrapper className="flex cursor-pointer justify-center rounded">
@@ -151,9 +150,9 @@ const Pricing = () => {
                       Reservas y pagos fáciles.
                     </li>
                   </ul>
-                  <div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">
-                    <ButtonOutline>Ver mas</ButtonOutline>
-                  </div>
+                  {/*<div className="mb-8 mt-12 flex w-full flex-none flex-col justify-center">*/}
+                  {/*  <ButtonOutline>Ver mas</ButtonOutline>*/}
+                  {/*</div>*/}
                 </motion.div>
               </ScrollAnimationWrapper>
             </div>
