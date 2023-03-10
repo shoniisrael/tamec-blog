@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 // import react slick
 import Slider from "react-slick";
+import Link from "next/link";
 
 const Testimoni = ({
   listTestimoni = [
@@ -47,9 +48,9 @@ const Testimoni = ({
     dots: true,
     customPaging: function (i) {
       return (
-        <a className="">
+        <Link className="">
           <span className="mx-2 block h-4 w-4 cursor-pointer rounded-l-full rounded-r-full transition-all "></span>
-        </a>
+        </Link>
       );
     },
     dotsClass: "slick-dots w-max absolute mt-64  ",

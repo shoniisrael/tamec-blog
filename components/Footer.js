@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="bg-zinc-50">
@@ -19,7 +21,7 @@ export const Footer = () => {
 
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
               <li>
-                <a
+                <Link
                   href="/"
                   rel="noreferrer"
                   target="_blank"
@@ -38,11 +40,11 @@ export const Footer = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="/"
                   rel="noreferrer"
                   target="_blank"
@@ -61,11 +63,11 @@ export const Footer = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="/"
                   rel="noreferrer"
                   target="_blank"
@@ -80,11 +82,11 @@ export const Footer = () => {
                   >
                     <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                   </svg>
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="/"
                   rel="noreferrer"
                   target="_blank"
@@ -103,11 +105,11 @@ export const Footer = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="/"
                   rel="noreferrer"
                   target="_blank"
@@ -126,7 +128,7 @@ export const Footer = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -138,39 +140,39 @@ export const Footer = () => {
               <nav aria-label="Footer About Nav" className="mt-8">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Company History
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Meet the Team
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Employee Handbook
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Careers
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -182,39 +184,39 @@ export const Footer = () => {
               <nav aria-label="Footer Services Nav" className="mt-8">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Web Development
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Web Design
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Marketing
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/"
                     >
                       Google Ads
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -226,12 +228,12 @@ export const Footer = () => {
               <nav aria-label="Footer Helpful Nav" className="mt-8">
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a
+                    <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
                       href="/faq"
                     >
                       Preguntas Frecuentes-FAQ
-                    </a>
+                    </Link>
                   </li>
 
                   {/*<li>*/}
@@ -244,7 +246,7 @@ export const Footer = () => {
                   {/*</li>*/}
 
                   <li>
-                    <a
+                    <Link
                       className="group flex justify-center gap-1.5 sm:justify-start"
                       href="https://wa.me/message/YREO4ZR4GE43E1"
                       target="_blank"
@@ -258,7 +260,7 @@ export const Footer = () => {
                         <span className="bg-primary-400 absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
                         <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-500"></span>
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -269,7 +271,7 @@ export const Footer = () => {
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
-                  <a
+                  <Link
                     className="flex items-center justify-center gap-1.5 sm:justify-start"
                     href="/"
                   >
@@ -289,11 +291,11 @@ export const Footer = () => {
                     </svg>
 
                     <span className="text-gray-700">tamecviajes@gmail.com</span>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="flex items-center justify-center gap-1.5 sm:justify-start"
                     href="/"
                   >
@@ -313,7 +315,7 @@ export const Footer = () => {
                     </svg>
 
                     <span className="text-gray-700">+593 999778220</span>
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-start justify-center gap-1.5 sm:justify-start">
@@ -350,21 +352,21 @@ export const Footer = () => {
         <div className="mt-12 border-t border-gray-100 pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
             <p className="text-sm text-zinc-500">
-              <a
+              <Link
                 className="text-primary-600 hover:text-primary-600 inline-block px-2 underline transition"
                 href="/"
               >
                 Términos y Condiciones
-              </a>
+              </Link>
 
               <span>&middot;</span>
 
-              <a
+              <Link
                 className="text-primary-600 hover:text-primary-600 inline-block underline transition"
                 href="/"
               >
                 Política de Privacidad
-              </a>
+              </Link>
             </p>
 
             <p className="mt-4 text-sm text-zinc-500 sm:order-first sm:mt-0">

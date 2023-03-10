@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
 import ButtonOutline from "../misc/ButtonOutline.";
-
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -17,13 +16,12 @@ const Header = () => {
     <>
       <header
         className={
-          "fixed top-0 w-full  z-30 bg-white transition-all " +
-          (scrollActive ? " shadow-md pt-0" : " pt-4")
+          "bg-white fixed top-0  z-30 w-full transition-all " +
+          (scrollActive ? " pt-0 shadow-md" : " pt-4")
         }
       >
-        <nav className="max-w-screen-2xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
-
-          <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
+        <nav className="mx-auto grid max-w-screen-2xl grid-flow-col px-6 py-3 sm:px-8 sm:py-4 lg:px-16">
+          <ul className="col-start-4 col-end-8 hidden items-center text-black-500  lg:flex">
             <LinkScroll
               activeClass="active"
               to="about"
@@ -34,10 +32,10 @@ const Header = () => {
                 setActiveLink("about");
               }}
               className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "about"
                   ? " text-teal-500 animation-active "
-                  : " text-black-500 hover:text-teal-500 a")
+                  : " hover:text-teal-500 a text-black-500")
               }
             >
               About
@@ -52,10 +50,10 @@ const Header = () => {
                 setActiveLink("feature");
               }}
               className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "feature"
                   ? " text-teal-500 animation-active "
-                  : " text-black-500 hover:text-teal-500 ")
+                  : " hover:text-teal-500 text-black-500 ")
               }
             >
               Feature
@@ -70,10 +68,10 @@ const Header = () => {
                 setActiveLink("pricing");
               }}
               className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "pricing"
                   ? " text-teal-500 animation-active "
-                  : " text-black-500 hover:text-teal-500 ")
+                  : " hover:text-teal-500 text-black-500 ")
               }
             >
               Pricing
@@ -88,20 +86,21 @@ const Header = () => {
                 setActiveLink("testimoni");
               }}
               className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "testimoni"
                   ? " text-teal-500 animation-active "
-                  : " text-black-500 hover:text-teal-500 ")
+                  : " hover:text-teal-500 text-black-500 ")
               }
             >
               Testimonial
             </LinkScroll>
           </ul>
-          <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
-            <Link href="/">
-              <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-teal-500 transition-all">
-                  Sign In
-              </a>
+          <div className="col-start-10 col-end-12 flex items-center justify-end font-medium">
+            <Link
+              href="/"
+              className="hover:text-teal-500 mx-2 capitalize tracking-wide text-black-600 transition-all sm:mx-4"
+            >
+              Sign In
             </Link>
             <ButtonOutline>Sign Up</ButtonOutline>
           </div>
@@ -109,9 +108,9 @@ const Header = () => {
       </header>
       {/* Mobile Navigation */}
 
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed bottom-0 left-0 right-0 z-20 px-4 shadow-t sm:px-8 lg:hidden ">
         <div className="bg-white sm:px-3">
-          <ul className="flex w-full justify-between items-center text-black-500">
+          <ul className="flex w-full items-center justify-between text-black-500">
             <LinkScroll
               activeClass="active"
               to="about"
@@ -122,14 +121,14 @@ const Header = () => {
                 setActiveLink("about");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "about"
                   ? "  border-teal-500 text-teal-500"
                   : " border-transparent")
               }
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -154,14 +153,14 @@ const Header = () => {
                 setActiveLink("feature");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "feature"
                   ? "  border-teal-500 text-teal-500"
                   : " border-transparent ")
               }
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -186,14 +185,14 @@ const Header = () => {
                 setActiveLink("pricing");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "pricing"
                   ? "  border-teal-500 text-teal-500"
                   : " border-transparent ")
               }
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -218,14 +217,14 @@ const Header = () => {
                 setActiveLink("testimoni");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "testimoni"
                   ? "  border-teal-500 text-teal-500"
                   : " border-transparent ")
               }
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
