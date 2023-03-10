@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 // import react slick
 import Slider from "react-slick";
-import Link from "next/link";
-import Image from "next/image";
 
 const Testimoni = ({
   listTestimoni = [
@@ -49,9 +47,9 @@ const Testimoni = ({
     dots: true,
     customPaging: function (i) {
       return (
-        <Link className="">
+        <div className="">
           <span className="mx-2 block h-4 w-4 cursor-pointer rounded-l-full rounded-r-full transition-all "></span>
-        </Link>
+        </div>
       );
     },
     dotsClass: "slick-dots w-max absolute mt-64  ",
@@ -98,10 +96,11 @@ const Testimoni = ({
                   {/*  width={50}*/}
                   {/*  alt="Icon People"*/}
                   {/*/>*/}
-                  <Image
+                  <img
                     src={listTestimonis.image + "?img=" + index}
                     alt="oeu"
-                    srcset=""
+                    width={"100"}
+                    height={"100"}
                   />
                   <div className="ml-5 flex flex-col text-left">
                     <p className="text-lg capitalize text-black-600">

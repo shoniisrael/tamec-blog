@@ -10,6 +10,8 @@ export const Footer = () => {
             <div className="text-primary-600 flex justify-center sm:justify-start">
               <Image
                 src="/assets/logo.webp"
+                width={"100"}
+                height={"100"}
                 className="mr-3 h-8 sm:h-9"
                 alt="Tamec Logo"
               />

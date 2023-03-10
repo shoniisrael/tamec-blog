@@ -60,6 +60,8 @@ export const Header = ({
           <PrismicLink href="/" className="flex items-center">
             <Image
               src="/assets/logo.webp"
+              width={"100"}
+              height={"100"}
               className="mr-3 h-6 sm:h-9"
               alt="Tamec Logo"
             />

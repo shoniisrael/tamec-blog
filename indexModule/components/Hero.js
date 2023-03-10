@@ -38,7 +38,12 @@ const Hero = ({
             >
               <div className="mx-auto flex w-40 sm:w-auto">
                 <div className="bg-cyan-100 mr-6 flex h-12 w-12 items-center justify-center rounded-full">
-                  <Image src={listUsers.icon} className="h-6 w-6" />
+                  <Image
+                    src={listUsers.icon}
+                    className="h-6 w-6"
+                    width={"100"}
+                    height={"100"}
+                  />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-xl font-bold text-black-600">
