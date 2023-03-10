@@ -1,4 +1,3 @@
-import Feature from "../indexModule/components/Feature";
 import Pricing from "../indexModule/components/Pricing";
 import Hero from "../indexModule/components/Hero";
 
@@ -26,7 +25,6 @@ const Home = ({ navigation, settings, page }) => {
 
         <SliceZone slices={page.data.slices} components={components} />
         <Hero />
-        <Feature />
         <Pricing />
         {/*<Footer />*/}
       </Layout>

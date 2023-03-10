@@ -166,6 +166,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Feature1": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ import Banner from './Banner';
 import Banner2 from './Banner2';
 import ContactForm from './ContactForm';
 import Faq from './Faq';
+import Feature1 from './Feature1';
 import Hero from './Hero';
 import HeroSection from './HeroSection';
 import Image from './Image';
@@ -20,6 +21,7 @@ export {
 	Banner2,
 	ContactForm,
 	Faq,
+	Feature1,
 	Hero,
 	HeroSection,
 	Image,
@@ -36,6 +38,7 @@ export const components = {
 	banner2: Banner2,
 	contact_form: ContactForm,
 	faq: Faq,
+	feature1: Feature1,
 	hero: Hero,
 	hero_section: HeroSection,
 	image: Image,

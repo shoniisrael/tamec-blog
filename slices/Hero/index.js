@@ -14,7 +14,7 @@ import getScrollAnimation from "../../indexModule/utils/getScrollAnimation";
 const Hero = ({ slice }) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
   return (
-    <section>
+    <section className={"container mx-auto"}>
       <ScrollAnimationWrapper>
         <motion.div
           className="grid grid-flow-row grid-rows-2 gap-8 py-6 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-1 sm:py-0 "
