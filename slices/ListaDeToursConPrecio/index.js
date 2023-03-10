@@ -1,6 +1,7 @@
 import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { Bounded } from "../../components/Bounded";
+import Image from "next/image";
 
 /**
  * @typedef {import("@prismicio/client").Content.ProductCardWithPriceSlice} ProductCardWithPriceSlice
@@ -28,7 +29,7 @@ const ProductCardWithPrice = ({ slice }) => (
           field={item.link}
           className="shadow-indigo-100 block max-w-md rounded-lg p-4 shadow-sm"
         >
-          <img
+          <Image
             src={item?.image?.url}
             alt={item?.image?.alt}
             className="h-56 w-full rounded-md object-cover"

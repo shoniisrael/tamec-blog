@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import react slick
 import Slider from "react-slick";
 import Link from "next/link";
+import Image from "next/image";
 
 const Testimoni = ({
   listTestimoni = [
@@ -97,7 +98,7 @@ const Testimoni = ({
                   {/*  width={50}*/}
                   {/*  alt="Icon People"*/}
                   {/*/>*/}
-                  <img
+                  <Image
                     src={listTestimonis.image + "?img=" + index}
                     alt="oeu"
                     srcset=""

@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import Image from "next/image";
 
 const Hero = ({
   listUser = [
@@ -37,7 +38,7 @@ const Hero = ({
             >
               <div className="mx-auto flex w-40 sm:w-auto">
                 <div className="bg-cyan-100 mr-6 flex h-12 w-12 items-center justify-center rounded-full">
-                  <img src={listUsers.icon} className="h-6 w-6" />
+                  <Image src={listUsers.icon} className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-xl font-bold text-black-600">

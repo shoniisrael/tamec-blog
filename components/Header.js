@@ -2,6 +2,7 @@ import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { Heading } from "./Heading";
+import Image from "next/image";
 
 const Profile = ({ name, description, profilePicture }) => {
   return (
@@ -57,7 +58,7 @@ export const Header = ({
       <nav className="border-gray-200 dark:bg-gray-800 bg-zinc-50 px-4 py-2.5 lg:px-6">
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between">
           <PrismicLink href="/" className="flex items-center">
-            <img
+            <Image
               src="/assets/logo.webp"
               className="mr-3 h-6 sm:h-9"
               alt="Tamec Logo"
