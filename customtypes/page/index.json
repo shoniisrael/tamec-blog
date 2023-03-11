@@ -64,6 +64,9 @@
             },
             "feature1": {
               "type": "SharedSlice"
+            },
+            "estadisticas": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -4,6 +4,7 @@ import ArticleLists from './ArticleLists';
 import Banner from './Banner';
 import Banner2 from './Banner2';
 import ContactForm from './ContactForm';
+import Estadisticas from './Estadisticas';
 import Faq from './Faq';
 import Feature1 from './Feature1';
 import Hero from './Hero';
@@ -20,6 +21,7 @@ export {
 	Banner,
 	Banner2,
 	ContactForm,
+	Estadisticas,
 	Faq,
 	Feature1,
 	Hero,
@@ -37,6 +39,7 @@ export const components = {
 	banner: Banner,
 	banner2: Banner2,
 	contact_form: ContactForm,
+	estadisticas: Estadisticas,
 	faq: Faq,
 	feature1: Feature1,
 	hero: Hero,

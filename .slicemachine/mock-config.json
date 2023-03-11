@@ -171,6 +171,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "Estadisticas": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

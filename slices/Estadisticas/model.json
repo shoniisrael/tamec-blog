@@ -1,0 +1,41 @@
+{
+  "id": "estadisticas",
+  "type": "SharedSlice",
+  "name": "Estadisticas",
+  "description": "Estadisticas",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Estadisticas",
+      "primary": {},
+      "items": {
+        "numero_o_texto_principal": {
+          "type": "Text",
+          "config": {
+            "label": "Numero o texto principal",
+            "placeholder": ""
+          }
+        },
+        "descripcion": {
+          "type": "Text",
+          "config": {
+            "label": "descripcion",
+            "placeholder": ""
+          }
+        },
+        "imagen": {
+          "type": "Image",
+          "config": {
+            "label": "imagen",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
