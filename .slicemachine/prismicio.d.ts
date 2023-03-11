@@ -734,10 +734,65 @@ interface Feature1SliceDefaultPrimary {
  */
 export type Feature1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Feature1SliceDefaultPrimary>, never>;
 /**
+ * Primary content in Feature1 → Primary
+ *
+ */
+interface Feature1SliceFeature2Primary {
+    /**
+     * title field in *Feature1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature1.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * image field in *Feature1 → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature1.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * description field in *Feature1 → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature1.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * titulo de la tarjeta field in *Feature1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature1.primary.titulo_de_la_tarjeta
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    titulo_de_la_tarjeta: prismicT.KeyTextField;
+}
+/**
+ * feature con tarjeta derecha variation for Feature1 Slice
+ *
+ * - **API ID**: `feature2`
+ * - **Description**: `Feature1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Feature1SliceFeature2 = prismicT.SharedSliceVariation<"feature2", Simplify<Feature1SliceFeature2Primary>, never>;
+/**
  * Slice variation for *Feature1*
  *
  */
-type Feature1SliceVariation = Feature1SliceDefault;
+type Feature1SliceVariation = Feature1SliceDefault | Feature1SliceFeature2;
 /**
  * Feature1 Shared Slice
  *
@@ -1351,6 +1406,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, Banner2SliceDefaultPrimary, Banner2SliceDefault, Banner2SliceVariation, Banner2Slice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, Banner2SliceDefaultPrimary, Banner2SliceDefault, Banner2SliceVariation, Banner2Slice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
