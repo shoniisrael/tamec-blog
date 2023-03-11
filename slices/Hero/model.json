@@ -18,6 +18,36 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "texto_boton_1": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton 1",
+            "placeholder": ""
+          }
+        },
+        "link_boton_1": {
+          "type": "Link",
+          "config": {
+            "label": "link boton 1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "texto_boton_2": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton 2",
+            "placeholder": ""
+          }
+        },
+        "link_boton_2": {
+          "type": "Link",
+          "config": {
+            "label": "link boton 2",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {},

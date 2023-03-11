@@ -1,5 +1,4 @@
 import Pricing from "../indexModule/components/Pricing";
-import Hero from "../indexModule/components/Hero";
 
 import SeoHead from "../indexModule/components/SeoHead";
 
@@ -24,7 +23,6 @@ const Home = ({ navigation, settings, page }) => {
         </Head>
 
         <SliceZone slices={page.data.slices} components={components} />
-        <Hero />
         <Pricing />
         {/*<Footer />*/}
       </Layout>

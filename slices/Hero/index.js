@@ -32,8 +32,12 @@ const Hero = ({ slice }) => {
               agencia de viajes de confianza.
             </p>
             <div className={" flex lg:mt-8"}>
-              <ButtonPrimary>Contactar</ButtonPrimary>
-              <ButtonOutline>Ver Tours</ButtonOutline>
+              <ButtonPrimary linkButton={slice.primary.link_boton_1}>
+                {slice.primary.texto_boton_1}
+              </ButtonPrimary>
+              <ButtonOutline linkButton={slice.primary.link_boton_2}>
+                {slice.primary.texto_boton_2}
+              </ButtonOutline>
             </div>
           </div>
           <div className="h-full w-full">

@@ -876,6 +876,46 @@ interface HeroSliceDefaultPrimary {
      *
      */
     imagen: prismicT.ImageField<never>;
+    /**
+     * texto boton 1 field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.texto_boton_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto_boton_1: prismicT.KeyTextField;
+    /**
+     * link boton 1 field in *Hero → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.link_boton_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_boton_1: prismicT.LinkField;
+    /**
+     * texto boton 2 field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.texto_boton_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto_boton_2: prismicT.KeyTextField;
+    /**
+     * link boton 2 field in *Hero → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.link_boton_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_boton_2: prismicT.LinkField;
 }
 /**
  * Default variation for Hero Slice
