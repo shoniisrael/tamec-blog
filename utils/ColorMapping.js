@@ -8,7 +8,14 @@ export class ColorMapping {
       "Morado",
       "Amarillo",
     ];
-    this.bgOptions = ["bg-white", "bg-zinc-50", "bg-primary-900"];
+    this.bgOptions = [
+      "bg-white",
+      "bg-zinc-50",
+      "bg-primary-900",
+      "bg-secondary-500",
+      "bg-tertiary-500",
+      "bg-quaternary-500",
+    ];
     this.textOptions = ["text-black", "text-black", "text-white"];
     this.opacityArray = ["100", "300", "500", "700", "900"];
   }

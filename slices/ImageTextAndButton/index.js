@@ -16,7 +16,7 @@ const ImageTextAndButton = ({ slice }) => {
     <section className={backgroundColorCssClass + " " + textColorCssClass}>
       <div
         className={
-          "container mx-auto my-8 w-full p-6  sm:my-14 sm:px-8 lg:my-20  lg:px-16"
+          "container mx-auto w-full p-6 py-8  sm:py-14 sm:px-8 lg:py-20  lg:px-16"
         }
       >
         <div className="my-8 flex w-full flex-col items-center justify-center rounded-xl pl-4 md:flex-row md:items-start md:pl-12 ">
