@@ -1,7 +1,7 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "field"
+    "value": "tell"
   },
   "title": {
     "__TYPE__": "StructuredTextContent",
@@ -9,16 +9,47 @@
       {
         "type": "heading1",
         "content": {
-          "text": "Canal"
+          "text": "Finish"
         }
       }
     ]
+  },
+  "smalltext": {
+    "__TYPE__": "FieldContent",
+    "value": "compare",
+    "type": "Text"
+  },
+  "principal_text": {
+    "__TYPE__": "FieldContent",
+    "value": "happen",
+    "type": "Text"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+      "width": 6597,
+      "height": 4398
+    },
+    "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+    "width": 6597,
+    "height": 4398,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero_section$35bddac6-47fc-40a9-a258-28387cc47d48",
+        "key": "hero_section$f73092c0-fdc3-4c6e-8276-fefa0f5fcebf",
         "name": "hero_section",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -26,27 +57,27 @@
           "primary": {
             "titulo": {
               "__TYPE__": "FieldContent",
-              "value": "size",
+              "value": "sum",
               "type": "Text"
             },
             "titulo_principal": {
               "__TYPE__": "FieldContent",
-              "value": "list",
+              "value": "plural",
               "type": "Text"
             },
             "parrafo": {
               "__TYPE__": "FieldContent",
-              "value": "made",
+              "value": "tonight",
               "type": "Text"
             },
             "texto_boton_azul": {
               "__TYPE__": "FieldContent",
-              "value": "truck",
+              "value": "next",
               "type": "Text"
             },
             "texto_boton_blanco": {
               "__TYPE__": "FieldContent",
-              "value": "serve",
+              "value": "green",
               "type": "Text"
             },
             "link_boton_azul": {
@@ -60,20 +91,20 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://twitter.com"
+                "url": "https://prismic.io"
               }
             },
             "imagen_de_fondo": {
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-                "width": 5616,
-                "height": 3744
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+                "width": 4172,
+                "height": 4000
               },
-              "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-              "width": 5616,
-              "height": 3744,
+              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+              "width": 4172,
+              "height": 4000,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -94,21 +125,44 @@
         }
       },
       {
-        "key": "product_card_with_price$7585f8e1-0625-4aac-bc8f-7c94bbe7f188",
+        "key": "product_card_with_price$4e8673a4-56e9-4703-ac92-1151a8371b35",
         "name": "product_card_with_price",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
-          "primary": {},
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Fight"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Sit tempor consequat velit pariatur nulla dolor aliqua culpa ex aliquip officia minim incididunt elit. Nostrud id cillum voluptate non culpa dolore ea Lorem et quis eiusmod voluptate. Labore amet tempor esse aute aute ad est aute cupidatat magna."
+                  }
+                }
+              ]
+            }
+          },
           "items": [
             {
               "__TYPE__": "GroupItemContent",
               "value": [
                 [
-                  "title",
+                  "principal_text",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "recently",
+                    "value": "block",
                     "type": "Text"
                   }
                 ],
@@ -116,8 +170,42 @@
                   "desde",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "forget",
+                    "value": "scale",
                     "type": "Text"
+                  }
+                ],
+                [
+                  "link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://google.com"
+                    }
+                  }
+                ],
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+                      "width": 5616,
+                      "height": 3744
+                    },
+                    "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+                    "width": 5616,
+                    "height": 3744,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
                   }
                 ]
               ]

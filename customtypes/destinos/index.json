@@ -21,6 +21,28 @@
           "single": "heading1"
         }
       },
+      "smalltext": {
+        "type": "Text",
+        "config": {
+          "label": "pais (para tarjeta)",
+          "placeholder": ""
+        }
+      },
+      "principal_text": {
+        "type": "Text",
+        "config": {
+          "label": "Nombre del Lugar (para tarjeta)",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Imagen (para tarjeta)",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

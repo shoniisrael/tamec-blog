@@ -13,9 +13,9 @@ import { PrismicRichText } from "@prismicio/react";
 const Feature1 = ({ slice }) => {
   console.log(slice);
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
-  const orderClass = slice?.variation === "default" ? "order-0" : "order-1";
-  const position = slice?.variation === "default" ? "ml-auto " : "mr-auto ";
-  const imgPosition = slice?.variation !== "default" ? "ml-auto " : "mr-auto ";
+  const orderClass = slice?.primary.image_first ? "order-0" : "order-1";
+  const position = slice?.primary.image_first ? "ml-auto " : "mr-auto ";
+  const imgPosition = slice?.primary.image_first ? "mr-auto " : "ml-auto ";
   return (
     <section
       className="container mx-auto my-8 w-full bg-white px-6 sm:my-14  sm:px-8 lg:my-20 lg:max-h-96 lg:px-16"

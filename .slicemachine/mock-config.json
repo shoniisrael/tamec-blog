@@ -175,6 +175,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "TestimonialSection": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

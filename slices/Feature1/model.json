@@ -34,6 +34,15 @@
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,o-list-item,list-item"
           }
+        },
+        "image_first": {
+          "type": "Boolean",
+          "config": {
+            "label": "Poner Imagen a la izquierda",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       },
       "items": {},

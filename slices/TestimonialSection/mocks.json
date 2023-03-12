@@ -1,0 +1,29 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "would",
+        "type": "Text"
+      },
+      "subtitle": {
+        "__TYPE__": "FieldContent",
+        "value": "afraid",
+        "type": "Text"
+      },
+      "color_de_fondo": {
+        "__TYPE__": "FieldContent",
+        "value": "Celeste",
+        "type": "Select"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

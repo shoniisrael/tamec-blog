@@ -64,6 +64,9 @@
             },
             "pricing_section": {
               "type": "SharedSlice"
+            },
+            "testimonial_section": {
+              "type": "SharedSlice"
             }
           }
         }
