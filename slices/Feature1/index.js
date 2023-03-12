@@ -18,7 +18,7 @@ const Feature1 = ({ slice }) => {
   const imgPosition = slice?.variation !== "default" ? "ml-auto " : "mr-auto ";
   return (
     <section
-      className="container mx-auto my-8 w-full bg-white px-6 sm:my-14 sm:py-14 sm:px-8 lg:h-96 lg:max-h-96 lg:px-16"
+      className="container mx-auto my-8 w-full bg-white px-6 sm:my-14  sm:px-8 lg:my-20 lg:max-h-96 lg:px-16"
       id="feature"
     >
       <div className="flex w-full flex-col sm:flex-row ">

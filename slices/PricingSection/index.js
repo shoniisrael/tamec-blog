@@ -57,7 +57,10 @@ const PricingSection = ({ slice }) => {
                     <p className="my-2 text-lg font-medium capitalize text-black-600 sm:my-7">
                       <span>{item.cardtitle}</span>
                     </p>
-                    <div className="flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left text-black-500 xl:pl-0">
+                    <div
+                      id="texto"
+                      className="flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left text-black-500 xl:pl-0"
+                    >
                       <PrismicRichText field={item?.cardcontent} />
                     </div>
                     {item?.cardbuttonlink && item?.cardbuttontext ? (
