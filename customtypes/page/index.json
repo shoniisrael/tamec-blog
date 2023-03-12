@@ -38,7 +38,7 @@
             "article_lists": {
               "type": "SharedSlice"
             },
-            "banner": {
+            "imageTextAndButton": {
               "type": "SharedSlice"
             },
             "product_card": {

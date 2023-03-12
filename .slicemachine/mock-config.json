@@ -119,7 +119,7 @@
         "primary": {}
       }
     },
-    "Banner": {
+    "ImageTextAndButton": {
       "default": {
         "primary": {}
       }
@@ -164,6 +164,9 @@
     },
     "Feature1": {
       "default": {
+        "primary": {}
+      },
+      "feature2": {
         "primary": {}
       }
     },

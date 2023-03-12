@@ -69,13 +69,6 @@
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,o-list-item,list-item"
           }
-        },
-        "titulo_de_la_tarjeta": {
-          "type": "Text",
-          "config": {
-            "label": "titulo de la tarjeta",
-            "placeholder": ""
-          }
         }
       },
       "items": {},

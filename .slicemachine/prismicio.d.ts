@@ -239,7 +239,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ArticleListsSlice | BannerSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ArticleListsSlice | ImageTextAndButtonSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice;
 /**
  * Page document from Prismic
  *
@@ -342,155 +342,6 @@ type ArticleListsSliceVariation = ArticleListsSliceDefault;
  *
  */
 export type ArticleListsSlice = prismicT.SharedSlice<"article_lists", ArticleListsSliceVariation>;
-/**
- * Primary content in Banner → Primary
- *
- */
-interface BannerSliceDefaultPrimary {
-    /**
-     * header_image field in *Banner → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.header_image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    header_image: prismicT.ImageField<never>;
-    /**
-     * small_title field in *Banner → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.small_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    small_title: prismicT.RichTextField;
-    /**
-     * title field in *Banner → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.RichTextField;
-    /**
-     * button_label field in *Banner → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.button_label
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    button_label: prismicT.KeyTextField;
-    /**
-     * button_link field in *Banner → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.button_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    button_link: prismicT.LinkField;
-    /**
-     * image field in *Banner → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-    /**
-     * color_de_fondo field in *Banner → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: Color De Fondo
-     * - **API ID Path**: banner.primary.color_de_fondo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Morado" | "Amarillo" | "Naranja">;
-    /**
-     * opacidad_de_fondo field in *Banner → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: Opacidad Fondo 1 claro - 5 obscuro
-     * - **API ID Path**: banner.primary.opacidad_de_fondo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    opacidad_de_fondo: prismicT.SelectField<"1" | "2" | "3" | "4" | "5">;
-    /**
-     * color_small_title field in *Banner → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.color_small_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    color_small_title: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Morado" | "Amarillo" | "Naranja">;
-    /**
-     * op_color_small_title field in *Banner → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: Opacit Smalltext (1 claro - 5 obsc)
-     * - **API ID Path**: banner.primary.op_color_small_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    op_color_small_title: prismicT.NumberField;
-    /**
-     * color_title field in *Banner → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: *None*
-     * - **API ID Path**: banner.primary.color_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    color_title: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Morado" | "Amarillo" | "Naranja">;
-    /**
-     * op_color_title field in *Banner → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: 1 claro - 5 obscuro
-     * - **API ID Path**: banner.primary.op_color_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    op_color_title: prismicT.NumberField;
-}
-/**
- * Default variation for Banner Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Banner`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type BannerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<BannerSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *Banner*
- *
- */
-type BannerSliceVariation = BannerSliceDefault;
-/**
- * Banner Shared Slice
- *
- * - **API ID**: `banner`
- * - **Description**: `Banner`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type BannerSlice = prismicT.SharedSlice<"banner", BannerSliceVariation>;
 /**
  * Default variation for ContactForm Slice
  *
@@ -728,16 +579,6 @@ interface Feature1SliceFeature2Primary {
      *
      */
     description: prismicT.RichTextField;
-    /**
-     * titulo de la tarjeta field in *Feature1 → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature1.primary.titulo_de_la_tarjeta
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    titulo_de_la_tarjeta: prismicT.KeyTextField;
 }
 /**
  * feature con tarjeta derecha variation for Feature1 Slice
@@ -1035,30 +876,149 @@ type ImageSliceVariation = ImageSliceDefault | ImageSliceWide;
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
 /**
+ * Primary content in ImageTextAndButton → Primary
+ *
+ */
+interface ImageTextAndButtonSliceDefaultPrimary {
+    /**
+     * header_image field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.header_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    header_image: prismicT.ImageField<never>;
+    /**
+     * Titulo pequeño field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.small_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    small_title: prismicT.RichTextField;
+    /**
+     * Titulo Principal field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * texto boton principal field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.button_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_label: prismicT.KeyTextField;
+    /**
+     * link button principal field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.button_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    button_link: prismicT.LinkField;
+    /**
+     * image field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * texto boton secundario (opcional) field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.texto_boton_secundario
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto_boton_secundario: prismicT.KeyTextField;
+    /**
+     * link boton secundario (opcional) field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.link_boton_secundario
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_boton_secundario: prismicT.LinkField;
+    /**
+     * color field in *ImageTextAndButton → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: imageTextAndButton.primary.color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color: prismicT.SelectField<"Blanco" | "Gris" | "Celeste">;
+}
+/**
+ * Default variation for ImageTextAndButton Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ImageTextAndButton`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageTextAndButtonSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ImageTextAndButtonSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *ImageTextAndButton*
+ *
+ */
+type ImageTextAndButtonSliceVariation = ImageTextAndButtonSliceDefault;
+/**
+ * ImageTextAndButton Shared Slice
+ *
+ * - **API ID**: `imageTextAndButton`
+ * - **Description**: `ImageTextAndButton`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageTextAndButtonSlice = prismicT.SharedSlice<"imageTextAndButton", ImageTextAndButtonSliceVariation>;
+/**
  * Primary content in ListaDestinos → Primary
  *
  */
 interface ListaDestinosSliceDefaultPrimary {
     /**
-     * titulo de la seccion field in *ListaDestinos → Primary*
+     * titulo field in *ListaDestinos → Primary*
      *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
      * - **API ID Path**: lista_destinos.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.KeyTextField;
     /**
-     * subtitulo o descripcion field in *ListaDestinos → Primary*
+     * subtitulo field in *ListaDestinos → Primary*
      *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
      * - **API ID Path**: lista_destinos.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.RichTextField;
+    description: prismicT.KeyTextField;
     /**
      * Color de Fondo field in *ListaDestinos → Primary*
      *
@@ -1068,37 +1028,7 @@ interface ListaDestinosSliceDefaultPrimary {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Naranja" | "Morado" | "Amarillo">;
-    /**
-     * Opacidad de fondo field in *ListaDestinos → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: 1 claro - 5 obscuro
-     * - **API ID Path**: lista_destinos.primary.opacidad_de_fondo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    opacidad_de_fondo: prismicT.NumberField;
-    /**
-     * color de texto field in *ListaDestinos → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: *None*
-     * - **API ID Path**: lista_destinos.primary.color_de_texto
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    color_de_texto: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Naranja" | "Morado" | "Amarillo">;
-    /**
-     * opacidad color de texto field in *ListaDestinos → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: 1 claro, 5 obscuro
-     * - **API ID Path**: lista_destinos.primary.opacidad_color_de_texto
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    opacidad_color_de_texto: prismicT.NumberField;
+    color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste">;
 }
 /**
  * Item in ListaDestinos → Items
@@ -1511,6 +1441,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ImageTextAndButtonSliceDefaultPrimary, ImageTextAndButtonSliceDefault, ImageTextAndButtonSliceVariation, ImageTextAndButtonSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

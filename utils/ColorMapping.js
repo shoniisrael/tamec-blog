@@ -1,26 +1,25 @@
 export class ColorMapping {
   constructor() {
     this.colorsArray = [
-      { key: "Blanco", value: "white" },
-      { key: "Gris", value: "zinc" },
-      { key: "Celeste", value: "primary" },
-      { key: "Naranja", value: "secondary" },
-      { key: "Morado", value: "tertiary" },
-      { key: "Amarillo", value: "quaternary" },
+      "Blanco",
+      "Gris",
+      "Celeste",
+      "Naranja",
+      "Morado",
+      "Amarillo",
     ];
+    this.bgOptions = ["bg-white", "bg-zinc-50", "bg-primary-900"];
+    this.textOptions = ["text-black", "text-black", "text-white"];
     this.opacityArray = ["100", "300", "500", "700", "900"];
   }
 
-  getValue(keyColor = "", keyOpacity = 1) {
+  getTextColor(keyColor = "Blanco") {
     keyColor = keyColor.replace(/\s/g, "");
-    const itemColor = this.colorsArray.find((item) => item.key === keyColor);
-    const color = itemColor ? itemColor.value : "white";
-    if (color === "white") {
-      return color;
-    }
-    keyOpacity = keyOpacity <= 1 ? 1 : keyOpacity;
-    keyOpacity = keyOpacity >= 5 ? 5 : keyOpacity;
-    const itemOpacity = this.opacityArray[keyOpacity - 1];
-    return color + "-" + itemOpacity;
+    return this.textOptions[this.colorsArray.indexOf(keyColor)] || "text-black";
+  }
+
+  getBgColor(keyColor = "Blanco") {
+    keyColor = keyColor.replace(/\s/g, "");
+    return this.bgOptions[this.colorsArray.indexOf(keyColor)] || "bg-white";
   }
 }

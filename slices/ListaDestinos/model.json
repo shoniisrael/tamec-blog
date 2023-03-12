@@ -12,21 +12,17 @@
       "description": "ListaDestinos",
       "primary": {
         "title": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
-            "label": "titulo de la seccion",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading1"
+            "label": "titulo",
+            "placeholder": ""
           }
         },
         "description": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
-            "label": "subtitulo o descripcion",
-            "placeholder": "A nice description of your feature",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "label": "subtitulo",
+            "placeholder": ""
           }
         },
         "color_de_fondo": {
@@ -37,40 +33,8 @@
             "options": [
               "Blanco",
               "Gris",
-              "Celeste",
-              "Naranja",
-              "Morado",
-              "Amarillo"
+              "Celeste"
             ]
-          }
-        },
-        "opacidad_de_fondo": {
-          "type": "Number",
-          "config": {
-            "label": "Opacidad de fondo",
-            "placeholder": "1 claro - 5 obscuro"
-          }
-        },
-        "color_de_texto": {
-          "type": "Select",
-          "config": {
-            "label": "color de texto",
-            "placeholder": "",
-            "options": [
-              "Blanco",
-              "Gris",
-              "Celeste",
-              "Naranja",
-              "Morado",
-              "Amarillo"
-            ]
-          }
-        },
-        "opacidad_color_de_texto": {
-          "type": "Number",
-          "config": {
-            "label": "opacidad color de texto",
-            "placeholder": "1 claro, 5 obscuro"
           }
         }
       },

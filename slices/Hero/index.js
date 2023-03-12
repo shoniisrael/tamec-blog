@@ -31,7 +31,11 @@ const Hero = ({ slice }) => {
               con <strong className="font-black text-teal-600">TAMEC</strong> tu
               agencia de viajes de confianza.
             </p>
-            <div className={" flex lg:mt-8"}>
+            <div
+              className={
+                " flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:mt-8"
+              }
+            >
               <ButtonPrimary linkButton={slice.primary.link_boton_1}>
                 {slice.primary.texto_boton_1}
               </ButtonPrimary>

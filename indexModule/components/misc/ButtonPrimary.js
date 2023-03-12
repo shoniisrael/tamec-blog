@@ -2,7 +2,7 @@ import React from "react";
 import { PrismicLink } from "@prismicio/react";
 
 const ButtonPrimary = ({ children, linkButton }) => {
-  if (linkButton === null) return <> </>;
+  if (linkButton === null || children === null) return <> </>;
 
   return (
     <PrismicLink

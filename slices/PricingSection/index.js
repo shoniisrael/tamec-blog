@@ -32,7 +32,7 @@ const PricingSection = ({ slice }) => {
                 {slice.primary.subtitle}
               </motion.p>
             </ScrollAnimationWrapper>
-            <div className="flex flex-col justify-around space-x-8 py-8 px-4 sm:flex-row sm:px-0 lg:py-12">
+            <div className="flex flex-col justify-around space-x-8 px-4 pt-8 sm:flex-row sm:px-0 lg:pt-12">
               {slice?.items?.map((item, i) => (
                 <ScrollAnimationWrapper className="flex flex-1 cursor-pointer justify-center rounded">
                   <motion.div

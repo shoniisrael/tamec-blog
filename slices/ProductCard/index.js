@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ProductCard = ({ slice }) => (
   <section>
-    <div className="h-96 max-w-xs overflow-hidden rounded-lg shadow-lg">
+    <div className="h-96 max-w-xs overflow-hidden rounded-lg bg-secondary-500 shadow-lg">
       <div className="relative">
         <Image
           className="h-48 w-full object-cover"

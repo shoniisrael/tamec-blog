@@ -1,0 +1,94 @@
+{
+  "id": "imageTextAndButton",
+  "type": "SharedSlice",
+  "name": "ImageTextAndButton",
+  "description": "ImageTextAndButton",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageTextAndButton",
+      "primary": {
+        "header_image": {
+          "type": "Image",
+          "config": {
+            "label": "header_image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "small_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titulo pequeño",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titulo Principal",
+            "placeholder": ""
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton principal",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "link button principal",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "texto_boton_secundario": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton secundario (opcional)",
+            "placeholder": ""
+          }
+        },
+        "link_boton_secundario": {
+          "type": "Link",
+          "config": {
+            "label": "link boton secundario (opcional)",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "color": {
+          "type": "Select",
+          "config": {
+            "label": "color",
+            "placeholder": "",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste"
+            ]
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

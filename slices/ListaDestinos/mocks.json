@@ -4,46 +4,19 @@
     "variation": "default",
     "primary": {
       "title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading1",
-            "content": {
-              "text": "Replied"
-            }
-          }
-        ]
+        "__TYPE__": "FieldContent",
+        "value": "east",
+        "type": "Text"
       },
       "description": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Laboris mollit qui eu esse quis eiusmod laborum officia. Magna eiusmod ad magna amet ullamco. Proident enim sint id consequat cillum nulla."
-            }
-          }
-        ]
+        "__TYPE__": "FieldContent",
+        "value": "refused",
+        "type": "Text"
       },
       "color_de_fondo": {
         "__TYPE__": "FieldContent",
-        "value": "Blanco",
+        "value": "Gris",
         "type": "Select"
-      },
-      "opacidad_de_fondo": {
-        "__TYPE__": "FieldContent",
-        "value": "26",
-        "type": "Number"
-      },
-      "color_de_texto": {
-        "__TYPE__": "FieldContent",
-        "value": "Morado",
-        "type": "Select"
-      },
-      "opacidad_color_de_texto": {
-        "__TYPE__": "FieldContent",
-        "value": "50",
-        "type": "Number"
       }
     },
     "items": [
@@ -54,7 +27,7 @@
             "smalltext",
             {
               "__TYPE__": "FieldContent",
-              "value": "worse",
+              "value": "suddenly",
               "type": "Text"
             }
           ],
@@ -62,7 +35,7 @@
             "principal_text",
             {
               "__TYPE__": "FieldContent",
-              "value": "perfectly",
+              "value": "single",
               "type": "Text"
             }
           ],
@@ -71,13 +44,13 @@
             {
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
-                "width": 2747,
-                "height": 4120
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+                "width": 4172,
+                "height": 4000
               },
-              "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
-              "width": 2747,
-              "height": 4120,
+              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+              "width": 4172,
+              "height": 4000,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -98,7 +71,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
+                "url": "http://google.com"
               }
             }
           ]
