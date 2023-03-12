@@ -152,11 +152,6 @@
         "items": {}
       }
     },
-    "Banner2": {
-      "default": {
-        "primary": {}
-      }
-    },
     "Hero": {
       "default": {
         "primary": {}
