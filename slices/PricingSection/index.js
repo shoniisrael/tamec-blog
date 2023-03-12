@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import ScrollAnimationWrapper from "../../indexModule/components/Layout/ScrollAnimationWrapper";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import getScrollAnimation from "../../indexModule/utils/getScrollAnimation";
 import { PrismicRichText } from "@prismicio/react";
 import ButtonOutline from "../../indexModule/components/misc/ButtonOutline.";
@@ -47,11 +46,11 @@ const PricingSection = ({ slice }) => {
                     }}
                   >
                     <div className="mt-6 p-4 lg:mt-16 lg:p-0">
-                      <Image
-                        src="/assets/avion.png"
+                      <img
+                        src={item.cardimage.url}
+                        alt={item.cardimage.alt || "icono"}
                         width={64}
                         height={64}
-                        alt="Free Plan"
                       />
                     </div>
                     <p className="my-2 text-lg font-medium capitalize text-black-600 sm:my-7">
