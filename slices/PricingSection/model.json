@@ -1,0 +1,73 @@
+{
+  "id": "pricing_section",
+  "type": "SharedSlice",
+  "name": "PricingSection",
+  "description": "PricingSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PricingSection",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "subtitle",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "cardimage": {
+          "type": "Image",
+          "config": {
+            "label": "cardImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cardtitle": {
+          "type": "Text",
+          "config": {
+            "label": "cardTitle",
+            "placeholder": ""
+          }
+        },
+        "cardcontent": {
+          "type": "StructuredText",
+          "config": {
+            "label": "cardContent",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "cardbuttontext": {
+          "type": "Text",
+          "config": {
+            "label": "cardButtonText (opcional)",
+            "placeholder": ""
+          }
+        },
+        "cardbuttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "cardButtonLink (opcional)",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

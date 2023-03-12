@@ -177,6 +177,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "PricingSection": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

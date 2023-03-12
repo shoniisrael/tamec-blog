@@ -12,6 +12,7 @@ import HeroSection from './HeroSection';
 import Image from './Image';
 import ListaDestinos from './ListaDestinos';
 import ListaDeToursConPrecio from './ListaDeToursConPrecio';
+import PricingSection from './PricingSection';
 import ProductCard from './ProductCard';
 import Quote from './Quote';
 import Text from './Text';
@@ -29,6 +30,7 @@ export {
 	Image,
 	ListaDestinos,
 	ListaDeToursConPrecio,
+	PricingSection,
 	ProductCard,
 	Quote,
 	Text,
@@ -47,6 +49,7 @@ export const components = {
 	image: Image,
 	lista_destinos: ListaDestinos,
 	product_card_with_price: ListaDeToursConPrecio,
+	pricing_section: PricingSection,
 	product_card: ProductCard,
 	quote: Quote,
 	text: Text,

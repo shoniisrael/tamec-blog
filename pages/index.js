@@ -1,5 +1,3 @@
-import Pricing from "../indexModule/components/Pricing";
-
 import SeoHead from "../indexModule/components/SeoHead";
 
 import Head from "next/head";
@@ -23,7 +21,7 @@ const Home = ({ navigation, settings, page }) => {
         </Head>
 
         <SliceZone slices={page.data.slices} components={components} />
-        <Pricing />
+        {/*<Pricing />*/}
         {/*<Footer />*/}
       </Layout>
     </>

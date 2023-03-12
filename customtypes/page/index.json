@@ -67,6 +67,9 @@
             },
             "estadisticas": {
               "type": "SharedSlice"
+            },
+            "pricing_section": {
+              "type": "SharedSlice"
             }
           }
         }

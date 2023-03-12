@@ -1,7 +1,6 @@
 import React from "react";
 import { PrismicLink } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
-import Image from "next/image";
 
 /**
  * @typedef {import("@prismicio/client").Content.Banner2Slice} Banner2Slice
@@ -39,11 +38,11 @@ const Banner2 = ({ slice }) => (
             )}
           </div>
         </div>
-        <div className="relative hidden sm:block sm:w-1/3 lg:w-3/5">
-          <Image
+        <div className="relative hidden h-full sm:block sm:w-1/3 lg:w-3/5">
+          <img
             src={slice.primary.imagen.url}
             alt={slice.primary.imagen.alt}
-            className="m-auto max-w-xs md:max-w-sm"
+            className="m-auto max-w-xs object-cover md:max-w-sm"
           />
         </div>
       </div>

@@ -239,7 +239,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice | ArticleListsSlice | BannerSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | Banner2Slice | HeroSlice | Feature1Slice | EstadisticasSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice | ArticleListsSlice | BannerSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | Banner2Slice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice;
 /**
  * Page document from Prismic
  *
@@ -1364,6 +1364,111 @@ type ProductCardWithPriceSliceVariation = ProductCardWithPriceSliceDefault;
  */
 export type ProductCardWithPriceSlice = prismicT.SharedSlice<"product_card_with_price", ProductCardWithPriceSliceVariation>;
 /**
+ * Primary content in PricingSection → Primary
+ *
+ */
+interface PricingSectionSliceDefaultPrimary {
+    /**
+     * Title field in *PricingSection → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * subtitle field in *PricingSection → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subtitle: prismicT.KeyTextField;
+}
+/**
+ * Item in PricingSection → Items
+ *
+ */
+export interface PricingSectionSliceDefaultItem {
+    /**
+     * cardImage field in *PricingSection → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.items[].cardimage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    cardimage: prismicT.ImageField<never>;
+    /**
+     * cardTitle field in *PricingSection → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.items[].cardtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cardtitle: prismicT.KeyTextField;
+    /**
+     * cardContent field in *PricingSection → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.items[].cardcontent
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cardcontent: prismicT.RichTextField;
+    /**
+     * cardButtonText (opcional) field in *PricingSection → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.items[].cardbuttontext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cardbuttontext: prismicT.KeyTextField;
+    /**
+     * cardButtonLink (opcional) field in *PricingSection → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pricing_section.items[].cardbuttonlink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cardbuttonlink: prismicT.LinkField;
+}
+/**
+ * Default variation for PricingSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `PricingSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PricingSectionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PricingSectionSliceDefaultPrimary>, Simplify<PricingSectionSliceDefaultItem>>;
+/**
+ * Slice variation for *PricingSection*
+ *
+ */
+type PricingSectionSliceVariation = PricingSectionSliceDefault;
+/**
+ * PricingSection Shared Slice
+ *
+ * - **API ID**: `pricing_section`
+ * - **Description**: `PricingSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PricingSectionSlice = prismicT.SharedSlice<"pricing_section", PricingSectionSliceVariation>;
+/**
  * Primary content in ProductCard → Primary
  *
  */
@@ -1505,6 +1610,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, Banner2SliceDefaultPrimary, Banner2SliceDefault, Banner2SliceVariation, Banner2Slice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, Banner2SliceDefaultPrimary, Banner2SliceDefault, Banner2SliceVariation, Banner2Slice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
