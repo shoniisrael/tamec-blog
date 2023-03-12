@@ -13,12 +13,14 @@ export class ColorMapping {
     this.opacityArray = ["100", "300", "500", "700", "900"];
   }
 
-  getTextColor(keyColor = "Blanco") {
+  getTextColor(keyColor) {
+    keyColor = keyColor || "Blanco";
     keyColor = keyColor.replace(/\s/g, "");
     return this.textOptions[this.colorsArray.indexOf(keyColor)] || "text-black";
   }
 
-  getBgColor(keyColor = "Blanco") {
+  getBgColor(keyColor) {
+    keyColor = keyColor || "Blanco";
     keyColor = keyColor.replace(/\s/g, "");
     return this.bgOptions[this.colorsArray.indexOf(keyColor)] || "bg-white";
   }

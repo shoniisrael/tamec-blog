@@ -178,6 +178,12 @@
     },
     "TestimonialSection": {
       "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "CallToAction": {
+      "default": {
         "primary": {}
       }
     }

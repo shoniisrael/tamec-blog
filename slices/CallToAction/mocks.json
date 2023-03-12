@@ -1,0 +1,41 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "titulo": {
+        "__TYPE__": "FieldContent",
+        "value": "being",
+        "type": "Text"
+      },
+      "subtitulo": {
+        "__TYPE__": "FieldContent",
+        "value": "sheet",
+        "type": "Text"
+      },
+      "texto_boton": {
+        "__TYPE__": "FieldContent",
+        "value": "century",
+        "type": "Text"
+      },
+      "link_del_boton": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "color_de_fondo": {
+        "__TYPE__": "FieldContent",
+        "value": "Blanco",
+        "type": "Select"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

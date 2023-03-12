@@ -38,7 +38,39 @@
           }
         }
       },
-      "items": {},
+      "items": {
+        "nombre": {
+          "type": "Text",
+          "config": {
+            "label": "Nombre (tarjeta testimonio)",
+            "placeholder": ""
+          }
+        },
+        "subtitulo": {
+          "type": "Text",
+          "config": {
+            "label": "subtitulo (tarjeta testimonio)",
+            "placeholder": ""
+          }
+        },
+        "testimonio": {
+          "type": "StructuredText",
+          "config": {
+            "label": "testimonio",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "foto": {
+          "type": "Image",
+          "config": {
+            "label": "foto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

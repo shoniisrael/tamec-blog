@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { ColorMapping } from "../../utils/ColorMapping";
+import ScrollAnimationWrapper from "../../indexModule/components/Layout/ScrollAnimationWrapper";
+
+import { motion } from "framer-motion";
+import getScrollAnimation from "../../indexModule/utils/getScrollAnimation";
+import Testimoni from "../../indexModule/components/Testimoni";
 
 /**
  * @typedef {import("@prismicio/client").Content.TestimonialSectionSlice} TestimonialSectionSlice
@@ -7,6 +12,8 @@ import { ColorMapping } from "../../utils/ColorMapping";
  * @param { TestimonialSectionProps }
  */
 const TestimonialSection = ({ slice }) => {
+  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+
   let color;
   color = new ColorMapping();
   let backgroundColorCssClass = color.getBgColor(slice.primary.color_de_fondo);
@@ -24,6 +31,16 @@ const TestimonialSection = ({ slice }) => {
           <div id="texto" className=" my-2 text-center ">
             {slice.primary.subtitle}
           </div>
+        </div>
+        <div
+          className="container my-16 mx-auto flex w-full flex-col"
+          id="testimoni"
+        >
+          <ScrollAnimationWrapper className="flex w-full flex-col py-12">
+            <motion.div variants={scrollAnimation}>
+              <Testimoni />
+            </motion.div>
+          </ScrollAnimationWrapper>
         </div>
       </div>
     </section>

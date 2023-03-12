@@ -1,0 +1,63 @@
+{
+  "id": "call_to_action",
+  "type": "SharedSlice",
+  "name": "CallToAction",
+  "description": "CallToAction",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CallToAction",
+      "primary": {
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "titulo",
+            "placeholder": ""
+          }
+        },
+        "subtitulo": {
+          "type": "Text",
+          "config": {
+            "label": "subtitulo",
+            "placeholder": ""
+          }
+        },
+        "texto_boton": {
+          "type": "Text",
+          "config": {
+            "label": "texto boton",
+            "placeholder": ""
+          }
+        },
+        "link_del_boton": {
+          "type": "Link",
+          "config": {
+            "label": "link del boton",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "color_de_fondo": {
+          "type": "Select",
+          "config": {
+            "label": "color de fondo",
+            "placeholder": "",
+            "options": [
+              "Blanco",
+              "Gris",
+              "Celeste",
+              "Naranja",
+              "Morado",
+              "Amarillo"
+            ]
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

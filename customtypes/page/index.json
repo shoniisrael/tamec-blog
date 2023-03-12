@@ -67,6 +67,9 @@
             },
             "testimonial_section": {
               "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
             }
           }
         }

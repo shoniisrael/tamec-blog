@@ -272,7 +272,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ArticleListsSlice | ImageTextAndButtonSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice | TestimonialSectionSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ArticleListsSlice | ImageTextAndButtonSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice | TestimonialSectionSlice | CallToActionSlice;
 /**
  * Page document from Prismic
  *
@@ -375,6 +375,85 @@ type ArticleListsSliceVariation = ArticleListsSliceDefault;
  *
  */
 export type ArticleListsSlice = prismicT.SharedSlice<"article_lists", ArticleListsSliceVariation>;
+/**
+ * Primary content in CallToAction → Primary
+ *
+ */
+interface CallToActionSliceDefaultPrimary {
+    /**
+     * titulo field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.titulo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    titulo: prismicT.KeyTextField;
+    /**
+     * subtitulo field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.subtitulo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subtitulo: prismicT.KeyTextField;
+    /**
+     * texto boton field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.texto_boton
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto_boton: prismicT.KeyTextField;
+    /**
+     * link del boton field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.link_del_boton
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_del_boton: prismicT.LinkField;
+    /**
+     * color de fondo field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.color_de_fondo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste" | "Naranja" | "Morado" | "Amarillo">;
+}
+/**
+ * Default variation for CallToAction Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CallToAction`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CallToActionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CallToActionSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *CallToAction*
+ *
+ */
+type CallToActionSliceVariation = CallToActionSliceDefault;
+/**
+ * CallToAction Shared Slice
+ *
+ * - **API ID**: `call_to_action`
+ * - **Description**: `CallToAction`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CallToActionSlice = prismicT.SharedSlice<"call_to_action", CallToActionSliceVariation>;
 /**
  * Item in Estadisticas → Items
  *
@@ -1455,6 +1534,52 @@ interface TestimonialSectionSliceDefaultPrimary {
     color_de_fondo: prismicT.SelectField<"Blanco" | "Gris" | "Celeste">;
 }
 /**
+ * Item in TestimonialSection → Items
+ *
+ */
+export interface TestimonialSectionSliceDefaultItem {
+    /**
+     * Nombre (tarjeta testimonio) field in *TestimonialSection → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial_section.items[].nombre
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    nombre: prismicT.KeyTextField;
+    /**
+     * subtitulo (tarjeta testimonio) field in *TestimonialSection → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial_section.items[].subtitulo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subtitulo: prismicT.KeyTextField;
+    /**
+     * testimonio field in *TestimonialSection → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial_section.items[].testimonio
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    testimonio: prismicT.RichTextField;
+    /**
+     * foto field in *TestimonialSection → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial_section.items[].foto
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    foto: prismicT.ImageField<never>;
+}
+/**
  * Default variation for TestimonialSection Slice
  *
  * - **API ID**: `default`
@@ -1462,7 +1587,7 @@ interface TestimonialSectionSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TestimonialSectionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialSectionSliceDefaultPrimary>, never>;
+export type TestimonialSectionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialSectionSliceDefaultPrimary>, Simplify<TestimonialSectionSliceDefaultItem>>;
 /**
  * Slice variation for *TestimonialSection*
  *
@@ -1521,6 +1646,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ImageTextAndButtonSliceDefaultPrimary, ImageTextAndButtonSliceDefault, ImageTextAndButtonSliceVariation, ImageTextAndButtonSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ImageTextAndButtonSliceDefaultPrimary, ImageTextAndButtonSliceDefault, ImageTextAndButtonSliceVariation, ImageTextAndButtonSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
