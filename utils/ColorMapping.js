@@ -13,10 +13,25 @@ export class ColorMapping {
       "bg-zinc-50",
       "bg-primary-900",
       "bg-secondary-500",
-      "bg-tertiary-500",
-      "bg-quaternary-500",
+      "bg-tertiary-900",
+      "bg-quaternary-900",
     ];
-    this.textOptions = ["text-black", "text-black", "text-white"];
+    this.colorName = [
+      "white",
+      "black",
+      "primary",
+      "secondary",
+      "tertiary",
+      "quaternary",
+    ];
+    this.textOptions = [
+      "text-black",
+      "text-black",
+      "text-white",
+      "text-black",
+      "text-white",
+      "text-black",
+    ];
     this.opacityArray = ["100", "300", "500", "700", "900"];
   }
 
@@ -30,5 +45,11 @@ export class ColorMapping {
     keyColor = keyColor || "Blanco";
     keyColor = keyColor.replace(/\s/g, "");
     return this.bgOptions[this.colorsArray.indexOf(keyColor)] || "bg-white";
+  }
+
+  getColorName(keyColor) {
+    keyColor = keyColor || "Blanco";
+    keyColor = keyColor.replace(/\s/g, "");
+    return this.colorName[this.colorsArray.indexOf(keyColor)] || "bg-white";
   }
 }
