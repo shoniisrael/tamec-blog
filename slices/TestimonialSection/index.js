@@ -82,15 +82,16 @@ const TestimonialSection = ({ slice }) => {
                 >
                   {slice?.items?.map((item, index) => (
                     <div
-                      className="flex h-60 w-full max-w-sm items-stretch px-3"
+                      className="flex w-full max-w-sm flex-1 items-center bg-secondary-100 px-3"
                       key={index}
                     >
-                      <div className="flex h-60 flex-col rounded-lg border-2 border-zinc-300 bg-zinc-100 p-8 text-black-600 transition-all hover:border-teal-500">
+                      <div className="flex flex-col rounded-lg border-2 border-zinc-300 bg-zinc-100 p-8 text-black-600 transition-all hover:border-teal-500">
                         <div className="flex w-full flex-col items-stretch xl:flex-row xl:items-center">
                           <div className="order-2 flex xl:order-1">
                             <img
                               src={item.foto.url}
                               alt={item.foto.alt || "testimonio"}
+                              className={"h-20 w-20 rounded-lg  object-cover"}
                               width={"100"}
                               height={"100"}
                             />
