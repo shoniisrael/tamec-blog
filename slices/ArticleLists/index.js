@@ -48,31 +48,31 @@ const Article = ({ article }) => {
   const excerpt = getExcerpt(article.data.slices);
 
   return (
-    <li className="grid grid-cols-1 items-start gap-6 md:grid-cols-3 md:gap-8">
+    <li className="bg-white border border-x-white border-t-white border-b-zinc-200 sm:p-4 rounded-lg flex flex-row space-x-4 items-start md:grid-cols-3 hover:text-primary-700 hover:cursor-pointer hover:bg-zinc-50 hover:border  hover:border-zinc-200 ">
       <PrismicLink document={article} tabIndex="-1">
-        <div className="aspect-w-4 aspect-h-3 relative bg-gray-100">
+        <div className="w-64 aspect-h-3 relative bg-gray-300">
           {prismicH.isFilled.image(featuredImage) && (
             <PrismicNextImage
               field={featuredImage}
               fill={false}
-              width={400}
-              height={300}
+              width={250}
+              height={200}
               className="object-cover"
             />
           )}
         </div>
       </PrismicLink>
       <div className="grid grid-cols-1 gap-3 md:col-span-2">
+        <p className="font-sans italic tracking-tighter text-slate-500">
+          {dateFormatter.format(date)}
+        </p>
         <Heading as="h2">
           <PrismicLink document={article}>
             <PrismicText field={article.data.title} />
           </PrismicLink>
         </Heading>
-        <p className="font-sans italic tracking-tighter text-slate-500">
-          {dateFormatter.format(date)}
-        </p>
         {excerpt && (
-          <p className="font-sans leading-relaxed md:text-lg md:leading-relaxed">
+          <p className="font-sans leading-relaxed md:text-lg md:leading-relaxed text-black-500">
             {excerpt}
           </p>
         )}
@@ -85,7 +85,7 @@ const ArticleLists = ({ context}) => {
 
   return (
       <Bounded size="widest">
-        <ul className="grid grid-cols-1 gap-16">
+        <ul className="grid grid-cols-1 gap-8">
           {context.map((article) => (
             <Article key={article.id} article={article} />
           ))}

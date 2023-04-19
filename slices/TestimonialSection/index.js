@@ -57,7 +57,7 @@ const TestimonialSection = ({ slice }) => {
   return (
     <section className={backgroundColorCssClass + " " + textColorCssClass}>
       <div
-        className={`container mx-auto w-full px-6 py-8 md:py-16 md:px-14 lg:py-24 lg:px-28 `}
+        className={`container mx-auto w-full px-6 my-8 md:my-16 md:px-14 lg:my-24 lg:px-28 min-h-full `}
       >
         <div className="mx-auto my-8 text-center">
           <h2 className="text-3xl font-medium leading-relaxed lg:text-4xl">
@@ -95,10 +95,10 @@ const TestimonialSection = ({ slice }) => {
                               height={"100"}
                             />
                             <div className="ml-5 flex flex-col text-left">
-                              <h3 className="text-lg capitalize font-bold ">
+                              <h3 className="text-lg capitalize font-bold  text-primary-700">
                                 {item.nombre || "Desconocido"}
                               </h3>
-                              <p className="text-sm capitalize text-black-500">
+                              <p className="text-sm capitalize text-secondary-500">
                                 {item.subtitulo || "Desconocido"}
                               </p>
                             </div>

@@ -34,3 +34,5 @@ yarn-error.log*
 .idea/sonarlint/
 
 .idea/
+
+package-lock.json

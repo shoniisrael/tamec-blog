@@ -21,7 +21,7 @@ const CallToAction = ({ slice }) => {
   let buttonTextColor = color.getColorName(slice.primary.color_de_fondo);
   return (
     <section>
-      <div className={`container mx-auto w-full px-6 py-8 md:px-14  lg:px-28 `}>
+      <div className={`container mx-auto w-full px-6 my-8 md:px-14  lg:px-28 `}>
         <div
           className="container my-16 mx-auto flex w-full flex-col"
           id="testimoni"
