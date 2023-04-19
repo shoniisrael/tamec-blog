@@ -5,8 +5,8 @@ export const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="bg-zinc-50">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <div>
+        <div className="flex flex-col sm:flex-row space-x-4 lg:grid-cols-3">
+          <div class="grow w-full">
             <div className="text-primary-600 flex justify-center sm:justify-start">
               <Image
                 src="/assets/logo.webp"
@@ -17,7 +17,7 @@ export const Footer = () => {
               />
             </div>
 
-            <p className="text-gray-900 mt-6 max-w-md text-center leading-relaxed sm:max-w-xs sm:text-left">
+            <p className="text-gray-900 mt-6 md:mr-16 text-center leading-relaxed sm:text-left">
               Nos apasiona brindarle el mejor servicio, ¡Esperamos tener
               noticias suyas pronto para vivir juntos &nbsp;
               <b>
@@ -118,95 +118,9 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
-            <div className="text-center sm:text-left">
-              <p className="text-gray-900 text-lg font-medium">About Us</p>
-
-              <nav aria-label="Footer About Nav" className="mt-8">
-                <ul className="space-y-4 text-sm">
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Company History
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Meet the Team
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Employee Handbook
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Careers
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            <div className="text-center sm:text-left">
-              <p className="text-gray-900 text-lg font-medium">Our Services</p>
-
-              <nav aria-label="Footer Services Nav" className="mt-8">
-                <ul className="space-y-4 text-sm">
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Web Development
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Web Design
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Marketing
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/"
-                    >
-                      Google Ads
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
+          <div className="grow-0 w-96 flex flex-col sm:flex-row space-x-4 ">
+ 
+ 
             <div className="text-center sm:text-left">
               <p className="text-gray-900 text-lg font-medium">Links Utils</p>
 
@@ -215,9 +129,10 @@ export const Footer = () => {
                   <li>
                     <Link
                       className="text-gray-700 hover:text-gray-700/75 transition"
-                      href="/faq"
+                      href="https://calendly.com/tamecviajes/30min"
+                      target="_blank"
                     >
-                      Preguntas Frecuentes-FAQ
+                      Agenda tu cita gratis
                     </Link>
                   </li>
 
@@ -238,7 +153,7 @@ export const Footer = () => {
                       rel="noreferrer"
                     >
                       <span className="text-gray-700 group-hover:text-gray-700/75 transition">
-                        Chatear con nosotros
+                        Chatea con nosotros
                       </span>
 
                       <span className="relative flex h-2 w-2">
