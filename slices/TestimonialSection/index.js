@@ -29,7 +29,7 @@ const TestimonialSection = ({ slice }) => {
         </div>
       );
     },
-    dotsClass: "slick-dots w-max absolute mt-64  ",
+    dotsClass: "absolute ",
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -82,30 +82,28 @@ const TestimonialSection = ({ slice }) => {
                 >
                   {slice?.items?.map((item, index) => (
                     <div
-                      className="flex w-full max-w-sm flex-1 items-center bg-secondary-100 px-3"
+                      className="flex w-full w-60 max-w-sm flex-1 items-center px-3"
                       key={index}
                     >
-                      <div className="flex flex-col rounded-lg border-2 border-zinc-300 bg-zinc-100 p-8 text-black-600 transition-all hover:border-teal-500">
-                        <div className="flex w-full flex-col items-stretch xl:flex-row xl:items-center">
-                          <div className="order-2 flex xl:order-1">
+                      <div className="flex flex-col rounded-lg  text-black-600 transition-all hover:border-teal-500 text-center">
+                        <div className="flex w-full flex-col items-center">                          
                             <img
                               src={item.foto.url}
                               alt={item.foto.alt || "testimonio"}
-                              className={"h-20 w-20 rounded-lg  object-cover"}
+                              className={"h-32 w-32 rounded-full  object-cover"}
                               width={"100"}
                               height={"100"}
                             />
                             <div className="ml-5 flex flex-col text-left">
-                              <p className="text-lg capitalize text-black-600">
+                              <h3 className="text-lg capitalize font-bold ">
                                 {item.nombre || "Desconocido"}
-                              </p>
+                              </h3>
                               <p className="text-sm capitalize text-black-500">
                                 {item.subtitulo || "Desconocido"}
                               </p>
                             </div>
-                          </div>
                         </div>
-                        <div className="mt-5 text-left">
+                        <div className="mt-5 text-center">
                           <PrismicRichText field={item.testimonio} />
                         </div>
                       </div>
