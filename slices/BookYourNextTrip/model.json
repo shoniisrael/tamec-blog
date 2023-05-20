@@ -1,0 +1,97 @@
+{
+  "id": "book_your_next_trip",
+  "type": "SharedSlice",
+  "name": "BookYourNextTrip",
+  "description": "BookYourNextTrip",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BookYourNextTrip",
+      "primary": {
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "subtitle",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "paso1": {
+          "type": "Text",
+          "config": {
+            "label": "paso1",
+            "placeholder": ""
+          }
+        },
+        "texto1": {
+          "type": "Text",
+          "config": {
+            "label": "texto1",
+            "placeholder": ""
+          }
+        },
+        "paso2": {
+          "type": "Text",
+          "config": {
+            "label": "paso2",
+            "placeholder": ""
+          }
+        },
+        "texto2": {
+          "type": "Text",
+          "config": {
+            "label": "texto2",
+            "placeholder": ""
+          }
+        },
+        "paso3": {
+          "type": "Text",
+          "config": {
+            "label": "paso3",
+            "placeholder": ""
+          }
+        },
+        "texto3": {
+          "type": "Text",
+          "config": {
+            "label": "texto3",
+            "placeholder": ""
+          }
+        },
+        "cardtitle": {
+          "type": "Text",
+          "config": {
+            "label": "cardTitle",
+            "placeholder": ""
+          }
+        },
+        "cardsubtitle": {
+          "type": "Text",
+          "config": {
+            "label": "cardSubtitle",
+            "placeholder": ""
+          }
+        },
+        "cardimage": {
+          "type": "Image",
+          "config": {
+            "label": "cardImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

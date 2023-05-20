@@ -70,6 +70,9 @@
             },
             "call_to_action": {
               "type": "SharedSlice"
+            },
+            "book_your_next_trip": {
+              "type": "SharedSlice"
             }
           }
         }

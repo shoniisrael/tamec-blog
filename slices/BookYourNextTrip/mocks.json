@@ -1,0 +1,85 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "into",
+        "type": "Text"
+      },
+      "subtitle": {
+        "__TYPE__": "FieldContent",
+        "value": "eye",
+        "type": "Text"
+      },
+      "paso1": {
+        "__TYPE__": "FieldContent",
+        "value": "practical",
+        "type": "Text"
+      },
+      "texto1": {
+        "__TYPE__": "FieldContent",
+        "value": "acres",
+        "type": "Text"
+      },
+      "paso2": {
+        "__TYPE__": "FieldContent",
+        "value": "gone",
+        "type": "Text"
+      },
+      "texto2": {
+        "__TYPE__": "FieldContent",
+        "value": "depth",
+        "type": "Text"
+      },
+      "paso3": {
+        "__TYPE__": "FieldContent",
+        "value": "atomic",
+        "type": "Text"
+      },
+      "texto3": {
+        "__TYPE__": "FieldContent",
+        "value": "high",
+        "type": "Text"
+      },
+      "cardtitle": {
+        "__TYPE__": "FieldContent",
+        "value": "against",
+        "type": "Text"
+      },
+      "cardsubtitle": {
+        "__TYPE__": "FieldContent",
+        "value": "by",
+        "type": "Text"
+      },
+      "cardimage": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+          "width": 3648,
+          "height": 4560
+        },
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+        "width": 3648,
+        "height": 4560,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

@@ -186,6 +186,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "BookYourNextTrip": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

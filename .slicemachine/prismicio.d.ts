@@ -272,7 +272,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ArticleListsSlice | ImageTextAndButtonSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice | TestimonialSectionSlice | CallToActionSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ArticleListsSlice | ImageTextAndButtonSlice | ProductCardSlice | ProductCardWithPriceSlice | ListaDestinosSlice | HeroSectionSlice | HeroSlice | Feature1Slice | EstadisticasSlice | PricingSectionSlice | TestimonialSectionSlice | CallToActionSlice | BookYourNextTripSlice;
 /**
  * Page document from Prismic
  *
@@ -375,6 +375,145 @@ type ArticleListsSliceVariation = ArticleListsSliceDefault;
  *
  */
 export type ArticleListsSlice = prismicT.SharedSlice<"article_lists", ArticleListsSliceVariation>;
+/**
+ * Primary content in BookYourNextTrip → Primary
+ *
+ */
+interface BookYourNextTripSliceDefaultPrimary {
+    /**
+     * subtitle field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subtitle: prismicT.KeyTextField;
+    /**
+     * title field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * paso1 field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.paso1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    paso1: prismicT.KeyTextField;
+    /**
+     * texto1 field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.texto1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto1: prismicT.KeyTextField;
+    /**
+     * paso2 field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.paso2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    paso2: prismicT.KeyTextField;
+    /**
+     * texto2 field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.texto2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto2: prismicT.KeyTextField;
+    /**
+     * paso3 field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.paso3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    paso3: prismicT.KeyTextField;
+    /**
+     * texto3 field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.texto3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    texto3: prismicT.KeyTextField;
+    /**
+     * cardTitle field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.cardtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cardtitle: prismicT.KeyTextField;
+    /**
+     * cardSubtitle field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.cardsubtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cardsubtitle: prismicT.KeyTextField;
+    /**
+     * cardImage field in *BookYourNextTrip → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_your_next_trip.primary.cardimage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    cardimage: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for BookYourNextTrip Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `BookYourNextTrip`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type BookYourNextTripSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<BookYourNextTripSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *BookYourNextTrip*
+ *
+ */
+type BookYourNextTripSliceVariation = BookYourNextTripSliceDefault;
+/**
+ * BookYourNextTrip Shared Slice
+ *
+ * - **API ID**: `book_your_next_trip`
+ * - **Description**: `BookYourNextTrip`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type BookYourNextTripSlice = prismicT.SharedSlice<"book_your_next_trip", BookYourNextTripSliceVariation>;
 /**
  * Primary content in CallToAction → Primary
  *
@@ -1646,6 +1785,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ImageTextAndButtonSliceDefaultPrimary, ImageTextAndButtonSliceDefault, ImageTextAndButtonSliceVariation, ImageTextAndButtonSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, ArticlelistDocumentData, ArticlelistDocument, DestinosDocumentData, DestinosDocumentDataSlicesSlice, DestinosDocument, FaqDocumentData, FaqDocumentDataSlicesSlice, FaqDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ArticleListsSliceDefault, ArticleListsSliceVariation, ArticleListsSlice, BookYourNextTripSliceDefaultPrimary, BookYourNextTripSliceDefault, BookYourNextTripSliceVariation, BookYourNextTripSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, EstadisticasSliceDefaultItem, EstadisticasSliceDefault, EstadisticasSliceVariation, EstadisticasSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, Feature1SliceDefaultPrimary, Feature1SliceDefault, Feature1SliceFeature2Primary, Feature1SliceFeature2, Feature1SliceVariation, Feature1Slice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, ImageTextAndButtonSliceDefaultPrimary, ImageTextAndButtonSliceDefault, ImageTextAndButtonSliceVariation, ImageTextAndButtonSlice, ListaDestinosSliceDefaultPrimary, ListaDestinosSliceDefaultItem, ListaDestinosSliceDefault, ListaDestinosSliceVariation, ListaDestinosSlice, ProductCardWithPriceSliceDefaultPrimary, ProductCardWithPriceSliceDefaultItem, ProductCardWithPriceSliceDefault, ProductCardWithPriceSliceVariation, ProductCardWithPriceSlice, PricingSectionSliceDefaultPrimary, PricingSectionSliceDefaultItem, PricingSectionSliceDefault, PricingSectionSliceVariation, PricingSectionSlice, ProductCardSliceDefaultPrimary, ProductCardSliceDefault, ProductCardSliceVariation, ProductCardSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
