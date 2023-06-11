@@ -3,18 +3,18 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: "LaslesVPN",
-  siteName: "LaslesVPN",
+  title: "Agencia de Viajes Tamec",
+  siteName: "Tamec Viajes",
   description:
-    "Landing page VPN LaslesVPN Best VPN For Privacy, Country and Cheapest",
+    "Experiencias de viaje inolvidables con Tamec: destinos personalizados, alta calidad y atención excepcional. ¡Descubre más!",
   // change base url of your web (without '/' at the end)
-  url: "https://next-landing-vpn.vercel.app",
+  url: "https://tamecviajes.com",
   type: "website",
   robots: "follow, index",
   // change with url of your image (recommended dimension = 1.91:1)
   // used in twitter, facebook, etc. card when link copied in tweet/status
-  image: "https://next-landing-vpn.vercel.app/assets/card-image.png",
-  author: "Lorem Ipsum",
+  image: "https://images.prismic.io/tamecblog/133e0bb7-d6f9-43b8-966d-8a43d85155ee_WhatsApp+Image+2023-02-03+at+10.06.51.jpeg?auto=compress%2Cformat&rect=0%2C6%2C569%2C427&w=256&fit=max",
+  author: "ArteCodigoYCafe",
 };
 
 /**
