@@ -5,8 +5,11 @@ import { PrismicLink, PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "../prismicio";
 import { Heading } from "../components/Heading";
+import "bootstrap/dist/css/bootstrap.css";
 
 import "../styles/globals.css";
+import "../styles/bootstrap.scss";
+import Head from "next/head";
 
 const richTextComponents = {
   heading1: ({ children }) => (
@@ -38,7 +41,7 @@ const richTextComponents = {
     <li className="mb-1 list-disc pl-1 last:mb-0 md:pl-2">{children}</li>
   ),
   preformatted: ({ children }) => (
-    <pre className="mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg">
+    <pre className="bg-slate-100 mb-7 rounded p-4 text-sm last:mb-0 md:p-8 md:text-lg">
       <code>{children}</code>
     </pre>
   ),
@@ -57,14 +60,18 @@ const richTextComponents = {
 
 export default function App({ Component, pageProps }) {
   return (
-    <PrismicProvider
-      internalLinkComponent={(props) => <Link {...props} />}
-      richTextComponents={richTextComponents}
-    >
-
-      <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
-      </PrismicPreview>
-    </PrismicProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <PrismicProvider
+        internalLinkComponent={(props) => <Link {...props} />}
+        richTextComponents={richTextComponents}
+      >
+        <PrismicPreview repositoryName={repositoryName}>
+          <Component {...pageProps} />
+        </PrismicPreview>
+      </PrismicProvider>
+    </>
   );
 }
