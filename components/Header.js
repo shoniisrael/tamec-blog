@@ -44,7 +44,9 @@ const Profile = ({ name, description, profilePicture }) => {
 
 const NavItem = ({ children }) => {
   return (
-    <li className="text-slate-800 font-semibold tracking-tight">{children}</li>
+    <li className="py-auto flex h-16 items-center justify-center font-semibold tracking-tight text-gray-800 hover:text-primary">
+      {children}
+    </li>
   );
 };
 
@@ -70,11 +72,11 @@ export const Header = ({
         id="headerNav"
         className={` z-100 ${
           isScrolled ? "sticky-shadow shadow" : ""
-        } fixed top-0 left-0 right-0 border-gray-200 bg-gray-50 px-4
+        } fixed top-0 left-0 right-0 border-gray-200 bg-primary-50 px-4
           py-2  transition duration-300 lg:px-6`}
       >
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between">
-          <PrismicLink href="/" className="flex h-full w-48 items-center">
+          <PrismicLink href="/" className="flex h-16 w-48 items-center">
             <Image
               src="/assets/logo.webp"
               width={"192"}
@@ -84,10 +86,10 @@ export const Header = ({
             />
           </PrismicLink>
           <div
-            className=" w-full items-center justify-between md:order-1 md:flex md:w-auto"
+            className=" h-16 w-full items-center justify-between md:flex md:w-auto"
             id="mobile-menu-2"
           >
-            <ul className="mt-4 flex flex-col font-medium md:mt-0 md:flex-row md:space-x-8">
+            <ul className="flex h-16 flex-col font-medium md:flex-row md:space-x-8">
               <NavItem>
                 <PrismicLink href="/">
                   <PrismicText field={navigation.data.homepageLabel} />
@@ -96,7 +98,7 @@ export const Header = ({
               {navigation.data?.links.map((item) => (
                 <NavItem key={prismicH.asText(item.label)}>
                   <PrismicLink field={item.link}>
-                    <PrismicText field={item.label} className="text" />
+                    <PrismicText field={item.label} />
                   </PrismicLink>
                 </NavItem>
               ))}
