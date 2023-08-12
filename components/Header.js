@@ -3,6 +3,7 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { Heading } from "./Heading";
 import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
 const Profile = ({ name, description, profilePicture }) => {
   return (
@@ -53,9 +54,25 @@ export const Header = ({
   navigation,
   settings,
 }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 0);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <header>
-      <nav className="border-gray-200 bg-gray-50 px-4 py-2.5 dark:bg-gray-800 lg:px-6">
+      <nav
+        id="headerNav"
+        className={` z-100 ${
+          isScrolled ? "sticky-shadow shadow" : ""
+        } fixed top-0 left-0 right-0 border-gray-200 bg-gray-50 px-4
+          py-2  transition duration-300 lg:px-6`}
+      >
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between">
           <PrismicLink href="/" className="flex h-full w-48 items-center">
             <Image
