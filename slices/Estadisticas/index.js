@@ -8,7 +8,7 @@ import React from "react";
 
 const Estadisticas = ({ slice }) => {
   return (
-    <section className={"container mx-auto"} id="section1">
+    <section className={"container mx-auto"}>
       <div className="mx-auto max-w-screen-2xl px-4 md:px-0 " id="about">
         <div className="relative flex w-full">
           <div className=" grid w-full grid-flow-row grid-cols-1 grid-cols-1 divide-y-2 divide-gray-100 rounded-lg bg-white sm:grid-cols-2  sm:divide-y-0 sm:divide-x-2 lg:grid-cols-4">

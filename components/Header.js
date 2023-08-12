@@ -1,46 +1,8 @@
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
-import { Heading } from "./Heading";
+
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-
-const Profile = ({ name, description, profilePicture }) => {
-  return (
-    <div className="px-4">
-      <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
-        <PrismicLink href="/" tabIndex="-1">
-          <div className="relative h-40 w-40 overflow-hidden rounded-full bg-gray-300">
-            {prismicH.isFilled.image(profilePicture) && (
-              <PrismicNextImage
-                field={profilePicture}
-                fill={true}
-                className="object-cover"
-              />
-            )}
-          </div>
-        </PrismicLink>
-        {(prismicH.isFilled.richText(name) ||
-          prismicH.isFilled.richText(description)) && (
-          <div className="grid grid-cols-1 gap-2 text-center">
-            {prismicH.isFilled.richText(name) && (
-              <Heading>
-                <PrismicLink href="/">
-                  <PrismicText field={name} />
-                </PrismicLink>
-              </Heading>
-            )}
-            {prismicH.isFilled.richText(description) && (
-              <p className="text-slate-500 font-sans text-2xl italic leading-normal tracking-tight">
-                <PrismicText field={description} />
-              </p>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
 
 const NavItem = ({ children }) => {
   return (
@@ -50,12 +12,7 @@ const NavItem = ({ children }) => {
   );
 };
 
-export const Header = ({
-  withDivider = true,
-  withProfile = false,
-  navigation,
-  settings,
-}) => {
+export const Header = ({ navigation, settings }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 0);
@@ -67,7 +24,7 @@ export const Header = ({
     };
   }, []);
   return (
-    <header>
+    <header className="h-16">
       <nav
         id="headerNav"
         className={` z-10 ${
@@ -94,6 +51,18 @@ export const Header = ({
                 <PrismicLink href="/">
                   <PrismicText field={navigation.data.homepageLabel} />
                 </PrismicLink>
+              </NavItem>
+              <NavItem>
+                <PrismicLink href="/#nosotros">Sobre Nosotros</PrismicLink>
+              </NavItem>
+              <NavItem>
+                <PrismicLink href="/#servicios">Servicios</PrismicLink>
+              </NavItem>
+              <NavItem>
+                <PrismicLink href="/#visas">Visas</PrismicLink>
+              </NavItem>
+              <NavItem>
+                <PrismicLink href="/#gps">Galapagos</PrismicLink>
               </NavItem>
               {navigation.data?.links.map((item) => (
                 <NavItem key={prismicH.asText(item.label)}>

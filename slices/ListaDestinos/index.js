@@ -15,7 +15,10 @@ const ListaDestinos = ({ slice }) => {
 
   let textColorCssClass = color.getTextColor(slice.primary.color_de_fondo);
   return (
-    <section className={backgroundColorCssClass + " " + textColorCssClass}>
+    <section
+      className={backgroundColorCssClass + " " + textColorCssClass}
+      id="visas"
+    >
       <div
         className={`container mx-auto w-full px-6 py-8 md:py-16 md:px-14 lg:py-24 lg:px-28 `}
       >

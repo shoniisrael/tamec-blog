@@ -12,7 +12,7 @@ export const Layout = ({
   return (
     <div className="text-slate-700">
       <Header navigation={navigation} settings={settings} />
-      <main>{children}</main>
+      <main className="mt-16">{children}</main>
       <Footer />
     </div>
   );

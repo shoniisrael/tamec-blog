@@ -7,7 +7,7 @@ import { PrismicRichText } from "@prismicio/react";
  * @param { BookYourNextTripProps }
  */
 const BookYourNextTrip = ({ slice }) => (
-  <section id="booking" className="py-10">
+  <section id="gps" className="py-10">
     <div className="container mx-auto w-full px-6 py-8 text-gray-900 md:py-16 md:px-14 lg:py-24  lg:px-28">
       <div className="flex flex-wrap items-center">
         <div className="w-full lg:w-1/2">

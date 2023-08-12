@@ -13,8 +13,8 @@ import ButtonOutline from "../../indexModule/components/misc/ButtonOutline.";
 const PricingSection = ({ slice }) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
   return (
-    <section>
-      <div className=" bg-primary-dark w-full py-8 lg:py-24" id="pricing">
+    <section id="servicios">
+      <div className=" w-full bg-primary-dark py-8 lg:py-24" id="pricing">
         <div className="mx-auto  flex w-full max-w-screen-2xl flex-col justify-center px-6 text-center sm:px-8 lg:px-16">
           <div className="flex w-full flex-col">
             <ScrollAnimationWrapper>
@@ -53,12 +53,12 @@ const PricingSection = ({ slice }) => {
                         height={64}
                       />
                     </div>
-                    <p className="my-2 text-lg font-medium capitalize text-black-600 sm:my-7">
+                    <p className="text-black-600 my-2 text-lg font-medium capitalize sm:my-7">
                       <span>{item.cardtitle}</span>
                     </p>
                     <div
                       id="texto"
-                      className="flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left text-black-500 xl:pl-0"
+                      className="text-black-500 flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left xl:pl-0"
                     >
                       <PrismicRichText field={item?.cardcontent} />
                     </div>

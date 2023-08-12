@@ -18,8 +18,8 @@ const Feature1 = ({ slice }) => {
   const imgPosition = slice?.primary.image_first ? "mr-auto " : "ml-auto ";
   return (
     <section
-      className="container mx-auto my-8 w-full bg-white px-6 sm:my-14  sm:px-8 lg:my-20 lg:max-h-96 lg:px-16"
-      id="feature"
+      className="container mx-auto w-full bg-white py-20 px-6   sm:px-8   lg:px-16"
+      id={slice?.primary?.uuid}
     >
       <div className="flex w-full flex-col sm:flex-row ">
         <div className={`${orderClass} sm:w-1/2`}>
@@ -27,13 +27,13 @@ const Feature1 = ({ slice }) => {
             className={`flex w-full items-start justify-center `}
           >
             <motion.div
-              className={`${imgPosition} h-full w-full lg:max-h-96`}
+              className={`${imgPosition} h-full w-full `}
               variants={scrollAnimation}
             >
               <img
                 src={slice?.primary?.image?.url || "/assets/feature.jpg"}
                 alt={slice?.primary?.image?.alt || "imagen de un viaje"}
-                className={`${imgPosition} object-cover lg:max-h-96`}
+                className={`${imgPosition} object-cover `}
                 quality={100}
                 height={100}
                 width={508}
@@ -47,10 +47,10 @@ const Feature1 = ({ slice }) => {
               className={`flex w-full flex-col items-start ${position} px-4  `}
               variants={scrollAnimation}
             >
-              <h2 className="text-3xl font-medium leading-relaxed text-black-600 lg:text-4xl">
+              <h2 className="text-black-600 text-3xl font-medium leading-relaxed lg:text-4xl">
                 {slice.primary.title}
               </h2>
-              <div id="texto" className=" my-2 text-left text-black-500">
+              <div id="texto" className=" text-black-500 my-2 text-left">
                 <PrismicRichText field={slice.primary.description} />
               </div>
             </motion.div>

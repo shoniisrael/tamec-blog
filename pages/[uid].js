@@ -24,6 +24,7 @@ const Page = ({ page, navigation, settings, articles }) => {
         slices={page.data.slices}
         components={components}
         context={articles}
+        className="mt-16"
       />
     </Layout>
   );

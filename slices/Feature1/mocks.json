@@ -9,7 +9,6 @@
         "type": "Text"
       },
       "image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
@@ -27,6 +26,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "description": {
@@ -43,6 +45,11 @@
       "image_first": {
         "__TYPE__": "BooleanContent",
         "value": false
+      },
+      "uuid": {
+        "__TYPE__": "FieldContent",
+        "value": "seen",
+        "type": "Text"
       }
     },
     "items": [
@@ -62,7 +69,6 @@
         "type": "Text"
       },
       "image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
@@ -80,6 +86,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "description": {
@@ -92,6 +101,11 @@
             }
           }
         ]
+      },
+      "uuid": {
+        "__TYPE__": "FieldContent",
+        "value": "religious",
+        "type": "Text"
       }
     },
     "items": [

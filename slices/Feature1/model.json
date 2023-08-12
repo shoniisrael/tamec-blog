@@ -43,6 +43,13 @@
             "placeholder_true": "true",
             "default_value": false
           }
+        },
+        "uuid": {
+          "type": "Text",
+          "config": {
+            "label": "uuid",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
@@ -77,6 +84,13 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,o-list-item,list-item"
+          }
+        },
+        "uuid": {
+          "type": "Text",
+          "config": {
+            "label": "uuid",
+            "placeholder": ""
           }
         }
       },

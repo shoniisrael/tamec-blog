@@ -20,7 +20,11 @@ const Home = ({ navigation, settings, page }) => {
           <title>TAMEC | Agencia de Viajes Online</title>
         </Head>
 
-        <SliceZone slices={page.data.slices} components={components} />
+        <SliceZone
+          slices={page.data.slices}
+          components={components}
+          className="mt-16"
+        />
         {/*<Pricing />*/}
         {/*<Footer />*/}
       </Layout>

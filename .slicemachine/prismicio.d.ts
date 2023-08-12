@@ -773,6 +773,16 @@ interface Feature1SliceDefaultPrimary {
      *
      */
     image_first: prismicT.BooleanField;
+    /**
+     * uuid field in *Feature1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature1.primary.uuid
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    uuid: prismicT.KeyTextField;
 }
 /**
  * Default variation for Feature1 Slice
@@ -818,6 +828,16 @@ interface Feature1SliceFeature2Primary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * uuid field in *Feature1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature1.primary.uuid
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    uuid: prismicT.KeyTextField;
 }
 /**
  * feature con tarjeta derecha variation for Feature1 Slice
