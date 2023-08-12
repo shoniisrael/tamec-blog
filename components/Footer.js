@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer aria-label="Site Footer" className="bg-zinc-50">
+    <footer aria-label="Site Footer" className="bg-gray-50">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="flex flex-col sm:flex-row space-x-4 lg:grid-cols-3">
-          <div class="grow w-full">
+        <div className="flex flex-col space-x-4 sm:flex-row lg:grid-cols-3">
+          <div class="w-full grow">
             <div className="text-primary-600 flex justify-center sm:justify-start">
               <Image
                 src="/assets/logo.webp"
@@ -17,7 +17,7 @@ export const Footer = () => {
               />
             </div>
 
-            <p className="text-gray-900 mt-6 md:mr-16 text-center leading-relaxed sm:text-left">
+            <p className="text-gray-900 mt-6 text-center leading-relaxed sm:text-left md:mr-16">
               Nos apasiona brindarle el mejor servicio, ¡Esperamos tener
               noticias suyas pronto para vivir juntos &nbsp;
               <b>
@@ -33,7 +33,7 @@ export const Footer = () => {
                   href="https://www.facebook.com/tamecviajes"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 transition hover:text-primary-700/75"
+                  className="text-primary-700 hover:text-primary-700/75 transition"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
@@ -56,7 +56,7 @@ export const Footer = () => {
                   href="https://www.instagram.com/tamecviajes/"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 transition hover:text-primary-700/75"
+                  className="text-primary-700 hover:text-primary-700/75 transition"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -79,7 +79,7 @@ export const Footer = () => {
                   href="https://twitter.com/tamecviajes"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 transition hover:text-primary-700/75"
+                  className="text-primary-700 hover:text-primary-700/75 transition"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
@@ -98,7 +98,7 @@ export const Footer = () => {
                   href="https://wa.me/message/YREO4ZR4GE43E1"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 transition hover:text-primary-700/75"
+                  className="text-primary-700 hover:text-primary-700/75 transition"
                 >
                   <span className="sr-only">Whatsapp</span>
 
@@ -118,9 +118,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="grow-0 w-96 flex flex-col sm:flex-row space-x-4 ">
- 
- 
+          <div className="flex w-96 grow-0 flex-col space-x-4 sm:flex-row ">
             <div className="text-center sm:text-left">
               <p className="text-gray-900 text-lg font-medium">Links Utils</p>
 
@@ -157,8 +155,8 @@ export const Footer = () => {
                       </span>
 
                       <span className="relative flex h-2 w-2">
-                        <span className="bg-primary-400 absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-500"></span>
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
                       </span>
                     </Link>
                   </li>
@@ -249,9 +247,9 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-100 pt-6">
+        <div className="border-gray-100 mt-12 border-t pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
-            <p className="text-sm text-zinc-500">
+            <p className="text-gray-500 text-sm">
               <Link
                 className="text-primary-600 hover:text-primary-600 inline-block px-2 underline transition"
                 href="/"
@@ -269,7 +267,7 @@ export const Footer = () => {
               </Link>
             </p>
 
-            <p className="mt-4 text-sm text-zinc-500 sm:order-first sm:mt-0">
+            <p className="text-gray-500 mt-4 text-sm sm:order-first sm:mt-0">
               &copy; {new Date().getFullYear()} Agencia de Viajes Tamec - Todos
               los derechos reservados
             </p>

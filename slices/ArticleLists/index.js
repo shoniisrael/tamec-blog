@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
@@ -48,9 +48,9 @@ const Article = ({ article }) => {
   const excerpt = getExcerpt(article.data.slices);
 
   return (
-    <li className="bg-white border border-x-white border-t-white border-b-zinc-200 sm:p-4 rounded-lg flex flex-row space-x-4 items-start md:grid-cols-3 hover:text-primary-700 hover:cursor-pointer hover:bg-zinc-50 hover:border  hover:border-zinc-200 ">
+    <li className="hover:text-primary-700 flex flex-row items-start space-x-4 rounded-lg border border-x-white border-t-white border-b-gray-200 bg-white hover:cursor-pointer hover:border hover:border-gray-200 hover:bg-gray-50 sm:p-4  md:grid-cols-3 ">
       <PrismicLink document={article} tabIndex="-1">
-        <div className="w-64 aspect-h-3 relative bg-gray-300">
+        <div className="aspect-h-3 relative w-64 bg-gray-300">
           {prismicH.isFilled.image(featuredImage) && (
             <PrismicNextImage
               field={featuredImage}
@@ -63,7 +63,7 @@ const Article = ({ article }) => {
         </div>
       </PrismicLink>
       <div className="grid grid-cols-1 gap-3 md:col-span-2">
-        <p className="font-sans italic tracking-tighter text-slate-500">
+        <p className="text-slate-500 font-sans italic tracking-tighter">
           {dateFormatter.format(date)}
         </p>
         <Heading as="h2">
@@ -72,7 +72,7 @@ const Article = ({ article }) => {
           </PrismicLink>
         </Heading>
         {excerpt && (
-          <p className="font-sans leading-relaxed md:text-lg md:leading-relaxed text-black-500">
+          <p className="font-sans leading-relaxed text-black-500 md:text-lg md:leading-relaxed">
             {excerpt}
           </p>
         )}
@@ -81,16 +81,15 @@ const Article = ({ article }) => {
   );
 };
 
-const ArticleLists = ({ context}) => {
-
+const ArticleLists = ({ context }) => {
   return (
-      <Bounded size="widest">
-        <ul className="grid grid-cols-1 gap-8">
-          {context.map((article) => (
-            <Article key={article.id} article={article} />
-          ))}
-        </ul>
-      </Bounded>
+    <Bounded size="widest">
+      <ul className="grid grid-cols-1 gap-8">
+        {context.map((article) => (
+          <Article key={article.id} article={article} />
+        ))}
+      </ul>
+    </Bounded>
   );
 };
 

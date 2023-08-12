@@ -14,7 +14,7 @@ const PricingSection = ({ slice }) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
   return (
     <section>
-      <div className=" w-full bg-primary-900 py-8 lg:py-24" id="pricing">
+      <div className=" bg-primary-dark w-full py-8 lg:py-24" id="pricing">
         <div className="mx-auto  flex w-full max-w-screen-2xl flex-col justify-center px-6 text-center sm:px-8 lg:px-16">
           <div className="flex w-full flex-col">
             <ScrollAnimationWrapper>

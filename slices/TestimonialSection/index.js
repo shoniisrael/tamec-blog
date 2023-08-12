@@ -57,7 +57,7 @@ const TestimonialSection = ({ slice }) => {
   return (
     <section className={backgroundColorCssClass + " " + textColorCssClass}>
       <div
-        className={`container mx-auto w-full px-6 my-8 md:my-16 md:px-14 lg:my-24 lg:px-28 min-h-full `}
+        className={`container mx-auto my-8 min-h-full w-full px-6 md:my-16 md:px-14 lg:my-24 lg:px-28 `}
       >
         <div className="mx-auto my-8 text-center">
           <h2 className="text-3xl font-medium leading-relaxed lg:text-4xl">
@@ -85,23 +85,23 @@ const TestimonialSection = ({ slice }) => {
                       className="flex w-full w-60 max-w-sm flex-1 items-center px-3"
                       key={index}
                     >
-                      <div className="flex flex-col rounded-lg  text-black-600 transition-all hover:border-teal-500 text-center">
-                        <div className="flex w-full flex-col items-center">                          
-                            <img
-                              src={item.foto.url}
-                              alt={item.foto.alt || "testimonio"}
-                              className={"h-32 w-32 rounded-full  object-cover"}
-                              width={"100"}
-                              height={"100"}
-                            />
-                            <div className="ml-5 flex flex-col text-left">
-                              <h3 className="text-lg capitalize font-bold  text-primary-700">
-                                {item.nombre || "Desconocido"}
-                              </h3>
-                              <p className="text-sm capitalize text-secondary-500">
-                                {item.subtitulo || "Desconocido"}
-                              </p>
-                            </div>
+                      <div className="text-black-600 flex flex-col  rounded-lg text-center transition-all hover:border-primary">
+                        <div className="flex w-full flex-col items-center">
+                          <img
+                            src={item.foto.url}
+                            alt={item.foto.alt || "testimonio"}
+                            className={"h-32 w-32 rounded-full  object-cover"}
+                            width={"100"}
+                            height={"100"}
+                          />
+                          <div className="ml-5 flex flex-col text-left">
+                            <h3 className="text-primary-700 text-lg font-bold  capitalize">
+                              {item.nombre || "Desconocido"}
+                            </h3>
+                            <p className="text-sm capitalize text-secondary">
+                              {item.subtitulo || "Desconocido"}
+                            </p>
+                          </div>
                         </div>
                         <div className="mt-5 text-center">
                           <PrismicRichText field={item.testimonio} />
@@ -113,7 +113,7 @@ const TestimonialSection = ({ slice }) => {
                 <div className="flex w-full items-center justify-end">
                   <div className="mt-14 flex w-auto flex-none justify-between">
                     <div
-                      className="mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 bg-white text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
+                      className="mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-primary bg-white text-primary transition-all hover:bg-primary hover:text-white"
                       onClick={sliderRef?.slickPrev}
                     >
                       <svg
@@ -132,7 +132,7 @@ const TestimonialSection = ({ slice }) => {
                       </svg>
                     </div>
                     <div
-                      className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-teal-500 bg-white text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
+                      className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-primary bg-white text-primary transition-all hover:bg-primary hover:text-white"
                       onClick={sliderRef?.slickNext}
                     >
                       <svg

@@ -10,11 +10,11 @@ export class ColorMapping {
     ];
     this.bgOptions = [
       "bg-white",
-      "bg-zinc-50",
-      "bg-primary-900",
-      "bg-secondary-500",
-      "bg-tertiary-900",
-      "bg-quaternary-900",
+      "bg-gray-50",
+      "bg-primary-dark",
+      "bg-secondary",
+      "bg-tertiary-dark",
+      "bg-quaternary-dark",
     ];
     this.colorName = [
       "white",

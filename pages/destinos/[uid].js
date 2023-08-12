@@ -53,7 +53,7 @@ const Destinos = ({ destinos, latestDestinos, navigation, settings }) => {
         <div>
           <PrismicLink
             href="/destinos"
-            className=" font-semibold tracking-tight text-primary-500"
+            className=" text-primary font-semibold tracking-tight"
           >
             &larr; Volver a Destinos
           </PrismicLink>

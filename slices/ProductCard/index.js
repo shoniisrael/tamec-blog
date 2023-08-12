@@ -5,14 +5,14 @@ import Image from "next/image";
 
 const ProductCard = ({ slice }) => (
   <section>
-    <div className="h-96 max-w-xs overflow-hidden rounded-lg bg-secondary-500 shadow-lg">
+    <div className="h-96 max-w-xs overflow-hidden rounded-lg bg-secondary shadow-lg">
       <div className="relative">
         <Image
           className="h-48 w-full object-cover"
           src="https://picsum.photos/200/300"
           alt={slice.primary.title}
         />
-        <div className="bg-gray-200 text-gray-800 absolute top-0 right-0 m-2 rounded-full p-1">
+        <div className="absolute top-0 right-0 m-2 rounded-full bg-gray-200 p-1 text-gray-800">
           <h3 className="mb-0 max-h-7 overflow-hidden text-sm font-bold">
             <PrismicText field={slice.primary.title} />
           </h3>
@@ -23,7 +23,7 @@ const ProductCard = ({ slice }) => (
           <PrismicText field={slice.primary.title} />
         </h3>
         <br />
-        <div className="text-gray-700 max-h-24 overflow-hidden text-base">
+        <div className="max-h-24 overflow-hidden text-base text-gray-700">
           <PrismicRichText field={slice.primary.description} />
         </div>
       </div>

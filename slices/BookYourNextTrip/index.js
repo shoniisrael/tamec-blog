@@ -8,17 +8,17 @@ import { PrismicRichText } from "@prismicio/react";
  */
 const BookYourNextTrip = ({ slice }) => (
   <section id="booking" className="py-10">
-    <div className="container mx-auto w-full px-6 py-8 text-zinc-900 md:py-16 md:px-14 lg:py-24  lg:px-28">
+    <div className="container mx-auto w-full px-6 py-8 text-gray-900 md:py-16 md:px-14 lg:py-24  lg:px-28">
       <div className="flex flex-wrap items-center">
         <div className="w-full lg:w-1/2">
           <div className="mb-4 text-left">
             <h5 className="font-bold ">{slice.primary.subtitle}</h5>
-            <h3 className="text-2xl font-bold capitalize text-primary-900 md:text-4xl lg:text-6xl">
+            <h3 className="text-2xl font-bold capitalize text-primary-dark md:text-4xl lg:text-6xl">
               {slice.primary.title}
             </h3>
           </div>
           <div className="mb-5 flex items-start">
-            <div className="mr-4 rounded-md bg-secondary-700 p-3">
+            <div className="bg-secondary-700 mr-4 rounded-md p-3">
               <img src="assets/steps/selection.svg" width="22" alt="steps" />
             </div>
             <div className="flex-1">
@@ -27,7 +27,7 @@ const BookYourNextTrip = ({ slice }) => (
             </div>
           </div>
           <div className="mb-5 flex items-start">
-            <div className="mr-4 rounded-md bg-secondary-700 p-3">
+            <div className="bg-secondary-700 mr-4 rounded-md p-3">
               <img src="assets/steps/water-sport.svg" width="22" alt="steps" />
             </div>
             <div className="flex-1">
@@ -36,7 +36,7 @@ const BookYourNextTrip = ({ slice }) => (
             </div>
           </div>
           <div className="mb-5 flex items-start">
-            <div className="mr-4 rounded-md bg-secondary-700 p-3">
+            <div className="bg-secondary-700 mr-4 rounded-md p-3">
               <img src="assets/steps/taxi.svg" width="22" alt="steps" />
             </div>
             <div className="flex-1">

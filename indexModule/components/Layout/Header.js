@@ -34,8 +34,8 @@ const Header = () => {
               className={
                 "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "about"
-                  ? " text-teal-500 animation-active "
-                  : " hover:text-teal-500 a text-black-500")
+                  ? " text-primary animation-active "
+                  : " hover:text-primary a text-black-500")
               }
             >
               About
@@ -52,8 +52,8 @@ const Header = () => {
               className={
                 "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "feature"
-                  ? " text-teal-500 animation-active "
-                  : " hover:text-teal-500 text-black-500 ")
+                  ? " text-primary animation-active "
+                  : " hover:text-primary text-black-500 ")
               }
             >
               Feature
@@ -70,8 +70,8 @@ const Header = () => {
               className={
                 "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "pricing"
-                  ? " text-teal-500 animation-active "
-                  : " hover:text-teal-500 text-black-500 ")
+                  ? " text-primary animation-active "
+                  : " hover:text-primary text-black-500 ")
               }
             >
               Pricing
@@ -88,8 +88,8 @@ const Header = () => {
               className={
                 "animation-hover relative mx-2 inline-block cursor-pointer px-4 py-2" +
                 (activeLink === "testimoni"
-                  ? " text-teal-500 animation-active "
-                  : " hover:text-teal-500 text-black-500 ")
+                  ? " text-primary animation-active "
+                  : " hover:text-primary text-black-500 ")
               }
             >
               Testimonial
@@ -98,7 +98,7 @@ const Header = () => {
           <div className="col-start-10 col-end-12 flex items-center justify-end font-medium">
             <Link
               href="/"
-              className="hover:text-teal-500 mx-2 capitalize tracking-wide text-black-600 transition-all sm:mx-4"
+              className="hover:text-primary mx-2 capitalize tracking-wide text-black-600 transition-all sm:mx-4"
             >
               Sign In
             </Link>
@@ -123,7 +123,7 @@ const Header = () => {
               className={
                 "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "about"
-                  ? "  border-teal-500 text-teal-500"
+                  ? "  border-primary text-primary"
                   : " border-transparent")
               }
             >
@@ -155,7 +155,7 @@ const Header = () => {
               className={
                 "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "feature"
-                  ? "  border-teal-500 text-teal-500"
+                  ? "  border-primary text-primary"
                   : " border-transparent ")
               }
             >
@@ -187,7 +187,7 @@ const Header = () => {
               className={
                 "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "pricing"
-                  ? "  border-teal-500 text-teal-500"
+                  ? "  border-primary text-primary"
                   : " border-transparent ")
               }
             >
@@ -219,7 +219,7 @@ const Header = () => {
               className={
                 "mx-1 flex flex-col items-center border-t-2 px-3 py-2 text-xs transition-all sm:mx-2 sm:px-4 " +
                 (activeLink === "testimoni"
-                  ? "  border-teal-500 text-teal-500"
+                  ? "  border-primary text-primary"
                   : " border-transparent ")
               }
             >

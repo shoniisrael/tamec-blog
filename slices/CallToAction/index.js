@@ -21,7 +21,7 @@ const CallToAction = ({ slice }) => {
   let buttonTextColor = color.getColorName(slice.primary.color_de_fondo);
   return (
     <section>
-      <div className={`container mx-auto w-full px-6 my-8 md:px-14  lg:px-28 `}>
+      <div className={`container mx-auto my-8 w-full px-6 md:px-14  lg:px-28 `}>
         <div
           className="container my-16 mx-auto flex w-full flex-col"
           id="testimoni"
@@ -40,8 +40,8 @@ const CallToAction = ({ slice }) => {
 
                 <PrismicLink
                   field={slice.primary.link_del_boton}
-                  className={`block w-full rounded-lg  border-2 border-zinc-300 bg-zinc-100 px-4 py-2 px-12 py-3 font-bold font-bold uppercase
-                  text-black-600 shadow ring-primary-300 hover:cursor-pointer hover:bg-white hover:text-primary-500 focus:outline-none focus:ring sm:w-auto md:px-6`}
+                  className={`ring-primary-300 block w-full  rounded-lg border-2 border-gray-300 bg-gray-100 px-4 py-2 px-12 py-3 font-bold font-bold
+                  uppercase text-black-600 shadow hover:cursor-pointer hover:bg-white hover:text-primary focus:outline-none focus:ring sm:w-auto md:px-6`}
                 >
                   {slice.primary.texto_boton}
                 </PrismicLink>

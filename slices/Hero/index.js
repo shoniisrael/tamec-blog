@@ -22,14 +22,14 @@ const Hero = ({ slice }) => {
           variants={scrollAnimation}
         >
           <div className=" row-start-2 flex flex-col items-start justify-center px-6 sm:row-start-1 sm:px-8 lg:py-40 lg:pl-16 lg:pr-0 ">
-            <h1 className="text-3xl font-black leading-normal text-orange-300 lg:text-6xl xl:text-7xl 2xl:text-7xl">
-              Viajes <strong className="text-teal-600">Únicos</strong>
+            <h1 className="text-orange-300 text-3xl font-black leading-normal lg:text-6xl xl:text-7xl 2xl:text-7xl">
+              Viajes <strong className="text-primary-600">Únicos</strong>
               <br />
-              Recuerdos <strong className="text-teal-600">Eternos</strong>
+              Recuerdos <strong className="text-primary-600">Eternos</strong>
             </h1>
-            <p className="mt-4 mb-6 text-black-500">
-              con <strong className="font-black text-teal-600">TAMEC</strong> tu
-              agencia de viajes de confianza.
+            <p className="text-black-500 mt-4 mb-6">
+              con <strong className="text-primary-600 font-black">TAMEC</strong>{" "}
+              tu agencia de viajes de confianza.
             </p>
             <div
               className={

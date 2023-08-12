@@ -9,7 +9,7 @@ const Profile = ({ name, description, profilePicture }) => {
     <div className="px-4">
       <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
         <PrismicLink href="/" tabIndex="-1">
-          <div className="bg-slate-300 relative h-40 w-40 overflow-hidden rounded-full">
+          <div className="relative h-40 w-40 overflow-hidden rounded-full bg-gray-300">
             {prismicH.isFilled.image(profilePicture) && (
               <PrismicNextImage
                 field={profilePicture}
@@ -55,14 +55,14 @@ export const Header = ({
 }) => {
   return (
     <header>
-      <nav className="border-gray-200 dark:bg-gray-800 bg-zinc-50 px-4 py-2.5 lg:px-6">
+      <nav className="border-gray-200 bg-gray-50 px-4 py-2.5 dark:bg-gray-800 lg:px-6">
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between">
-          <PrismicLink href="/" className="flex items-center">
+          <PrismicLink href="/" className="flex h-full w-48 items-center">
             <Image
               src="/assets/logo.webp"
-              width={"100"}
-              height={"100"}
-              className="mr-3 h-6 sm:h-9"
+              width={"192"}
+              height={"40"}
+              className="mr-3 h-auto w-48"
               alt="Tamec Logo"
             />
           </PrismicLink>
@@ -79,7 +79,7 @@ export const Header = ({
               {navigation.data?.links.map((item) => (
                 <NavItem key={prismicH.asText(item.label)}>
                   <PrismicLink field={item.link}>
-                    <PrismicText field={item.label} />
+                    <PrismicText field={item.label} className="text" />
                   </PrismicLink>
                 </NavItem>
               ))}

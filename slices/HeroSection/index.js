@@ -34,14 +34,14 @@ const HeroSection = ({ slice }) => {
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <PrismicLink
               field={slice?.primary?.link_boton_azul}
-              className="active:bg-rose-500 block w-full rounded bg-primary-500 px-12 py-3 text-sm font-medium text-white shadow hover:bg-primary-700 focus:outline-none focus:ring sm:w-auto"
+              className="active:bg-rose-500 bg-primary hover:bg-primary-dark block w-full rounded px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto"
             >
               <span>{slice?.primary?.texto_boton_azul}</span>
             </PrismicLink>
 
             <PrismicLink
               field={slice?.primary?.link_boton_blanco}
-              className="active:text-rose-500 block w-full rounded bg-white px-12 py-3 text-sm font-medium text-primary-500 shadow hover:text-primary-700 focus:outline-none focus:ring sm:w-auto"
+              className="active:text-rose-500 text-primary block w-full rounded bg-white px-12 py-3 text-sm font-medium shadow hover:text-primary-700 focus:outline-none focus:ring sm:w-auto"
             >
               <span>{slice?.primary?.texto_boton_blanco}</span>
             </PrismicLink>
