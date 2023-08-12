@@ -5,7 +5,7 @@ const ButtonOutline = ({ children, linkButton }) => {
   if (linkButton === null || children === null) return <> </>;
 
   return (
-    <PrismicLink field={linkButton} className="buttonOutline">
+    <PrismicLink field={linkButton} className="button buttonOutline">
       {children}
     </PrismicLink>
   );

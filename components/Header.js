@@ -70,7 +70,7 @@ export const Header = ({
     <header>
       <nav
         id="headerNav"
-        className={` z-100 ${
+        className={` z-10 ${
           isScrolled ? "sticky-shadow shadow" : ""
         } fixed top-0 left-0 right-0 border-gray-200 bg-primary-50 px-4
           py-2  transition duration-300 lg:px-6`}
