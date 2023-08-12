@@ -10,7 +10,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
  */
 const Hero = ({ slice }) => {
   return (
-    <section className={"relative  mx-auto"}>
+    <section className={"relative  mx-auto my-16"}>
       <div className="wave absolute top-0 right-0 h-full">
         <img
           src="/assets/wave.svg"
@@ -18,8 +18,8 @@ const Hero = ({ slice }) => {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className=" container  z-10 grid grid-flow-row grid-rows-2 gap-8 py-6 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-1 sm:py-0 ">
-        <div className=" row-start-2 flex flex-col items-start justify-center px-6 sm:row-start-1 sm:px-8 lg:py-40 lg:pl-16 lg:pr-0 ">
+      <div className=" container z-10   flex flex-col-reverse py-6 sm:flex-row  ">
+        <div className="row-start-2 flex w-full flex-col  items-start px-2 sm:row-start-1 sm:w-full sm:justify-center md:w-2/3 md:px-8 lg:w-full lg:py-40 lg:pl-16 lg:pr-0 ">
           <h1 className="text-3xl font-black leading-normal lg:text-6xl xl:text-7xl 2xl:text-7xl">
             Viajes Únicos
             <br />
@@ -32,7 +32,7 @@ const Hero = ({ slice }) => {
           </p>
           <div
             className={
-              " flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:mt-8"
+              " flex w-full flex-col space-y-4 md:w-auto md:flex-row md:space-y-0 md:space-x-4 lg:mt-8"
             }
           >
             <ButtonPrimary linkButton={slice.primary.link_boton_1}>
@@ -43,7 +43,7 @@ const Hero = ({ slice }) => {
             </ButtonOutline>
           </div>
         </div>
-        <div className="h-full w-full">
+        <div className="sm:1/3 h-full w-auto md:w-auto">
           <div className="h-full w-full">
             <picture className={"block h-full w-full"}>
               <LazyLoadImage
@@ -58,7 +58,7 @@ const Hero = ({ slice }) => {
                     ? slice?.primary?.imagen?.url
                     : "/assets/hero/2.webp"
                 }
-                wrapperClassName={"object-cover h-full w-full"}
+                wrapperClassName={"object-cover h-auto w-full"}
                 height="100%"
                 width="100%"
               />

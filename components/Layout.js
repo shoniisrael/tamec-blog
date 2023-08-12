@@ -11,12 +11,7 @@ export const Layout = ({
 }) => {
   return (
     <div className="text-slate-700">
-      <Header
-        withProfile={withProfile}
-        withDivider={withHeaderDivider}
-        navigation={navigation}
-        settings={settings}
-      />
+      <Header navigation={navigation} settings={settings} />
       <main>{children}</main>
       <Footer />
     </div>

@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="bg-gray-50">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="flex flex-col space-x-4 sm:flex-row lg:grid-cols-3">
+        <div className="flex flex-col space-x-4 overflow-hidden sm:flex-row lg:grid-cols-3">
           <div class="w-full grow">
             <div className="text-primary-600 flex justify-center sm:justify-start">
               <Image
@@ -17,7 +17,7 @@ export const Footer = () => {
               />
             </div>
 
-            <p className="text-gray-900 mt-6 text-center leading-relaxed sm:text-left md:mr-16">
+            <p className="mt-6 text-center leading-relaxed text-gray-900 sm:text-left md:mr-16">
               Nos apasiona brindarle el mejor servicio, ¡Esperamos tener
               noticias suyas pronto para vivir juntos &nbsp;
               <b>
@@ -120,13 +120,13 @@ export const Footer = () => {
 
           <div className="flex w-96 grow-0 flex-col space-x-4 sm:flex-row ">
             <div className="text-center sm:text-left">
-              <p className="text-gray-900 text-lg font-medium">Links Utils</p>
+              <p className="text-lg font-medium text-gray-900">Links Utils</p>
 
               <nav aria-label="Footer Helpful Nav" className="mt-8">
                 <ul className="space-y-4 text-sm">
                   <li>
                     <Link
-                      className="text-gray-700 hover:text-gray-700/75 transition"
+                      className="text-gray-700 transition hover:text-gray-700/75"
                       href="https://calendly.com/tamecviajes/30min"
                       target="_blank"
                     >
@@ -150,7 +150,7 @@ export const Footer = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <span className="text-gray-700 group-hover:text-gray-700/75 transition">
+                      <span className="text-gray-700 transition group-hover:text-gray-700/75">
                         Chatea con nosotros
                       </span>
 
@@ -165,7 +165,7 @@ export const Footer = () => {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-gray-900 text-lg font-medium">Contáctanos</p>
+              <p className="text-lg font-medium text-gray-900">Contáctanos</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -175,7 +175,7 @@ export const Footer = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="text-gray-900 h-5 w-5 shrink-0"
+                      className="h-5 w-5 shrink-0 text-gray-900"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -199,7 +199,7 @@ export const Footer = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="text-gray-900 h-5 w-5 shrink-0"
+                      className="h-5 w-5 shrink-0 text-gray-900"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -219,7 +219,7 @@ export const Footer = () => {
                 <li className="flex items-start justify-center gap-1.5 sm:justify-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-gray-900 h-5 w-5 shrink-0"
+                    className="h-5 w-5 shrink-0 text-gray-900"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -237,7 +237,7 @@ export const Footer = () => {
                     />
                   </svg>
 
-                  <address className="text-gray-700 -mt-0.5 not-italic">
+                  <address className="-mt-0.5 not-italic text-gray-700">
                     Quito, Ecuador <br />
                     Av. Francisco Ruiz y Jorge Gutierrez
                   </address>
@@ -247,9 +247,9 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-gray-100 mt-12 border-t pt-6">
+        <div className="mt-12 border-t border-gray-100 pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
-            <p className="text-gray-500 text-sm">
+            <p className="text-sm text-gray-500">
               <Link
                 className="text-primary-600 hover:text-primary-600 inline-block px-2 underline transition"
                 href="/"
@@ -267,7 +267,7 @@ export const Footer = () => {
               </Link>
             </p>
 
-            <p className="text-gray-500 mt-4 text-sm sm:order-first sm:mt-0">
+            <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
               &copy; {new Date().getFullYear()} Agencia de Viajes Tamec - Todos
               los derechos reservados
             </p>
