@@ -38,10 +38,10 @@ const ListaDestinos = ({ slice }) => {
               field={item.link_route}
               style={{
                 backgroundImage: `url(${item.image.url})`,
-                backgroundColor: "rgba(0, 0, 0, 0.45)",
+
                 backgroundBlendMode: "multiply",
               }}
-              className="hover:bg-indigo-500 relative block overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat transition-all hover:-translate-y-1 hover:scale-105"
+              className="imageCard relative block overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat transition-all hover:-translate-y-1 hover:scale-105 "
             >
               <div className="bg-black/25 absolute inset-0"></div>
               <div className="relative flex items-start justify-between p-4 sm:p-6 lg:p-8">

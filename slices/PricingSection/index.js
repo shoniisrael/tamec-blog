@@ -1,6 +1,4 @@
 import React, { useMemo } from "react";
-import ScrollAnimationWrapper from "../../indexModule/components/Layout/ScrollAnimationWrapper";
-import { motion } from "framer-motion";
 import getScrollAnimation from "../../indexModule/utils/getScrollAnimation";
 import { PrismicRichText } from "@prismicio/react";
 import ButtonOutline from "../../indexModule/components/misc/ButtonOutline.";
@@ -17,35 +15,22 @@ const PricingSection = ({ slice }) => {
       <div className=" w-full bg-primary-dark py-8 lg:py-24" id="pricing">
         <div className="mx-auto  flex w-full max-w-screen-2xl flex-col justify-center px-6 text-center sm:px-8 lg:px-16">
           <div className="flex w-full flex-col">
-            <ScrollAnimationWrapper>
-              <motion.h3
-                variants={scrollAnimation}
-                className="text-2xl font-medium leading-relaxed text-white sm:text-3xl lg:text-4xl"
-              >
+            <div>
+              <h3 className="text-2xl font-medium leading-relaxed text-white sm:text-3xl lg:text-4xl">
                 {slice.primary.title}
-              </motion.h3>
-              <motion.p
-                variants={scrollAnimation}
-                className="mx-auto my-2 w-10/12 text-center leading-normal text-white sm:w-7/12 lg:w-6/12"
-              >
+              </h3>
+              <p className="mx-auto my-2 w-10/12 text-center leading-normal text-white sm:w-7/12 lg:w-6/12">
                 {slice.primary.subtitle}
-              </motion.p>
-            </ScrollAnimationWrapper>
+              </p>
+            </div>
             <div className="flex flex-col justify-around space-x-8 px-4 pt-8 sm:flex-row sm:px-0 lg:pt-12">
               {slice?.items?.map((item, i) => (
-                <ScrollAnimationWrapper className="flex flex-1 cursor-pointer justify-center rounded">
-                  <motion.div
-                    variants={scrollAnimation}
-                    custom={{ duration: i }}
-                    className="flex w-full max-w-md flex-col items-center justify-center rounded-xl border-2 border-gray-500 bg-white py-4 px-6 lg:px-8 "
-                    whileHover={{
-                      scale: 1.1,
-                      transition: {
-                        duration: 0.2,
-                      },
-                    }}
-                  >
-                    <div className="mt-6 p-4 lg:mt-16 lg:p-0">
+                <div
+                  className="flex flex-1 cursor-pointer justify-center rounded"
+                  key={i}
+                >
+                  <div className="flex w-full max-w-md flex-col items-center justify-center rounded-xl border-2 border-gray-500 bg-white py-4 px-6 lg:px-8 ">
+                    <div className="mt-6 p-4 lg:mt-6 lg:p-0">
                       <img
                         src={item.cardimage.url}
                         alt={item.cardimage.alt || "icono"}
@@ -53,9 +38,9 @@ const PricingSection = ({ slice }) => {
                         height={64}
                       />
                     </div>
-                    <p className="text-black-600 my-2 text-lg font-medium capitalize sm:my-7">
+                    <h3 className="text-black-600 my-2 text-lg font-medium capitalize sm:my-7 md:py-4 md:text-3xl">
                       <span>{item.cardtitle}</span>
-                    </p>
+                    </h3>
                     <div
                       id="texto"
                       className="text-black-500 flex flex-grow list-inside flex-col items-start justify-start pl-6 text-left xl:pl-0"
@@ -71,8 +56,8 @@ const PricingSection = ({ slice }) => {
                     ) : (
                       <></>
                     )}
-                  </motion.div>
-                </ScrollAnimationWrapper>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
