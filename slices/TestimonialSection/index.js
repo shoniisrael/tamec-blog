@@ -57,7 +57,7 @@ const TestimonialSection = ({ slice }) => {
   return (
     <section className={backgroundColorCssClass + " " + textColorCssClass}>
       <div
-        className={`container mx-auto my-8 min-h-full w-full px-6 md:my-16 md:px-14 lg:my-24 lg:px-28 `}
+        className={`container mx-auto my-8 min-h-full w-full bg-primary-50 px-6 md:my-16 md:px-14 lg:my-24  lg:px-28`}
       >
         <div className="mx-auto my-8 text-center">
           <h2 className="text-3xl font-medium leading-relaxed lg:text-4xl">
@@ -82,7 +82,7 @@ const TestimonialSection = ({ slice }) => {
                 >
                   {slice?.items?.map((item, index) => (
                     <div
-                      className="flex w-full w-60 max-w-sm flex-1 items-center px-3"
+                      className="testimonialCard mx-2 flex w-full w-60 max-w-sm flex-1 items-center overflow-hidden rounded-lg border border-gray-200 bg-white px-3 shadow-sm"
                       key={index}
                     >
                       <div className="text-black-600 flex flex-col  rounded-lg text-center transition-all hover:border-primary">
@@ -94,16 +94,16 @@ const TestimonialSection = ({ slice }) => {
                             width={"100"}
                             height={"100"}
                           />
-                          <div className="ml-5 flex flex-col text-left">
-                            <h3 className="text-primary-700 text-lg font-bold  capitalize">
+                          <div className=" flex flex-col text-center">
+                            <h3 className="mt-2 mb-0 text-lg font-bold  capitalize text-primary">
                               {item.nombre || "Desconocido"}
                             </h3>
-                            <p className="text-sm capitalize text-secondary">
+                            <p className="text-sm capitalize text-primary-dark">
                               {item.subtitulo || "Desconocido"}
                             </p>
                           </div>
                         </div>
-                        <div className="mt-5 text-center">
+                        <div className="mt-2 text-center">
                           <PrismicRichText field={item.testimonio} />
                         </div>
                       </div>
@@ -113,7 +113,7 @@ const TestimonialSection = ({ slice }) => {
                 <div className="flex w-full items-center justify-end">
                   <div className="mt-14 flex w-auto flex-none justify-between">
                     <div
-                      className="mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-primary bg-white text-primary transition-all hover:bg-primary hover:text-white"
+                      className="mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border  text-secondary-dark transition-all  hover:text-primary-dark"
                       onClick={sliderRef?.slickPrev}
                     >
                       <svg
@@ -132,7 +132,7 @@ const TestimonialSection = ({ slice }) => {
                       </svg>
                     </div>
                     <div
-                      className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-primary bg-white text-primary transition-all hover:bg-primary hover:text-white"
+                      className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border text-secondary-dark transition-all  hover:text-primary-dark"
                       onClick={sliderRef?.slickNext}
                     >
                       <svg

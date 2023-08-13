@@ -18,7 +18,7 @@ const BookYourNextTrip = ({ slice }) => (
             </h3>
           </div>
           <div className="mb-5 flex items-start">
-            <div className="bg-secondary-700 mr-4 rounded-md p-3">
+            <div className="mr-4 rounded-md bg-secondary-dark p-3">
               <img src="assets/steps/selection.svg" width="22" alt="steps" />
             </div>
             <div className="flex-1">
@@ -27,7 +27,7 @@ const BookYourNextTrip = ({ slice }) => (
             </div>
           </div>
           <div className="mb-5 flex items-start">
-            <div className="bg-secondary-700 mr-4 rounded-md p-3">
+            <div className="mr-4 rounded-md bg-secondary-dark p-3">
               <img src="assets/steps/water-sport.svg" width="22" alt="steps" />
             </div>
             <div className="flex-1">
@@ -36,7 +36,7 @@ const BookYourNextTrip = ({ slice }) => (
             </div>
           </div>
           <div className="mb-5 flex items-start">
-            <div className="bg-secondary-700 mr-4 rounded-md p-3">
+            <div className="mr-4 rounded-md bg-secondary-dark p-3">
               <img src="assets/steps/taxi.svg" width="22" alt="steps" />
             </div>
             <div className="flex-1">

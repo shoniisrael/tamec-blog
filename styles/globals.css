@@ -43,3 +43,12 @@ header ul {
 .imageCard:hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
+
+.testimonialCard {
+  height: 29rem;
+
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

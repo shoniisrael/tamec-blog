@@ -33,7 +33,7 @@ export const Footer = () => {
                   href="https://www.facebook.com/tamecviajes"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 hover:text-primary-700/75 transition"
+                  className="text-primary-dark transition hover:text-primary-dark/75"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
@@ -56,7 +56,7 @@ export const Footer = () => {
                   href="https://www.instagram.com/tamecviajes/"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 hover:text-primary-700/75 transition"
+                  className="text-primary-dark transition hover:text-primary-dark/75"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -79,7 +79,7 @@ export const Footer = () => {
                   href="https://twitter.com/tamecviajes"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 hover:text-primary-700/75 transition"
+                  className="text-primary-dark transition hover:text-primary-dark/75"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
@@ -98,7 +98,7 @@ export const Footer = () => {
                   href="https://wa.me/message/YREO4ZR4GE43E1"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary-700 hover:text-primary-700/75 transition"
+                  className="text-primary-dark transition hover:text-primary-dark/75"
                 >
                   <span className="sr-only">Whatsapp</span>
 

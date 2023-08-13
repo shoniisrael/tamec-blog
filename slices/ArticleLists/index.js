@@ -48,7 +48,7 @@ const Article = ({ article }) => {
   const excerpt = getExcerpt(article.data.slices);
 
   return (
-    <li className="hover:text-primary-700 flex flex-row items-start space-x-4 rounded-lg border border-x-white border-t-white border-b-gray-200 bg-white hover:cursor-pointer hover:border hover:border-gray-200 hover:bg-gray-50 sm:p-4  md:grid-cols-3 ">
+    <li className="flex flex-row items-start space-x-4 rounded-lg border border-x-white border-t-white border-b-gray-200 bg-white hover:cursor-pointer hover:border hover:border-gray-200 hover:bg-gray-50 hover:text-primary-dark sm:p-4  md:grid-cols-3 ">
       <PrismicLink document={article} tabIndex="-1">
         <div className="aspect-h-3 relative w-64 bg-gray-300">
           {prismicH.isFilled.image(featuredImage) && (
@@ -72,7 +72,7 @@ const Article = ({ article }) => {
           </PrismicLink>
         </Heading>
         {excerpt && (
-          <p className="font-sans leading-relaxed text-black-500 md:text-lg md:leading-relaxed">
+          <p className="text-black-500 font-sans leading-relaxed md:text-lg md:leading-relaxed">
             {excerpt}
           </p>
         )}
