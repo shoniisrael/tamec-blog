@@ -30,5 +30,8 @@ img {
 }
 
 header a {
-  @apply text-gray-800 hover:text-primary no-underline   transition-all;
+  @apply text-gray-800 hover:text-primary no-underline   transition-all text-xs sm:text-sm md:text-base;
+}
+header ul {
+  @apply px-0;
 }

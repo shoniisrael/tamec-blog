@@ -1,7 +1,5 @@
 import React, { useMemo } from "react";
 import getScrollAnimation from "../../indexModule/utils/getScrollAnimation";
-import ScrollAnimationWrapper from "../../indexModule/components/Layout/ScrollAnimationWrapper";
-import { motion } from "framer-motion";
 import { PrismicRichText } from "@prismicio/react";
 
 /**
@@ -11,7 +9,6 @@ import { PrismicRichText } from "@prismicio/react";
  */
 
 const Feature1 = ({ slice }) => {
-  console.log(slice);
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
   const orderClass = slice?.primary.image_first ? "order-0" : "order-1";
   const position = slice?.primary.image_first ? "ml-auto " : "mr-auto ";
@@ -23,13 +20,8 @@ const Feature1 = ({ slice }) => {
     >
       <div className="flex w-full flex-col sm:flex-row ">
         <div className={`${orderClass} sm:w-1/2`}>
-          <ScrollAnimationWrapper
-            className={`flex w-full items-start justify-center `}
-          >
-            <motion.div
-              className={`${imgPosition} h-full w-full `}
-              variants={scrollAnimation}
-            >
+          <div className={`flex w-full items-start justify-center `}>
+            <div className={`${imgPosition} h-full w-full `}>
               <img
                 src={slice?.primary?.image?.url || "/assets/feature.jpg"}
                 alt={slice?.primary?.image?.alt || "imagen de un viaje"}
@@ -38,14 +30,13 @@ const Feature1 = ({ slice }) => {
                 height={100}
                 width={508}
               />
-            </motion.div>
-          </ScrollAnimationWrapper>
+            </div>
+          </div>
         </div>
         <div className={` sm:w-1/2`}>
-          <ScrollAnimationWrapper>
-            <motion.div
+          <div>
+            <div
               className={`flex w-full flex-col items-start ${position} px-4  `}
-              variants={scrollAnimation}
             >
               <h2 className="text-black-600 text-3xl font-medium leading-relaxed lg:text-4xl">
                 {slice.primary.title}
@@ -53,8 +44,8 @@ const Feature1 = ({ slice }) => {
               <div id="texto" className=" text-black-500 my-2 text-left">
                 <PrismicRichText field={slice.primary.description} />
               </div>
-            </motion.div>
-          </ScrollAnimationWrapper>
+            </div>
+          </div>
         </div>
       </div>
     </section>

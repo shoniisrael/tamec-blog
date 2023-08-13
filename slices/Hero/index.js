@@ -10,7 +10,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
  */
 const Hero = ({ slice }) => {
   return (
-    <section className={"relative  mx-auto my-16"}>
+    <section className={"relative  mx-auto "}>
       <div className="wave absolute top-0 right-0 h-full">
         <img
           src="/assets/wave.svg"

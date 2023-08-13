@@ -29,10 +29,10 @@ export const Header = ({ navigation, settings }) => {
         id="headerNav"
         className={` z-10 ${
           isScrolled ? "sticky-shadow shadow" : ""
-        } fixed top-0 left-0 right-0 border-gray-200 bg-primary-50 px-4
-          py-2  transition duration-300 lg:px-6`}
+        } fixed top-0 left-0 right-0 border-gray-200 bg-primary-50 py-2
+          transition  duration-300 sm:px-4 lg:px-6`}
       >
-        <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between">
+        <div className="mx-auto flex max-w-screen-2xl flex-col flex-wrap items-center justify-between md:flex-row">
           <PrismicLink href="/" className="flex h-16 w-48 items-center">
             <Image
               src="/assets/logo.webp"
@@ -42,11 +42,8 @@ export const Header = ({ navigation, settings }) => {
               alt="Tamec Logo"
             />
           </PrismicLink>
-          <div
-            className=" h-16 w-full items-center justify-between md:flex md:w-auto"
-            id="mobile-menu-2"
-          >
-            <ul className="flex h-16 flex-col font-medium md:flex-row md:space-x-8">
+          <div className="  h-16 w-full  px-1 md:w-auto" id="mobile-menu-2">
+            <ul className=" flex h-16 w-full flex-row items-center  justify-between  md:space-x-8">
               <NavItem>
                 <PrismicLink href="/">
                   <PrismicText field={navigation.data.homepageLabel} />
