@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import FacebookPixel from "../utils/facebookPixel";
 
 export default function Document() {
   return (
@@ -21,6 +22,7 @@ export default function Document() {
       <body className="overflow-x-hidden antialiased">
         <Main />
         <NextScript />
+        <FacebookPixel />
       </body>
     </Html>
   );
